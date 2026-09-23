@@ -386,7 +386,10 @@ ul {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--gris-claro);
+    appearance: none;
+    -webkit-appearance: none;
     background: transparent;
+    background-color: transparent;
     border: 1px solid var(--gris-oscuro);
     padding: 8px 14px;
     cursor: pointer;

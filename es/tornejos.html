@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORNEOS | Level Up Football Experience</title>
+    <meta name="description" content="Torneos Level Up: competiciones propias con organización profesional, ritmo alto, igualdad real y experiencia completa. El Desmarque, Fútbol Vertical y La Suprema.">
+    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/png">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/tornejos.css">
+</head>
+<body>
+
+    <a class="saltar-contenido" href="#contingut">Ir al contenido</a>
+
+    <!-- ===== Cabecera común (igual en todas las páginas) ===== -->
+    <header class="cabecera">
+        <div class="cabecera__contenido container">
+
+            <!-- ===== Zona izquierda: logo (un único enlace) ===== -->
+            <a href="index.html" class="logo" aria-label="Level Up - página de inicio">
+                <img src="../Imatges/Logo_LevelUp.ico" alt="" class="logo__img">
+                <span class="logo__texto">Level<span class="logo__acento">Up</span></span>
+            </a>
+
+            <!-- ===== Zona central: navegación principal ===== -->
+            <nav class="menu" id="menu-principal" aria-label="Menú principal">
+                <ul class="menu__lista">
+                    <li><a class="menu__enlace" href="index.html">Inicio</a></li>
+                    <li><a class="menu__enlace" href="levelup.html">Level Up</a></li>
+                    <li><a class="menu__enlace" href="tecnificacio.html">Tecnificación</a></li>
+                    <li><a class="menu__enlace" href="campus.html">Campus</a></li>
+                    <li><a class="menu__enlace menu__enlace--activo" href="tornejos.html" aria-current="page">Torneos</a></li>
+                    <li><a class="menu__enlace" href="seleccions.html">Selecciones</a></li>
+                </ul>
+            </nav>
+
+            <!-- ===== Zona derecha: idioma + CTA + hamburguesa ===== -->
+            <div class="cabecera__acciones">
+
+                <!-- Selector de idioma -->
+                <div class="cabecera__idioma">
+                    <button type="button" class="cabecera__idioma-boton"
+                            aria-label="Cambiar idioma" aria-haspopup="true" aria-expanded="false">
+                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-es.svg" alt="Espanol">
+                    </button>
+
+                    <ul class="menu__lista cabecera__idioma-lista">
+                        <li><a class="menu__enlace" href="../ca/tornejos.html"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
+                        <li><a class="menu__enlace menu__enlace--activo" href="tornejos.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace" href="../en/tornejos.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
+                    </ul>
+                </div>
+
+                <button class="hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main id="contingut">
+
+        <!-- ==================== A. HERO TORNEOS ==================== -->
+        <section class="tornejos-hero">
+            <div class="container tornejos-hero__grid">
+
+                <div class="tornejos-hero__contenido">
+                    <span class="kicker">Competiciones propias</span>
+                    <h1>Torneos <span>Level Up</span></h1>
+                    <p class="intro-seccion">Organizamos competiciones de fútbol con la misma exigencia que un club profesional: formatos competitivos bien pensados, ritmo alto, igualdad real y una experiencia completa para jugadores, equipos y familias.</p>
+                    <div class="tornejos-hero__accions">
+                        <a class="btn btn--dorado" href="#torneigs">Ver torneos</a>
+                        <a class="btn btn--borde" href="#dossier">Recibir dossier</a>
+                    </div>
+                </div>
+
+                <!-- Marcador de la edición protagonista -->
+                <aside class="tornejos-marcador" aria-label="Próxima edición destacada">
+                    <p class="tornejos-marcador__toroig">Próxima edición</p>
+                    <p class="tornejos-marcador__nom">La Suprema</p>
+                    <ul class="tornejos-marcador__fitxa">
+                        <li><span>Estado</span><span class="etiqueta etiqueta--inscripcions">Inscripciones abiertas</span></li>
+                        <li><span>Período</span><span>Abril 2027</span></li>
+                        <li><span>Categorías</span><span>Sub8 – Sub16</span></li>
+                        <li><span>Formato</span><span>Fase de grupos + eliminatorias</span></li>
+                    </ul>
+                    <p class="tornejos-marcador__concepte">La final del torneo se juega en campo grande, delante de las familias, con trofeo y un protocolo de victoria a la altura. Una experiencia que cualquier jugador recordará.</p>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- ==================== B. QUÉ SON LOS TORNEOS ==================== -->
+        <section class="seccion">
+            <div class="container tornejos-manifest">
+                <span class="kicker">Qué son</span>
+                <p class="tornejos-manifest__frase">Compite de verdad. <span>Organizado como debe ser.</span></p>
+                <p class="tornejos-manifest__text">Nuestros torneos no son un partido suelto ni un evento improvisado. Son competiciones diseñadas de principio a fin para jugarse a un nivel alto desde el primer minuto: partidos de calidad, arbitraje, tiempo de juego bien repartido, descansos y una experiencia que no termina en el pitido final. Aquí no se trata de participar por participar: se trata de competir, aprender y disfrutar en igualdad de condiciones.</p>
+
+                <div class="tornejos-rasgos">
+                    <p class="tornejos-rasgo">Competición exigente</p>
+                    <p class="tornejos-rasgo">Ritmo alto</p>
+                    <p class="tornejos-rasgo">Igualdad real</p>
+                    <p class="tornejos-rasgo">Experiencia completa</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== C. QUÉ CUIDAMOS ==================== -->
+        <section class="seccion seccion--fondo-suave">
+            <div class="container centrado">
+                <span class="kicker">Qué cuidamos</span>
+                <h2 class="titulo-seccion">El fútbol es serio, nosotros también</h2>
+                <p class="intro-seccion">En cada torneo ponemos atención a los detalles que en otros sitios pasan desapercibidos. Esto es lo que hace que un Level Up no sea un torneo más.</p>
+
+                <div class="tornejos-cuidem__grid">
+
+                    <article class="tornejos-cuidem__item">
+                        <span class="tornejos-cuidem__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </span>
+                        <h3>Formato competitivo</h3>
+                        <p>Fase de grupos y eliminatorias con tiempo de juego garantizado para todos los equipos.</p>
+                    </article>
+
+                    <article class="tornejos-cuidem__item">
+                        <span class="tornejos-cuidem__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="4"/><path d="M6 4h12l2 5-2 11H6L4 9z"/><path d="M9 13h6"/></svg>
+                        </span>
+                        <h3>Organización</h3>
+                        <p>Calendario claro, horarios rigurosos y circuitos cerrados donde todo está previsto.</p>
+                    </article>
+
+                    <article class="tornejos-cuidem__item">
+                        <span class="tornejos-cuidem__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h20v12H2z"/><path d="M6 20h12M8 16v4M16 16v4"/></svg>
+                        </span>
+                        <h3>Instalaciones</h3>
+                        <p>Espacios de juego con las garantías que un torneo de este nivel necesita.</p>
+                    </article>
+
+                    <article class="tornejos-cuidem__item">
+                        <span class="tornejos-cuidem__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a7 7 0 100-14 7 7 0 000 14z"/><path d="M9 8l2 2 4-4"/></svg>
+                        </span>
+                        <h3>Atención</h3>
+                        <p>Líderes de sede y canal de contacto abierto durante todo el evento.</p>
+                    </article>
+
+                    <article class="tornejos-cuidem__item">
+                        <span class="tornejos-cuidem__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-6-7 18-2-8z"/><path d="M12 15l6-6"/></svg>
+                        </span>
+                        <h3>Comunicación</h3>
+                        <p>Información clara antes y durante el torneo: todo lo que hay que saber, cuando hay que saberlo.</p>
+                    </article>
+
+                    <article class="tornejos-cuidem__item">
+                        <span class="tornejos-cuidem__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.5H21l-5.5 4 2 6.5-5.5-4-5.5 4 2-6.5L3 8.5h6.5z"/></svg>
+                        </span>
+                        <h3>Premios</h3>
+                        <p>Trofeos, reconocimientos y un protocolo de victoria que vale la pena vivir.</p>
+                    </article>
+
+                    <article class="tornejos-cuidem__item">
+                        <span class="tornejos-cuidem__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12a10 10 0 1020 0H2z"/><path d="M2 14v2h20v-2"/><path d="M12 4a2 2 0 100 4 2 2 0 000-4z"/></svg>
+                        </span>
+                        <h3>Servicios</h3>
+                        <p>Apoyo al club: gestiones, coordinación y acompañamiento durante todo el torneo.</p>
+                    </article>
+
+                    <article class="tornejos-cuidem__item">
+                        <span class="tornejos-cuidem__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9C1.5 9.8 2.3 7 4.5 6s4.4 1 6.2 3l1.3 1.6L13.3 9C15.1 7 17.8 5.8 19.5 6s3 2.3 2 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>
+                        </span>
+                        <h3>Experiencia</h3>
+                        <p>Un torneo que se recuerda: ambiente, protocolo y momentos que duran toda la vida.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== D. NUESTROS TORNEOS ==================== -->
+        <section class="seccion" id="torneigs">
+            <div class="container centrado">
+                <span class="kicker">Nuestros torneos</span>
+                <h2 class="titulo-seccion">Tres competiciones, un sello</h2>
+                <p class="intro-seccion">Cada torneo tiene su personalidad: formato, etapa y objetivos diferentes. Elige el que mejor encaje con tu equipo.</p>
+
+                <div class="tornejos-llista">
+
+                    <!-- TORNEO 1: EL DESMARQUE -->
+                    <article class="torneig torneig--desmarge">
+                        <div class="torneig__identitat">
+                            <p class="torneig__num">01</p>
+                            <div>
+                                <h3 class="torneig__nom">El Desmarque</h3>
+                                <p class="torneig__concepte">La competición pensada para descubrir talento: observación con ojos de club y mucho fútbol.</p>
+                            </div>
+                        </div>
+                        <div class="torneig__cos">
+                            <ul class="torneig__dades">
+                                <li><span>Estado</span><span class="etiqueta etiqueta--proximament">Próximamente</span></li>
+                                <li><span>Período</span><span>2027 · fechas por confirmar</span></li>
+                                <li><span>Categorías</span><span>Sub10 · Sub12 · Sub14</span></li>
+                                <li><span>Formato</span><span>Competición de descubrimiento</span></li>
+                            </ul>
+                            <p>Edición de estreno: cuando abramos inscripciones lo anunciaremos aquí y en redes.</p>
+                            <div class="torneig__accions">
+                                <a class="btn btn--borde" href="#dossier">Recibir dossier</a>
+                                <a class="btn btn--dorado" href="#dossier">Infórmame</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TORNEO 2: FÚTBOL VERTICAL -->
+                    <article class="torneig torneig--futbol">
+                        <div class="torneig__identitat">
+                            <p class="torneig__num">02</p>
+                            <div>
+                                <h3 class="torneig__nom">Fútbol Vertical</h3>
+                                <p class="torneig__concepte">Ritmo, transiciones y marcadores vivos: un torneo rápido que no baja la intensidad.</p>
+                            </div>
+                        </div>
+                        <div class="torneig__cos">
+                            <ul class="torneig__dades">
+                                <li><span>Estado</span><span class="etiqueta etiqueta--limitades">Plazas limitadas</span></li>
+                                <li><span>Período</span><span>2027 · fechas por confirmar</span></li>
+                                <li><span>Categorías</span><span>Sub12 · Sub14 · Sub16</span></li>
+                                <li><span>Formato</span><span>Torneo exprés de alto ritmo</span></li>
+                            </ul>
+                            <p>Proceso de selección de participantes: queremos asegurar el máximo nivel de competición en cada campo.</p>
+                            <div class="torneig__accions">
+                                <a class="btn btn--dorado" href="#dossier">Recibir dossier</a>
+                                <a class="btn btn--rojo" href="#inscripcio">Inscribe tu equipo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TORNEO 3: LA SUPREMA -->
+                    <article class="torneig torneig--suprema">
+                        <div class="torneig__identitat">
+                            <p class="torneig__num">03</p>
+                            <div>
+                                <h3 class="torneig__nom">La Suprema</h3>
+                                <p class="torneig__concepte">Nuestro gran torneo: formato definitivo, final en campo grande y protocolo de campeón.</p>
+                            </div>
+                        </div>
+                        <div class="torneig__cos">
+                            <ul class="torneig__dades">
+                                <li><span>Estado</span><span class="etiqueta etiqueta--inscripcions">Inscripciones abiertas</span></li>
+                                <li><span>Período</span><span>Abril 2027</span></li>
+                                <li><span>Categorías</span><span>Sub8 – Sub16</span></li>
+                                <li><span>Formato</span><span>Fase de grupos + eliminatorias</span></li>
+                            </ul>
+                            <p>La edición estrella del año: participan equipos y clubes de todo el territorio.</p>
+                            <div class="torneig__accions">
+                                <a class="btn btn--borde" href="../pdf/dossier-la-suprema.pdf" target="_blank" rel="noopener">Ver dossier</a>
+                                <a class="btn btn--rojo" href="#inscripcio">Inscribe tu equipo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== E. FORMULARIO "RECIBIR DOSSIER" ==================== -->
+        <section class="seccion seccion--fondo-suave" id="dossier">
+            <div class="container tornejos-form">
+                <div class="tornejos-form__cap">
+                    <span class="kicker">Dossier personal</span>
+                    <h2 class="titulo-seccion">Recibir el dossier</h2>
+                    <p class="intro-seccion">Te hacemos llegar toda la información del torneo que te interese: fechas, categorías, precios y condiciones.</p>
+                </div>
+
+                <!-- EDITABLE: sustituir el action por el link del Google Form del formulario de dossier cuando esté disponible. -->
+                <form action="#" method="get">
+
+                    <div class="tornejos-form__camps">
+
+                        <div class="tornejos-form__campo tornejos-form__campo--ple">
+                            <label for="torneig-interes">Torneo de interés</label>
+                            <select id="torneig-interes" name="torneig">
+                                <option value="el-desmarc">El Desmarque</option>
+                                <option value="futbol-vertical">Fútbol Vertical</option>
+                                <option value="la-suprema">La Suprema</option>
+                            </select>
+                        </div>
+
+                        <div class="tornejos-form__campo tornejos-form__campo--ple">
+                            <label for="club">Club / entidad</label>
+                            <input type="text" id="club" name="club" placeholder="Nombre del club o entidad" required>
+                        </div>
+
+                        <div class="tornejos-form__campo">
+                            <label for="responsable">Persona responsable</label>
+                            <input type="text" id="responsable" name="responsable" placeholder="Nombre y apellidos" required>
+                        </div>
+
+                        <div class="tornejos-form__campo">
+                            <label for="telefon">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefon" name="telefon" placeholder="600 000 000" required>
+                        </div>
+
+                        <div class="tornejos-form__campo tornejos-form__campo--ple">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="nombre@club.com" required>
+                        </div>
+
+                        <div class="tornejos-form__campo tornejos-form__campo--ple">
+                            <label>Categoría/s de interés</label>
+                            <div class="tornejos-form__categorias">
+                                <label class="tornejos-form__categoria"><input type="checkbox" name="categoria" value="sub8"><span>Sub8</span></label>
+                                <label class="tornejos-form__categoria"><input type="checkbox" name="categoria" value="sub10"><span>Sub10</span></label>
+                                <label class="tornejos-form__categoria"><input type="checkbox" name="categoria" value="sub12"><span>Sub12</span></label>
+                                <label class="tornejos-form__categoria"><input type="checkbox" name="categoria" value="sub14"><span>Sub14</span></label>
+                                <label class="tornejos-form__categoria"><input type="checkbox" name="categoria" value="sub16"><span>Sub16</span></label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn--dorado tornejos-form__enviar">Recibir el dossier</button>
+                    <p class="tornejos-form__nota">Nos ponemos en contacto contigo para resolver cualquier duda. Sin compromiso.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- ==================== F. CIFRAS (marcador) ==================== -->
+        <section class="seccion tornejos-xifres">
+            <div class="container centrado">
+                <span class="kicker">Cifras</span>
+                <h2 class="titulo-seccion">Nuestra pista</h2>
+                <p class="intro-seccion">Participación acumulada en ediciones anteriores. Datos revisados año a año.</p>
+
+                <!-- EDITABLE: revisar cifras con el cliente antes de publicar -->
+                <div class="tornejos-xifres__marcador">
+                    <div class="tornejos-xifres__dada">
+                        <p class="tornejos-xifres__num">+1.200</p>
+                        <p class="tornejos-xifres__label">Participantes</p>
+                    </div>
+                    <div class="tornejos-xifres__dada">
+                        <p class="tornejos-xifres__num">+40</p>
+                        <p class="tornejos-xifres__label">Equipos</p>
+                    </div>
+                    <div class="tornejos-xifres__dada">
+                        <p class="tornejos-xifres__num">+25</p>
+                        <p class="tornejos-xifres__label">Clubes</p>
+                    </div>
+                    <div class="tornejos-xifres__dada">
+                        <p class="tornejos-xifres__num">+300</p>
+                        <p class="tornejos-xifres__label">Partidos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== G. EXPERIENCIAS ANTERIORES (timeline) ==================== -->
+        <section class="seccion">
+            <div class="container centrado">
+                <span class="kicker">Experiencias anteriores</span>
+                <h2 class="titulo-seccion">Nuestros hitos</h2>
+                <p class="intro-seccion">Hitos que marcan el camino de nuestra competición, edición tras edición.</p>
+
+                <div class="tornejos-timeline">
+
+                    <div class="tornejos-fita tornejos-fita--esquerra">
+                        <p class="tornejos-fita__any">2025 · 1ª edición</p>
+                        <p class="tornejos-fita__nom">La Suprema</p>
+                        <p>Primera gran cita: equipos de todo el territorio, final disputada en campo grande y una ovación final que confirmó que íbamos por el buen camino.</p>
+                    </div>
+
+                    <div class="tornejos-fita tornejos-fita--dreta">
+                        <p class="tornejos-fita__any">2026 · 2ª edición</p>
+                        <p class="tornejos-fita__nom">Fútbol Vertical</p>
+                        <p>Estreno del formato exprés de alto ritmo. Selección de participantes y 25 clubes reunidos en un fin de semana intensísimo.</p>
+                    </div>
+
+                    <div class="tornejos-fita tornejos-fita--esquerra">
+                        <p class="tornejos-fita__any">2026 · 2ª edición</p>
+                        <p class="tornejos-fita__nom">La Suprema</p>
+                        <p>Récord de participación y primer trofeo con notoriedad: equipos que ya vienen a competir por el nombre, no solo a jugar.</p>
+                    </div>
+
+                    <div class="tornejos-fita tornejos-fita--dreta">
+                        <p class="tornejos-fita__any">2027 · 3ª edición</p>
+                        <p class="tornejos-fita__nom">La Suprema</p>
+                        <p>Consolidamos el calendario estable y abrimos La Suprema como la gran competición de referencia del año.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== H. CTA FINAL ==================== -->
+        <section class="seccion tornejos-cta" id="inscripcio">
+            <div class="container centrado">
+                <span class="kicker">Tu equipo, al campo</span>
+                <h2 class="titulo-seccion">El siguiente entrenador serás tú</h2>
+                <p class="intro-seccion">Reserva la plaza de tu equipo en La Suprema o pide el dossier del torneo que te interese.</p>
+                <div class="tornejos-hero__accions">
+                    <a class="btn btn--dorado" href="#dossier">Recibir dossier</a>
+                    <a class="btn btn--borde" href="#torneigs">Ver torneos</a>
+                </div>
+                <!-- EDITABLE: cuando haya el Google Form de inscripción, sustituir el botón por "Inscribe tu equipo" enlazado al form. -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Pie de página común (igual en todas las páginas) ===== -->
+    <footer class="pie" id="contacte">
+        <div class="container pie__grid">
+
+            <div>
+                <p class="pie__logo">LEVEL<span>UP</span></p>
+                <p class="pie__frase">Formación, competición y experiencias reales que te hacen crecer.</p>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Contacto</p>
+                <ul class="pie__lista">
+                    <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
+                    <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Síguenos</p>
+                <ul class="pie__lista">
+                    <li><a href="https://www.instagram.com/levelupfootballexperience" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@levelupfootballexperience" target="_blank" rel="noopener">TikTok</a></li>
+                    <li><a href="#">Linktree</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Legal</p>
+                <ul class="pie__lista">
+                    <li><a href="#">Aviso legal</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <p class="pie__copy">© <span id="any">2026</span> Level Up Football Experience · Todos los derechos reservados</p>
+    </footer>
+
+    <!-- JavaScript común -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

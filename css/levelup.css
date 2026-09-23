@@ -1,0 +1,894 @@
+/* ============================================================
+   LEVEL UP - CSS DE LA PÁGINA LEVEL UP / QUI SOM
+   Estilos exclusivos de levelup.html.
+   Lo común (menú, footer, botones, colores) está en global.css.
+   Orden igual que en el HTML:
+   1 Cabecera página  2 Historia  3 Filosofía  4 Pilares
+   5 Metodología  6 Valores  7 Sedes  8 Equipo
+   9 Confianza  10 CTA destinos
+   ============================================================ */
+
+/* ===== 1. CABECERA DE PÁGINA (hero corto) ===== */
+.capsalera-pagina {
+    min-height: 62vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.78), rgba(13, 13, 13, 0.78)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(8).jpg") center / cover no-repeat;
+}
+
+.capsalera-pagina__contenido { padding: 150px 0 70px; }
+
+.capsalera-pagina h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+/* ===== 2. HISTORIA / QUÉ ES LEVEL UP ===== */
+.historia__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Texto con regleta dorada vertical (estilo editorial minimalista) */
+.historia__texto {
+    border-left: 3px solid var(--dorado);
+    padding-left: 34px;
+}
+
+.historia__texto p {
+    color: var(--gris-claro);
+    margin-top: 18px;
+}
+
+.historia__texto strong { color: var(--blanco); }
+
+.historia__foto img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border: 1px solid var(--gris-oscuro);
+    box-shadow: var(--sombra);
+}
+
+/* ===== 3. FILOSOFÍA (banda con cita) ===== */
+.filosofia {
+    padding: 110px 0;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        url("../Imatges/La%20suprema/Imatges%20la%20suprema%20(12).jpg") center / cover no-repeat fixed;
+}
+
+.filosofia blockquote p {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 600;
+    line-height: 1.45;
+    max-width: 850px;
+    margin: 24px auto 18px;
+}
+
+.filosofia blockquote p::before,
+.filosofia blockquote p::after {
+    content: " \201C ";
+    color: var(--dorado);
+    font-size: 1.4em;
+}
+
+.filosofia cite {
+    font-style: normal;
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gris-claro);
+}
+
+/* ===== 4. PILARES (carrusel) ===== */
+.pilars__slider {
+    position: relative;
+    margin-top: 50px;
+    border: 1px solid var(--gris-oscuro);
+    border-top: 3px solid var(--dorado);
+    background: var(--negro-suave);
+    overflow: hidden;
+}
+
+.pilars__pista {
+    display: flex;
+    height: 480px;
+    transition: transform 0.55s ease;
+}
+
+.pilar {
+    position: relative;
+    flex: 0 0 100%;
+    min-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* La foto ocupa todo el carrusel (ancho y alto) */
+.pilar__foto {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Oscurece la foto para que el texto se lea bien */
+.pilar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13, 13, 13, 0.95) 0%,
+                                          rgba(13, 13, 13, 0.55) 55%,
+                                          rgba(13, 13, 13, 0.15) 100%);
+    pointer-events: none;
+}
+
+.pilar__cos {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    max-width: 640px;
+    padding: 46px 56px;
+}
+
+.pilar__numero {
+    font-family: var(--fuente-titulos);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--rojo);
+}
+
+.pilar__cos h3 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 12px 0 10px;
+}
+
+.pilar__cos p {
+    color: var(--gris-claro);
+    font-size: 0.95rem;
+}
+
+/* Flechas de navegación */
+.pilars__fletxa {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gris-oscuro);
+    background: rgba(13, 13, 13, 0.6);
+    color: var(--blanco);
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.pilars__fletxa:hover {
+    background: var(--rojo);
+    border-color: var(--rojo);
+}
+
+.pilars__fletxa svg {
+    width: 20px;
+    height: 20px;
+}
+
+.pilars__fletxa--esquerra { left: 20px; }
+.pilars__fletxa--dreta { right: 20px; }
+
+/* Puntos de indicación */
+.pilars__punts {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 22px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pilars__punts button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--blanco);
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.pilars__punts button.pilars__punt--actiu {
+    background: var(--dorado);
+    border-color: var(--dorado);
+    transform: scale(1.3);
+}
+
+.pilars__punts button:hover {
+    background: var(--rojo);
+    border-color: var(--rojo);
+}
+
+/* ===== 5. METODOLOGÍA ===== */
+/* Fondo de imagen oscurecido para que el texto se lea bien */
+.metodologia-fons {
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.9), rgba(13, 13, 13, 0.9)),
+        url("../Imatges/La%20suprema/Imatges%20la%20suprema%20(10).jpg") center / cover no-repeat;
+}
+
+.metodologia__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.metodologia__texto p {
+    color: var(--gris-claro);
+    margin-top: 16px;
+}
+
+.metodologia__texto strong { color: var(--blanco); }
+
+/* Píldoras de los aspectos que se trabajan */
+.metodologia__aspectes li {
+    border: 1px solid var(--gris-oscuro);
+    border-left: 3px solid var(--dorado);
+    padding: 16px 22px;
+    margin-bottom: 14px;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.metodologia__aspectes li:hover {
+    border-left-color: var(--rojo);
+    transform: translateX(6px);
+}
+
+.metodologia__aspectes strong {
+    font-family: var(--fuente-titulos);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dorado);
+}
+
+.metodologia__aspectes span {
+    display: block;
+    color: var(--gris-claro);
+    font-size: 0.86rem;
+    margin-top: 4px;
+}
+
+/* Contenedor del carrusel de aspectos (en móvil) */
+.metodologia__slider {
+    position: relative;
+}
+
+/* La barra de navegación solo se muestra en pantallas táctiles */
+.metodologia__navegacio { display: none; }
+
+/* ===== 6. VALORES (tarjetas giratorias) ===== */
+.valors {
+    background: var(--negro);
+    border-top: 3px solid var(--dorado);
+    border-bottom: 3px solid var(--dorado);
+}
+
+/* Fondo de imagen oscurecido */
+.valors-fons {
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.85)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(9).jpg") center / cover no-repeat;
+}
+
+.valors__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+/* Contenedor con profundidad 3D */
+.valor {
+    background: transparent;
+    border: 1px solid var(--gris-oscuro);
+    padding: 0;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.valor__intern {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+/* Giro: al pasar el ratón o al hacer clic (clase desde JS) */
+.valor:hover .valor__intern,
+.valor.valor--voltat .valor__intern {
+    transform: rotateY(180deg);
+}
+
+.valor__cara {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background: var(--negro-suave);
+}
+
+.valor__cara--davant {
+    border-top: 3px solid var(--dorado);
+}
+
+.valor__cara--darrera {
+    transform: rotateY(180deg);
+    background: var(--negro-suave);
+    border-top: 3px solid var(--rojo);
+}
+
+.valor__numero {
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dorado);
+}
+
+.valor h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--blanco);
+    margin-top: 14px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.valor h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 32px;
+    height: 2px;
+    background: var(--rojo);
+}
+
+.valor__text {
+    color: var(--gris-claro);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ===== 7. SEDES ===== */
+.seus__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+    max-width: 860px;
+    margin-inline: auto;
+}
+
+.seu {
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    padding: 30px 28px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease;
+}
+
+.seu__foto {
+    margin: -30px -28px 20px;
+    overflow: hidden;
+}
+
+.seu__foto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.seu:hover { border-color: var(--dorado); }
+
+.seu:hover .seu__foto img { transform: scale(1.05); }
+
+.seu .etiqueta { margin-bottom: 14px; }
+
+.seu h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    min-height: 3.1em;
+    margin-bottom: 14px;
+}
+
+.seu__nom {
+    color: var(--dorado);
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.seu__dades {
+    list-style: none;
+    margin-bottom: 18px;
+}
+
+.seu__dades li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gris-oscuro);
+    color: var(--gris-claro);
+    font-size: 0.92rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.seu__dades li:last-child { border-bottom: none; }
+
+.seu__dades li span {
+    color: var(--blanco);
+    font-weight: 600;
+    text-align: right;
+}
+
+.seu__maps {
+    display: inline-block;
+    margin-top: auto;
+    align-self: center;
+    padding: 10px 20px;
+    background: var(--dorado);
+    color: var(--negro-suave);
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.seu__maps:hover {
+    background: var(--blanco);
+    transform: translateY(-2px);
+}
+
+/* ===== 8. EQUIPO ===== */
+.equip__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+}
+
+.membre {
+    text-align: center;
+    padding: 30px 18px;
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.membre:hover {
+    border-color: var(--dorado);
+    transform: translateY(-5px);
+}
+
+/* Avatar con foto (antes eran iniciales) */
+.membre__avatar {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto 18px;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid var(--dorado);
+    object-fit: cover;
+}
+
+.membre h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.membre p {
+    color: var(--gris-claro);
+    font-size: 0.84rem;
+    margin-top: 6px;
+}
+
+.equip__nota {
+    text-align: center;
+    color: var(--gris-claro);
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+/* ===== 9. CONFIANZA (cifras estáticas) ===== */
+.confianca {
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.88), rgba(13, 13, 13, 0.88)),
+        url("../Imatges/La%20suprema/Imatges%20la%20suprema%20(7).jpg") center / cover no-repeat;
+}
+
+.confianca__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 46px;
+    text-align: center;
+}
+
+.confianca__dada {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: var(--blanco);
+}
+
+.confianca__dada span { color: var(--rojo); }
+
+.confianca__etiqueta {
+    color: var(--gris-claro);
+    font-family: var(--fuente-titulos);
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+/* ===== 10. CTA FINAL: ACCESOS A LAS 4 LÍNEAS ===== */
+.destins__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 50px;
+}
+
+.desti {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 190px;
+    padding: 28px 24px;
+    border: 1px solid var(--gris-oscuro);
+    background: var(--negro-suave);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.desti:hover {
+    transform: translateY(-6px);
+    border-color: var(--dorado);
+}
+
+.desti h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.02rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--blanco);
+}
+
+.desti p {
+    color: var(--gris-claro);
+    font-size: 0.85rem;
+    margin: 10px 0 18px;
+}
+
+.desti span {
+    font-family: var(--fuente-titulos);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dorado);
+}
+
+.desti:hover span { color: var(--rojo); }
+
+.desti span::after { content: " →"; }
+
+/* Fondo de foto en cada destino del CTA final */
+.desti--tecnificacio {
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.82), rgba(13, 13, 13, 0.82)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(2).jpg") center / cover no-repeat;
+}
+
+.desti--campus {
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.82), rgba(13, 13, 13, 0.82)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(6).jpg") center / cover no-repeat;
+}
+
+.desti--tornejos {
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.82), rgba(13, 13, 13, 0.82)),
+        url("../Imatges/La%20suprema/trofeo%20la%20suprema.jpg") center / cover no-repeat;
+}
+
+.desti--seleccions {
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.82), rgba(13, 13, 13, 0.82)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(4).jpg") center / cover no-repeat;
+}
+
+/* ===== RESPONSIVE DE LA PÁGINA ===== */
+@media (max-width: 900px) {
+
+    .capsalera-pagina { min-height: 48vh; }
+    .capsalera-pagina__contenido { padding: 130px 0 50px; }
+
+    .historia__grid,
+    .metodologia__grid {
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+
+    /* En móvil los aspectos de metodología pasan a un carrusel:
+       cada uno ocupa todo el ancho y se navega con la barra inferior */
+    .metodologia__slider {
+        overflow: hidden;
+        border: 1px solid var(--gris-oscuro);
+        border-top: 3px solid var(--dorado);
+        background: var(--negro-suave);
+    }
+
+    .metodologia__aspectes {
+        display: flex;
+        min-height: 200px;
+        transition: transform 0.5s ease;
+    }
+
+    .metodologia__aspectes li {
+        flex: 0 0 100%;
+        min-width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 38px 42px;
+        border: none;
+        border-left: 3px solid var(--dorado);
+        transition: border-left-color 0.25s ease;
+    }
+
+    .metodologia__aspectes li:hover { transform: none; }
+
+    .metodologia__aspectes strong { font-size: 1rem; }
+
+    .metodologia__aspectes span { font-size: 0.92rem; }
+
+    .metodologia__navegacio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 14px 16px;
+        border-top: 1px solid var(--gris-oscuro);
+    }
+
+    .metodologia__fletxa {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--gris-oscuro);
+        background: transparent;
+        color: var(--blanco);
+        cursor: pointer;
+        transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    }
+
+    .metodologia__fletxa:hover {
+        background: var(--rojo);
+        border-color: var(--rojo);
+    }
+
+    .metodologia__fletxa svg { width: 18px; height: 18px; }
+
+    .metodologia__punts {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .metodologia__punts button {
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border-radius: 50%;
+        border: 1px solid var(--blanco);
+        background: transparent;
+        cursor: pointer;
+        transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .metodologia__punts button.metodologia__punt--actiu {
+        background: var(--dorado);
+        border-color: var(--dorado);
+        transform: scale(1.3);
+    }
+
+    /* Foto como fondo con el texto encima (móvil) */
+    .seccion-historia {
+        padding: 0;
+        background: var(--negro);
+    }
+
+    .seccion-historia .container {
+        width: 100%;
+    }
+
+    .historia__grid {
+        position: relative;
+        min-height: 560px;
+        overflow: hidden;
+    }
+
+    .historia__foto {
+        position: absolute;
+        inset: 0;
+    }
+
+    .historia__foto::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom,
+                                    rgba(13, 13, 13, 0.55) 0%,
+                                    rgba(13, 13, 13, 0.95) 100%);
+    }
+
+    .historia__foto img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: none;
+        box-shadow: none;
+    }
+
+    .historia__texto {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 560px;
+        border-left: none;
+        padding: 100px 28px;
+    }
+
+    .historia__texto .kicker,
+    .historia__texto .titulo-seccion {
+        text-align: center;
+    }
+
+    /* Barra dorada horizontal entre el título y el texto */
+    .historia__texto .titulo-seccion {
+        margin-bottom: 8px;
+    }
+
+    .historia__texto .titulo-seccion::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: var(--dorado);
+        margin: 14px auto 22px;
+    }
+
+    .historia__texto p {
+        text-align: center;
+    }
+
+    .pilars__pista { height: 400px; }
+    .pilar__cos { padding: 34px 40px; }
+
+    .valors__grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Tarjetas de valors más compactas en pantallas táctiles
+       para que la sección ocupe menos altura. */
+    .valor__intern { height: 160px; }
+
+    .valor__cara { padding: 24px 22px; }
+
+    .valor__numero { font-size: 1.25rem; }
+
+    .valor h3 { font-size: 0.98rem; margin-top: 10px; }
+
+    .valor__text { font-size: 0.88rem; }
+
+    .seus__grid { grid-template-columns: 1fr; }
+
+    .equip__grid { grid-template-columns: repeat(2, 1fr); }
+
+    .confianca__grid { grid-template-columns: 1fr; gap: 36px; }
+
+    .destins__grid { grid-template-columns: repeat(2, 1fr); }
+
+    .filosofia { background-attachment: scroll; }
+}
+
+@media (max-width: 520px) {
+
+    .pilars__pista { height: 360px; }
+    .pilar__cos { padding: 28px 26px; }
+
+    /* 2 columnas también en móvil: reduce mucho la altura de la sección */
+    .valors__grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+    .valor__intern { height: 150px; }
+
+    .valor__cara { padding: 20px 14px; }
+
+    .valor__numero { font-size: 1.05rem; }
+
+    .valor h3 { font-size: 0.78rem; letter-spacing: 0.5px; margin-top: 8px; padding-bottom: 6px; }
+
+    .valor__text { font-size: 0.8rem; line-height: 1.5; }
+
+    .metodologia__aspectes { min-height: 180px; }
+
+    .metodologia__aspectes li { padding: 30px 28px; }
+
+    .equip__grid,
+    .destins__grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMPUS | Level Up Football Experience</title>
+    <meta name="description" content="Campus Level Up: programes intensius de perfeccionament en períodes vacacionals. Nadal, Setmana Santa i Estiu.">
+
+    <!-- Marca que hay JavaScript para activar las animaciones de scroll -->
+    <script>document.documentElement.className = "js";</script>
+    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/png">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/campus.css">
+</head>
+<body>
+
+    <a class="saltar-contenido" href="#contingut">Anar al contingut</a>
+
+    <!-- ===== Cabecera común (igual en todas las páginas) ===== -->
+    <header class="cabecera">
+        <div class="cabecera__contenido container">
+
+            <!-- ===== Zona izquierda: logo (un único enlace) ===== -->
+            <a href="index.html" class="logo" aria-label="Level Up - pàgina d'inici">
+                <img src="../Imatges/Logo_LevelUp.ico" alt="" class="logo__img">
+                <span class="logo__texto">Level<span class="logo__acento">Up</span></span>
+            </a>
+
+            <!-- ===== Zona central: navegació principal =====
+                 Per afegir o treure pàgines, només cal afegir o treure un <li>. -->
+            <nav class="menu" id="menu-principal" aria-label="Menú principal">
+                <ul class="menu__lista">
+                    <li><a class="menu__enlace" href="index.html">Inici</a></li>
+                    <li><a class="menu__enlace" href="levelup.html">Level Up</a></li>
+                    <li><a class="menu__enlace" href="tecnificacio.html">Tecnificació</a></li>
+                    <li><a class="menu__enlace menu__enlace--activo" href="campus.html" aria-current="page">Campus</a></li>
+                    <li><a class="menu__enlace" href="tornejos.html">Tornejos</a></li>
+                    <li><a class="menu__enlace" href="seleccions.html">Seleccions</a></li>
+                </ul>
+            </nav>
+
+            <!-- ===== Zona dreta: idioma + hamburguesa ===== -->
+            <div class="cabecera__acciones">
+
+                <!-- Selector d'idioma. De moment només és un botó. -->
+                <div class="cabecera__idioma">
+                    <button type="button" class="cabecera__idioma-boton"
+                            aria-label="Canvia l'idioma" aria-haspopup="true" aria-expanded="false">
+                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Catala">
+                    </button>
+
+                    <ul class="menu__lista cabecera__idioma-lista">
+                        <li><a class="menu__enlace menu__enlace--activo" href="campus.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
+                        <li><a class="menu__enlace" href="../es/campus.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace" href="../en/campus.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
+                    </ul>
+                </div>
+
+                <button class="hamburguesa" type="button" aria-label="Obrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main id="contingut">
+
+        <!-- ==================== 1. CABECERA ==================== -->
+        <section class="capsalera-pagina">
+            <div class="container capsalera-pagina__contenido">
+                <p class="kicker">Campus Level Up</p>
+                <h1>Campus</h1>
+                <p>Perfeccionament intensiu en períodes vacacionals. Futbol de qualitat, grups reduïts i màxima intensitat en cada edició.</p>
+                <div class="capsalera-pagina__accions">
+                    <a class="btn btn--dorado" href="#proxim-campus">Veure el pròxim campus</a>
+                    <a class="btn btn--rojo" href="#inscripcio">Inscriu-t'hi</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 2. QUÉ ES EL CAMPUS ==================== -->
+        <section class="seccion campus-quees" data-reveal="left">
+            <div class="container centrado campus-quees__contenido">
+                <p class="campus-quees__titular">Campus Level Up</p>
+                <h2 class="titulo-seccion">Què és el Campus Level Up?</h2>
+                <p class="campus-quees__lead"><strong>Els Campus Level Up no són un campus lúdic: són un programa formatiu.</strong></p>
+                <p>Durant els períodes vacacionals, oferim la possibilitat de <strong>continuar entrenant en un entorn professional</strong>, amb grans formadors i entrenaments de màxima qualitat formativa. Treballem totes les estructures del jugador/a a través de situacions personalitzades i d'alta intensitat.</p>
+                <p>Són sinònim de professionalitat: cada edició està planificada perquè, mentre no hi ha futbol de club, el jugador/a <strong>continui creixent</strong> i no perdi el ritme.</p>
+            </div>
+        </section>
+
+        <!-- ==================== 3. CÓMO TRABAJAMOS (carrusel) ==================== -->
+        <section class="seccion seccion--fondo-suave" id="com-treballem" data-reveal>
+            <div class="container">
+                <span class="kicker">Com treballem</span>
+                <h2 class="titulo-seccion">Entrenaments de qualitat, no de rellotge</h2>
+
+                <div class="campus-treball__carrusel" data-carrusel>
+                    <div class="campus-treball__pista" data-btn-group>
+                        <div class="campus-treball__bloc">
+                            <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(6).jpg" alt="">
+                            <div>
+                                <p class="campus-treball__num">01</p>
+                                <h3>Grups ajustats</h3>
+                                <p>Ràtios reduïdes per garantir atenció individual, molt toc de pilota i correccions constants.</p>
+                            </div>
+                        </div>
+                        <div class="campus-treball__bloc">
+                            <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(2).jpg" alt="">
+                            <div>
+                                <p class="campus-treball__num">02</p>
+                                <h3>Alta intensitat</h3>
+                                <p>Sessions exigents i dinàmiques, amb context de partit i transferència real al joc.</p>
+                            </div>
+                        </div>
+                        <div class="campus-treball__bloc">
+                            <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(7).jpg" alt="">
+                            <div>
+                                <p class="campus-treball__num">03</p>
+                                <h3>Adaptació per edat i nivell</h3>
+                                <p>Grups i tasques adaptats a la categoria i al nivell de cada participant. Tothom hi progressa.</p>
+                            </div>
+                        </div>
+                        <div class="campus-treball__bloc">
+                            <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(9).jpg" alt="">
+                            <div>
+                                <p class="campus-treball__num">04</p>
+                                <h3>Recursos complementaris</h3>
+                                <p>Fisioteràpia, treball condicional i anàlisi per cuidar el jugador/a i potenciar el seu rendiment.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="campus-treball__navegacio">
+                        <button class="campus-treball__fletxa campus-treball__fletxa--prev" type="button" aria-label="Anterior" data-prev>←</button>
+                        <div class="campus-treball__punts" data-punts>
+                            <button class="campus-treball__punt campus-treball__punt--actiu" type="button" aria-label="Anar a la diapositiva 1" data-punt="0"></button>
+                            <button class="campus-treball__punt" type="button" aria-label="Anar a la diapositiva 2" data-punt="1"></button>
+                            <button class="campus-treball__punt" type="button" aria-label="Anar a la diapositiva 3" data-punt="2"></button>
+                            <button class="campus-treball__punt" type="button" aria-label="Anar a la diapositiva 4" data-punt="3"></button>
+                        </div>
+                        <button class="campus-treball__fletxa campus-treball__fletxa--next" type="button" aria-label="Següent" data-next>→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. EDICIONES (NADAL / SETMANA SANTA / ESTIU) ==================== -->
+        <section class="seccion" id="edicions" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Edicions</span>
+                <h2 class="titulo-seccion">Tres temporades de campus</h2>
+                <p class="intro-seccion">Els Campus Level Up s'organitzen en tres edicions anuals. Cada una mostra el seu estat: actiu, pròximament o finalitzat.</p>
+                <div class="campus-edicions__grid">
+                    <div class="campus-edicio">
+                        <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(1).jpg" alt="">
+                        <div>
+                            <span class="etiqueta etiqueta--actiu campus-edicio__estat">ACTIU</span>
+                            <h3>Nadal</h3>
+                            <p class="campus-edicio__datas">Desembre – Gener<br>9:00h a 13:30h</p>
+                            <p class="campus-edicio__grup">Edició actual</p>
+                        </div>
+                    </div>
+                    <div class="campus-edicio">
+                        <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(4).jpg" alt="">
+                        <div>
+                            <span class="etiqueta etiqueta--proximament campus-edicio__estat">PRÒXIMAMENT</span>
+                            <h3>Setmana Santa</h3>
+                            <p class="campus-edicio__datas">Març – Abril<br>Dates per confirmar</p>
+                            <p class="campus-edicio__grup">Obre inscripcions aviat</p>
+                        </div>
+                    </div>
+                    <div class="campus-edicio">
+                        <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(10).jpg" alt="">
+                        <div>
+                            <span class="etiqueta etiqueta--finalitzat campus-edicio__estat">FINALITZAT</span>
+                            <h3>Estiu</h3>
+                            <p class="campus-edicio__datas">Juny – Juliol<br>Edició 2026</p>
+                            <p class="campus-edicio__grup">Tornem l'any vinent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. PRÓXIMO CAMPUS (edición protagonista amplia) ==================== -->
+        <section class="seccion campus-proxim" id="proxim-campus" data-reveal="escala">
+            <div class="container">
+<div class="campus-proxim__targeta">
+                    <span class="campus-proxim__etiqueta">Edició protagonista</span>
+                    <h2>Campus Nadal '26</h2>
+
+                    <div class="campus-proxim__foto">
+                        <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(5).jpg" alt="Fotografia del Campus Level Up de Nadal">
+                        <span class="etiqueta etiqueta--inscripcions">Inscripcions obertes</span>
+                    </div>
+
+                    <details class="campus-proxim__desplegable">
+                        <summary>
+                            <span>Més info</span>
+                            <span class="campus-proxim__indicador" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="campus-proxim__info">
+                            <div class="campus-proxim__dada">
+                                <strong>Dates</strong>
+                                <span>22, 23, 24, 29, 30, 31 de Desembre i 2 de Gener</span>
+                            </div>
+                            <div class="campus-proxim__dada">
+                                <strong>Horari</strong>
+                                <span>9:00h – 13:30h</span>
+                            </div>
+                            <div class="campus-proxim__dada">
+                                <strong>Categories</strong>
+                                <span>De S7 a S15 · 2019 a 2011</span>
+                            </div>
+                            <div class="campus-proxim__dada">
+                                <strong>Seus</strong>
+                                <span>L'Ametlla del Vallès · La Torreta (La Roca del Vallès)</span>
+                            </div>
+                        </div>
+                    </details>
+
+                    <div class="campus-proxim__accions">
+                        <a class="btn btn--dorado" href="#dossier">Veure dossier Campus Nadal '26</a>
+                        <a class="btn btn--rojo" href="#inscripcio">Inscriu-te al Campus Nadal</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- ==================== 6. QUÉ INCLUYE (índex editorial) ==================== -->
+        <section class="seccion campus-serveis-seccio" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Què inclou</span>
+                <h2 class="titulo-seccion">Tot el que necessites per rendir</h2>
+                <p class="intro-seccion">Serveis essencials de cada edició, pensats perquè el jugador/a i la família ho tinguin tot cobert.</p>
+                <div class="campus-serveis">
+                    <div class="campus-serveis__fila">
+                        <p class="campus-serveis__num">01</p>
+                        <h3 class="campus-serveis__titol">Entrenaments diaris</h3>
+                        <p class="campus-serveis__text">Sessions diàries de tècnica, tàctica i presa de decisions amb la metodologia Level Up.</p>
+                    </div>
+                    <div class="campus-serveis__fila">
+                        <p class="campus-serveis__num">02</p>
+                        <h3 class="campus-serveis__titol">Cos tècnic professional</h3>
+                        <p class="campus-serveis__text">Formadors i entrenadors en actiu amb experiència formativa i de competició.</p>
+                    </div>
+                    <div class="campus-serveis__fila">
+                        <p class="campus-serveis__num">03</p>
+                        <h3 class="campus-serveis__titol">Material esportiu</h3>
+                        <p class="campus-serveis__text">Samarreta del campus i tot el material d'entrenament inclòs en el preu.</p>
+                    </div>
+                    <div class="campus-serveis__fila">
+                        <p class="campus-serveis__num">04</p>
+                        <h3 class="campus-serveis__titol">Seguiment del jugador</h3>
+                        <p class="campus-serveis__text">Feedback durant el campus i informe final per conèixer l'evolució del participant.</p>
+                    </div>
+                    <div class="campus-serveis__fila">
+                        <p class="campus-serveis__num">05</p>
+                        <h3 class="campus-serveis__titol">Seguretat i assegurança</h3>
+                        <p class="campus-serveis__text">Assegurança d'accidents i protocol d'atenció per garantir un entorn segur.</p>
+                    </div>
+                    <div class="campus-serveis__fila">
+                        <p class="campus-serveis__num">06</p>
+                        <h3 class="campus-serveis__titol">Acompanyament familiar</h3>
+                        <p class="campus-serveis__text">Comunicació clara i constant amb les famílies durant tota la durada del campus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 7. DOSSIER CTA ==================== -->
+        <section class="seccion campus-dossier" id="dossier" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Tot el detall</span>
+                <h2 class="titulo-seccion">Baixa el dossier del campus</h2>
+                <p>Dates, horaris, seus, grups i condicions de l'edició en un sol document. Sense registrar-te: només un clic.</p>
+                <a class="btn btn--dorado" href="../pdf/dossier-campus-nadal-26.pdf" target="_blank" rel="noopener">Veure dossier Campus Nadal '26</a>
+                <!-- EDITABLE: substituir pel PDF real del dossier quan estigui disponible. -->
+            </div>
+        </section>
+
+        <!-- ==================== 8. INSCRIPCIÓN CTA ==================== -->
+        <section class="seccion campus-inscripcio" id="inscripcio" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Últim pas</span>
+                <h2 class="titulo-seccion">Inscriu-te al Campus Nadal '26</h2>
+                <p>Omple el formulari i reserva la plaça del jugador/a. Places limitades per garantir grups reduïts.</p>
+                <a class="btn btn--rojo" href="#" target="_blank" rel="noopener">Inscriu-te al Campus</a>
+                <!-- EDITABLE: substituir "#" pel link del Google Form específic de l'edició. -->
+            </div>
+        </section>
+
+<!-- ==================== 9. EXPERIENCIAS ANTERIORES ==================== -->
+        <section class="seccion seccion--fondo-suave" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Experiències</span>
+                <h2 class="titulo-seccion">Edicions anteriors</h2>
+                <p class="intro-seccion">Cada any sumem més jugadors/es que confien en la nostra manera d'entrenar.</p>
+                <div class="campus-experiencies__grid">
+                    <div class="campus-experiencia">
+                        <p class="campus-experiencia__cifra"><em>+</em>500</p>
+                        <p>Jugadors/es formats</p>
+                    </div>
+                    <div class="campus-experiencia">
+                        <p class="campus-experiencia__cifra">2</p>
+                        <p>Seus actives per edició</p>
+                    </div>
+                    <div class="campus-experiencia">
+                        <p class="campus-experiencia__cifra"><em>+</em><span>30</span></p>
+                        <p>Tècnics i formadors</p>
+                    </div>
+                </div>
+                <div class="campus-testimonis">
+                    <blockquote class="campus-testimoni">
+                        <p>"El meu fill va tornar del campus amb més confiança que mai. Es nota que cuiden cada detall i que estimen el que fan."</p>
+                        <footer>Família participant · Campus Estiu</footer>
+                    </blockquote>
+                    <blockquote class="campus-testimoni">
+                        <p>"Grups reduïts, entrenadors de primer nivell i molt toc de pilota. Sense cap dubte, el millor campus de la zona."</p>
+                        <footer>Pare de jugador · Campus Nadal</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Peu de pàgina comú (igual en totes les pàgines) ===== -->
+    <footer class="pie">
+        <div class="container pie__grid">
+
+            <div>
+                <p class="pie__logo">LEVEL<span>UP</span></p>
+                <p class="pie__frase">Formació, competició i experiències reals que et fan créixer.</p>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Contacte</p>
+                <ul class="pie__lista">
+                    <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
+                    <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Segueix-nos</p>
+                <ul class="pie__lista">
+                    <li><a href="https://www.instagram.com/levelupfootballexperience" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@levelupfootballexperience" target="_blank" rel="noopener">TikTok</a></li>
+                    <li><a href="#">Linktree</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Legal</p>
+                <ul class="pie__lista">
+                    <li><a href="#">Avís legal</a></li>
+                    <li><a href="#">Política de privacitat</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <p class="pie__copy">© <span id="any">2026</span> Level Up Football Experience · Tots els drets reservats</p>
+    </footer>
+
+    <!-- JavaScript común -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

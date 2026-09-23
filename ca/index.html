@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICI | Level Up Football Experience</title>
+    <meta name="description" content="Formació, competició i experiències reals que et fan créixer. Tecnificació, campus, tornejos i seleccions Level Up.">
+
+    <!-- Marca que hay JavaScript para activar las animaciones de scroll -->
+    <script>document.documentElement.className = "js";</script>
+    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/png">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/inici.css">
+</head>
+<body>
+
+    <a class="saltar-contenido" href="#contingut">Anar al contingut</a>
+
+    <header class="cabecera">
+        <div class="cabecera__contenido container">
+
+            <!-- ===== Zona izquierda: logo (un único enlace) ===== -->
+            <a href="index.html" class="logo" aria-label="Level Up - pàgina d'inici">
+                <img src="../Imatges/Logo_LevelUp.ico" alt="" class="logo__img">
+                <span class="logo__texto">Level<span class="logo__acento">Up</span></span>
+            </a>
+
+            <!-- ===== Zona central: navegació principal =====
+                 Per afegir o treure pàgines, només cal afegir o treure un <li>. -->
+            <nav class="menu" id="menu-principal" aria-label="Menú principal">
+                <ul class="menu__lista">
+                    <li><a class="menu__enlace menu__enlace--activo" href="index.html" aria-current="page">Inici</a></li>
+                    <li><a class="menu__enlace" href="levelup.html">Level Up</a></li>
+                    <li><a class="menu__enlace" href="tecnificacio.html">Tecnificació</a></li>
+                    <li><a class="menu__enlace" href="campus.html">Campus</a></li>
+                    <li><a class="menu__enlace" href="tornejos.html">Tornejos</a></li>
+                    <li><a class="menu__enlace" href="seleccions.html">Seleccions</a></li>
+                </ul>
+            </nav>
+
+            <!-- ===== Zona dreta: idioma + CTA + hamburguesa ===== -->
+            <div class="cabecera__acciones">
+
+                <!-- Selector d'idioma. De moment només és un botó.
+                     El comportament s'afegirà més endavant. -->
+                <div class="cabecera__idioma">
+                    <button type="button" class="cabecera__idioma-boton"
+                            aria-label="Canvia l'idioma" aria-haspopup="true" aria-expanded="false">
+                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Catala">
+                    </button>
+
+                    <ul class="menu__lista cabecera__idioma-lista">
+                        <li><a class="menu__enlace menu__enlace--activo" href="index.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
+                        <li><a class="menu__enlace" href="../es/index.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace" href="../en/index.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
+                    </ul>
+                </div>
+
+              
+                <button class="hamburguesa" type="button" aria-label="Obrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main id="contingut">
+
+        <!--  1. HERO / PRESENTACIÓN  -->
+        <section class="hero">
+            <div class="container hero__contenido">
+                <h1 class="hero__titulo">Level <span>Up</span> Football Experience</h1>
+                <p class="hero__frase">Formació, competició i experiències reals que et fan créixer.</p>
+                <div class="hero__botones">
+                    <a class="btn btn--dorado" href="levelup.html">Descobreix Level Up</a>
+                    <a class="btn btn--borde" href="#experiencies">Veure experiències</a>
+                </div>
+            </div>
+            <span class="hero__flecha" aria-hidden="true">▾</span>
+        </section>
+
+        <!--  2. QUÈ ÉS LEVEL UP -->
+        <section class="seccion seccion--qui-som" data-reveal="left">
+            <div class="container quienes-somos__grid">
+
+                <div class="quienes-somos__texto">
+                    <span class="kicker">Sobre nosaltres</span>
+                    <h2 class="titulo-seccion quienes-somos__titulo">Què és Level&nbsp;Up?</h2>
+                    <p>Level Up Football Experience és un projecte que desenvolupa
+                       <strong>experiències formatives i competitives</strong> per a jugadors,
+                       famílies i clubs.</p>
+                    <p>Combinem <strong>formació, competició i organització d'esdeveniments</strong>
+                       per acompanyar cada jugador en el seu creixement esportiu i personal,
+                       sempre amb grups reduïts i seguiment individual.</p>
+                </div>
+
+                <div class="quienes-somos__foto">
+                    <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(4).jpg"
+                         alt="Entrenament de Level Up Football Experience">
+                </div>
+
+            </div>
+        </section>
+
+        <!--  3. TRES GRANS ÀREES  -->
+        <section class="seccion seccion--areas centrado" data-reveal>
+            <img class="seccion--areas__fondo" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(5).jpg" alt="" aria-hidden="true">
+            <div class="container">
+                <span class="kicker">Les nostres línies</span>
+                <h2 class="titulo-seccion">Tres grans àrees</h2>
+                <p class="intro-seccion">
+                   Tot el que fem es mou entre tres línies clares. Entra en cadascuna per saber-ne més.
+                </p>
+
+                <div class="areas__grid">
+
+                    <article class="area area--formacio">
+                        <div class="area__foto"></div>
+                        <div class="area__cuerpo">
+                            <h3 class="area__nombre">Formació</h3>
+                            <p class="area__descripcion">
+                               Dos programes per seguir creixent durant tota la temporada,
+                               també en període vacacional.
+                            </p>
+                            <div class="area__links">
+                                <a class="area__enlace" href="tecnificacio.html">Tecnificació</a>
+                                <a class="area__enlace" href="campus.html">Campus</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="area area--seleccions">
+                        <div class="area__foto"></div>
+                        <div class="area__cuerpo">
+                            <h3 class="area__nombre">Seleccions</h3>
+                            <p class="area__descripcion">
+                               Equips Level Up per competir en experiències seleccionades durant la temporada.
+                            </p>
+                            <a class="area__enlace" href="seleccions.html">Descobrir seleccions</a>
+                        </div>
+                    </article>
+
+                    <article class="area area--tornejos">
+                        <div class="area__foto"></div>
+                        <div class="area__cuerpo">
+                            <h3 class="area__nombre">Tornejos</h3>
+                            <p class="area__descripcion">
+                               Competicions pròpies amb organització professional i segell Level Up.
+                            </p>
+                            <a class="area__enlace" href="tornejos.html">Descobrir tornejos</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!--  4. QUÈ ENS DIFERENCIA  -->
+        <section class="diferencial" data-reveal="right">
+            <div class="container">
+                <span class="kicker">La nostra manera de treballar</span>
+                <h2 class="titulo-seccion">Què ens diferencia?</h2>
+
+                <ul class="diferencial__lista">
+
+                    <li class="diferencial__item">
+                        <span class="diferencial__punt"></span>
+                        <span class="diferencial__text">Grups reduïts</span>
+                    </li>
+                    <li class="diferencial__item">
+                        <span class="diferencial__punt"></span>
+                        <span class="diferencial__text">Correccions individuals</span>
+                    </li>
+                    <li class="diferencial__item">
+                        <span class="diferencial__punt"></span>
+                        <span class="diferencial__text">Ritme alt d'entrenament</span>
+                    </li>
+                    <li class="diferencial__item">
+                        <span class="diferencial__punt"></span>
+                        <span class="diferencial__text">Metodologia pròpia</span>
+                    </li>
+                    <li class="diferencial__item">
+                        <span class="diferencial__punt"></span>
+                        <span class="diferencial__text">Seguiment continu</span>
+                    </li>
+                    <li class="diferencial__item">
+                        <span class="diferencial__punt"></span>
+                        <span class="diferencial__text">Organització professional</span>
+                    </li>
+                    <li class="diferencial__item">
+                        <span class="diferencial__punt"></span>
+                        <span class="diferencial__text">Experiències reals</span>
+                    </li>
+                    <li class="diferencial__item">
+                        <span class="diferencial__punt"></span>
+                        <span class="diferencial__text">Formació i competició connectades</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--  5. PRÒXIMES EXPERIÈNCIES 
+             Máximo 3 tarjetas. Para actualizar una tarjeta cambia:
+             etiqueta de estado, título, datos, texto, foto y botón. -->
+        <section class="seccion" id="experiencies" data-reveal>
+            <div class="container">
+                <span class="kicker">Agenda 26-27</span>
+                <h2 class="titulo-seccion">Pròximes experiències</h2>
+
+                <div class="experiencias__grid">
+
+                    <!-- TARJETA 1 · Tecnificació -->
+                    <article class="experiencia">
+                        <div class="experiencia__foto">
+                            <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(7).jpg"
+                                 alt="Entrenament de tecnificació">
+                        </div>
+                        <div class="experiencia__cuerpo">
+                            <span class="etiqueta etiqueta--actiu">Actiu</span>
+                            <h3 class="experiencia__titulo">Tecnificació Perfecciona't 26-27</h3>
+                            <p class="experiencia__datos">Setembre 2026 – Juny 2027 · Sub8 – Sub18</p>
+                            <p class="experiencia__texto">
+                               Treball complementari al club, personalitzat i en grups reduïts,
+                               amb correccions individuals i seguiment continu.
+                            </p>
+                            <div class="experiencia__botones">
+                                <a class="btn btn--borde" href="tecnificacio.html">Més informació</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 2 · La Suprema -->
+                    <article class="experiencia">
+                        <div class="experiencia__foto">
+                            <img src="../Imatges/La%20suprema/trofeo%20la%20suprema.jpg"
+                                 alt="Trofeus de La Suprema">
+                        </div>
+                        <div class="experiencia__cuerpo">
+                            <span class="etiqueta etiqueta--inscripcions">Inscripcions obertes</span>
+                            <h3 class="experiencia__titulo">La Suprema</h3>
+                            <p class="experiencia__datos">Abril 2027 · Sub14 / Sub16 · Clubs i equips</p>
+                            <p class="experiencia__texto">
+                               El torneig de referència: competició exigent, serveis complets i
+                               una experiència pensada per als equips que venen a guanyar.
+                            </p>
+                            <!-- El PDF debe estar en la carpeta /pdf con este nombre exacto -->
+                            <div class="experiencia__botones">
+                                <a class="btn btn--rojo" href="../pdf/dossier-la-suprema.pdf" target="_blank" rel="noopener">Veure dossier</a>
+                                <!-- Inserta aquí el enlace del formulari de Google Forms -->
+                                <a class="btn btn--borde" href="#">Inscriu-te!</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- TARJETA 3 · Campus d'estiu -->
+                    <article class="experiencia">
+                        <div class="experiencia__foto">
+                            <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(11).jpg"
+                                 alt="Campus d'estiu Level Up">
+                        </div>
+                        <div class="experiencia__cuerpo">
+                            <span class="etiqueta etiqueta--proximament">Pròximament</span>
+                            <h3 class="experiencia__titulo">Campus d'Estiu 2027</h3>
+                            <p class="experiencia__datos">Juliol 2027 · Sub8 – Sub16</p>
+                            <p class="experiencia__texto">
+                               Programa intensiu de perfeccionament en període vacacional:
+                               entrenament de qualitat, bons grups i molta pilota.
+                            </p>
+                            <div class="experiencia__botones">
+                                <a class="btn btn--borde" href="campus.html">Més informació</a>
+                            </div>
+                        </div>
+                        
+                    </article>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!--  6. XIFRES / TRAYECTORIA 
+             Cambia los números en data-objectiu (sin el signo +). -->
+        <section class="xifres" data-reveal>
+            <div class="container xifres__grid">
+                <div>
+                    <p class="xifres__numero" data-objectiu="9000" data-prefixe="+">+0</p>
+                    <p class="xifres__etiqueta">Participants als nostres tornejos</p>
+                </div>
+                <div>
+                    <p class="xifres__numero" data-objectiu="2000" data-prefixe="+">+0</p>
+                    <p class="xifres__etiqueta">Jugadors en programes formatius</p>
+                </div>
+                <div>
+                    <p class="xifres__numero" data-objectiu="870" data-prefixe="+">+0</p>
+                    <p class="xifres__etiqueta">Equips que han competit aquí</p>
+                </div>
+                <div>
+                    <p class="xifres__numero" data-objectiu="1300" data-prefixe="+">+0</p>
+                    <p class="xifres__etiqueta">Partits disputats en tornejos Level</p>
+                </div>
+                <div>
+                    <p class="xifres__numero" data-objectiu="60" data-prefixe="+">+0</p>
+                    <p class="xifres__etiqueta">Clubs que ja han confiat en nosaltres</p>
+                </div>
+                <div>
+                    <p class="xifres__numero" data-objectiu="8" data-prefixe="+">+0</p>
+                    <p class="xifres__etiqueta">Anys d'experiència organitzant tornejos</p>
+                </div>
+            </div>
+        </section>
+
+        <!--  7. TESTIMONIS  -->
+        <section class="seccion seccion--fondo-suave" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Confiança</span>
+                <h2 class="titulo-seccion">Què diu la gent?</h2>
+
+                <div class="testimonis__grid">
+
+                    <article class="testimoni">
+                        <span class="testimoni__comillas" aria-hidden="true">&ldquo;</span>
+                        <p class="testimoni__texto">
+                           Una experiència única pel nostre fill, ha crescut dins i fora del camp.
+                        </p>
+                        <p class="testimoni__autor">Família · Sergi Vives, formador UE Sant Andreu</p>
+                    </article>
+
+                    <article class="testimoni">
+                        <span class="testimoni__comillas" aria-hidden="true">&ldquo;</span>
+                        <p class="testimoni__texto">
+                           Organització impecable, tot estava sota control. Repetirem segur.
+                        </p>
+                        <p class="testimoni__autor">Club · Sergi Vives, formador UE Sant Andreu</p>
+                    </article>
+
+                    <article class="testimoni">
+                        <span class="testimoni__comillas" aria-hidden="true">&ldquo;</span>
+                        <p class="testimoni__texto">
+                           He après molt més que futbol: esforç, companyonia i confiança.
+                        </p>
+                        <p class="testimoni__autor">Jugador · Sergi Vives, formador UE Sant Andreu</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!--  8. CTA FINAL  -->
+        <section class="cta-final" data-reveal>
+            <div class="container">
+                <span class="kicker">Informa't</span>
+                <h2 class="titulo-seccion">Vols formar part de Level&nbsp;Up?</h2>
+                <p class="cta-final__texto">
+                   Explica'ns què busques: formació, campus, tornejos o seleccions.
+                   T'acompanyem en cada pas.
+                </p>
+                <div class="cta-final__botones">
+                    <a class="btn btn--dorado telefon-cta" href="#" target="_blank" rel="noopener">Contacta'ns</a>
+                    <a class="btn btn--borde" href="https://www.instagram.com/levelupfootballexperience" target="_blank" rel="noopener">Segueix-nos</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--  PIE DE PÁGINA 
+         Igual en todas las páginas. EDITABLE: email, teléfono,
+         redes sociales y enlaces legales. -->
+    <footer class="pie">
+        <div class="container pie__grid">
+
+            <div>
+                <p class="pie__logo">LEVEL<span>UP</span></p>
+                <p class="pie__frase">Formació, competició i experiències reals que et fan créixer.</p>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Contacte</p>
+                <ul class="pie__lista">
+                    <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
+                    <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Segueix-nos</p>
+                <ul class="pie__lista">
+                    <li><a href="https://www.instagram.com/levelupfootballexperience" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@levelupfootballexperience" target="_blank" rel="noopener">TikTok</a></li>
+                    <li><a href="#">Linktree</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Legal</p>
+                <ul class="pie__lista">
+                    <li><a href="#">Avís legal</a></li>
+                    <li><a href="#">Política de privacitat</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <p class="pie__copy">© <span id="any">2026</span> Level Up Football Experience · Tots els drets reservats</p>
+    </footer>
+
+    <!-- JavaScript común -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

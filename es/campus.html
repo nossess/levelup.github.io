@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMPUS | Level Up Football Experience</title>
+    <meta name="description" content="Campus Level Up: programa intensivo de perfeccionamiento en período vacacional.">
+    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/png">
+    <link rel="stylesheet" href="../css/global.css">
+</head>
+<body>
+
+    <a class="saltar-contenido" href="#contingut">Ir al contenido</a>
+
+    <!-- ===== Cabecera común (igual en todas las páginas) ===== -->
+    <header class="cabecera">
+        <div class="cabecera__contenido container">
+
+            <!-- ===== Zona izquierda: logo (un único enlace) ===== -->
+            <a href="index.html" class="logo" aria-label="Level Up - página de inicio">
+                <img src="../Imatges/Logo_LevelUp.ico" alt="" class="logo__img">
+                <span class="logo__texto">Level<span class="logo__acento">Up</span></span>
+            </a>
+
+            <!-- ===== Zona central: navegación principal =====
+                 Para añadir o quitar páginas, solo añade o quita un <li>. -->
+            <nav class="menu" id="menu-principal" aria-label="Menú principal">
+                <ul class="menu__lista">
+                    <li><a class="menu__enlace" href="index.html">Inicio</a></li>
+                    <li><a class="menu__enlace" href="levelup.html">Level Up</a></li>
+                    <li><a class="menu__enlace" href="tecnificacio.html">Tecnificación</a></li>
+                    <li><a class="menu__enlace menu__enlace--activo" href="campus.html" aria-current="page">Campus</a></li>
+                    <li><a class="menu__enlace" href="tornejos.html">Torneos</a></li>
+                    <li><a class="menu__enlace" href="seleccions.html">Selecciones</a></li>
+                </ul>
+            </nav>
+
+            <!-- ===== Zona derecha: idioma + CTA + hamburguesa ===== -->
+            <div class="cabecera__acciones">
+
+                <!-- Selector de idioma. Por ahora solo es un botón.
+                     El comportamiento se añadirá más adelante. -->
+                <div class="cabecera__idioma">
+                    <button type="button" class="cabecera__idioma-boton"
+                            aria-label="Cambiar idioma" aria-haspopup="true" aria-expanded="false">
+                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-es.svg" alt="Espanol">
+                    </button>
+
+                    <ul class="menu__lista cabecera__idioma-lista">
+                        <li><a class="menu__enlace" href="../ca/campus.html"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
+                        <li><a class="menu__enlace menu__enlace--activo" href="campus.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace" href="../en/campus.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
+                    </ul>
+                </div>
+
+                <button class="hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main id="contingut">
+        <section class="pagina-vacia">
+            <span class="kicker">Level Up</span>
+            <h1>Próximamente</h1>
+            <p>Esta página se encuentra en construcción. Pronto podrás descubrir todo el contenido.</p>
+            <a class="btn btn--dorado" href="index.html">Volver al inicio</a>
+        </section>
+    </main>
+
+    <!-- ===== Pie de página común (igual en todas las páginas) ===== -->
+    <footer class="pie">
+        <div class="container pie__grid">
+
+            <div>
+                <p class="pie__logo">LEVEL<span>UP</span></p>
+                <p class="pie__frase">Formación, competición y experiencias reales que te hacen crecer.</p>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Contacto</p>
+                <ul class="pie__lista">
+                    <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
+                    <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Síguenos</p>
+                <ul class="pie__lista">
+                    <li><a href="https://www.instagram.com/levelupfootballexperience" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@levelupfootballexperience" target="_blank" rel="noopener">TikTok</a></li>
+                    <li><a href="#">Linktree</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Legal</p>
+                <ul class="pie__lista">
+                    <li><a href="#">Aviso legal</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <p class="pie__copy">© <span id="any">2026</span> Level Up Football Experience · Todos los derechos reservados</p>
+    </footer>
+
+    <!-- JavaScript común -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

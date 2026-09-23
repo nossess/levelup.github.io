@@ -1,0 +1,685 @@
+/* ============================================================
+   LEVEL UP - CSS DE LA PÁGINA CAMPUS (ver. visual)
+   Estilos exclusivos de campus.html.
+   Lo común (menú, footer, botones, colores) está en global.css.
+   Lenguaje visual: tarjetas con foto de gran formato, números
+   grandes y composición asimétrica. Minimalista pero no repetitivo.
+   ============================================================ */
+
+/* ===== 1. CABECERA DE PÁGINA (hero corto, igual que otras secciones) ===== */
+.capsalera-pagina {
+    min-height: 62vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(13,13,13,0.78), rgba(13,13,13,0.78)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(3).jpg") center / cover no-repeat;
+}
+
+.capsalera-pagina__contenido { padding: 150px 0 70px; }
+
+.capsalera-pagina h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+.capsalera-pagina p {
+    color: var(--gris-claro);
+    max-width: 640px;
+    margin: 16px auto 34px;
+    font-size: 1.05rem;
+}
+
+.capsalera-pagina__accions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* ===== 2. QUÉ ES EL CAMPUS (fondo de foto, texto centrado) ===== */
+.campus-quees {
+    background:
+        linear-gradient(rgba(13,13,13,0.9), rgba(13,13,13,0.9)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(11).jpg") center / cover no-repeat;
+    border-top: 3px solid var(--dorado);
+    border-bottom: 3px solid var(--dorado);
+}
+
+.campus-quees__contenido {
+    max-width: 780px;
+}
+
+.campus-quees__titular {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--rojo);
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.campus-quees__lead {
+    font-size: 1.15rem;
+    color: var(--blanco);
+    line-height: 1.6;
+    margin: 20px 0 18px;
+}
+
+.campus-quees__contenido > p {
+    color: var(--gris-claro);
+    margin-top: 16px;
+    line-height: 1.7;
+}
+
+.campus-quees__contenido p strong { color: var(--blanco); }
+
+/* ===== 3. CÓMO TRABAJAMOS (carrusel 3D) ===== */
+.campus-treball__carrusel {
+    margin-top: 44px;
+    position: relative;
+}
+
+.campus-treball__pista {
+    position: relative;
+    height: 390px;
+    overflow: hidden;
+    perspective: 1200px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.campus-treball__bloc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--gris-oscuro);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
+}
+
+.campus-treball__bloc img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.28;
+    transition: transform 0.6s ease, opacity 0.4s ease;
+}
+
+.campus-treball__bloc:not(.campus-treball__bloc--centre):hover img {
+    transform: scale(1.06);
+    opacity: 0.4;
+}
+
+.campus-treball__bloc > div {
+    position: relative;
+    max-width: 560px;
+    padding: 40px 30px;
+    background: linear-gradient(180deg, transparent, rgba(13,13,13,0.92) 60%);
+}
+
+/* La tarjeta frontal se ve totalmente nítida: imagen a plena
+   opacidad y fondo sólido, sin huecos por donde se cuelen las de detrás. */
+.campus-treball__bloc--centre {
+    background: var(--negro-suave);
+}
+
+.campus-treball__bloc--centre img {
+    opacity: 1;
+}
+
+.campus-treball__bloc--centre > div {
+    background: linear-gradient(180deg, rgba(13,13,13,0.25) 0%, rgba(13,13,13,0.94) 72%);
+}
+
+.campus-treball__num {
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--dorado);
+    line-height: 1;
+    margin-bottom: 14px;
+}
+
+.campus-treball__bloc h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.campus-treball__bloc p {
+    color: var(--gris-claro);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ===== Posiciones 3D del carrusel (baraja apilada) =====
+   La tarjeta activa queda al frente. Las demás se empujan
+   hacia atrás en el eje Z y asoman ligeramente por los
+   bordes, oscurecidas, como cartas esperando en la baraja. */
+.campus-treball__bloc--centre {
+    transform: scale(0.7) translateZ(30px);
+    opacity: 1;
+    z-index: 8;
+    border-color: var(--dorado);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.campus-treball__bloc--seg1 {
+    transform: translateX(19%) translateZ(-80px) scale(0.7) rotateY(-10deg);
+    opacity: 0.7;
+    z-index: 6;
+    filter: brightness(0.55);
+}
+
+.campus-treball__bloc--seg-1 {
+    transform: translateX(-19%) translateZ(-80px) scale(0.7) rotateY(10deg);
+    opacity: 0.7;
+    z-index: 6;
+    filter: brightness(0.55);
+}
+
+.campus-treball__bloc--seg2 {
+    transform: translateX(34%) translateZ(-180px) scale(0.62) rotateY(-14deg);
+    opacity: 0.45;
+    z-index: 4;
+    filter: brightness(0.7);
+}
+
+.campus-treball__bloc--seg-2 {
+    transform: translateX(-34%) translateZ(-180px) scale(0.62) rotateY(14deg);
+    opacity: 0.45;
+    z-index: 4;
+    filter: brightness(0.7);
+}
+
+.campus-treball__bloc--amagat {
+    transform: translateX(45%) translateZ(-320px) scale(0.55) rotateY(-16deg);
+    opacity: 0;
+    z-index: 2;
+}
+
+.campus-treball__bloc--amagat- {
+    transform: translateX(-45%) translateZ(-320px) scale(0.55) rotateY(16deg);
+    opacity: 0;
+    z-index: 2;
+}
+
+/* ===== Navegación del carrusel ===== */
+.campus-treball__navegacio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 26px;
+}
+
+.campus-treball__fletxa {
+    background: transparent;
+    border: 1px solid var(--gris-oscuro);
+    color: var(--blanco);
+    font-size: 1.1rem;
+    line-height: 1;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.campus-treball__fletxa:hover {
+    border-color: var(--dorado);
+    color: var(--dorado);
+    transform: translateY(-2px);
+}
+
+.campus-treball__punts {
+    display: flex;
+    gap: 10px;
+}
+
+.campus-treball__punt {
+    width: 34px;
+    height: 4px;
+    border: none;
+    padding: 0;
+    background: var(--gris-oscuro);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.campus-treball__punt--actiu,
+.campus-treball__punt:hover {
+    background: var(--dorado);
+}
+
+/* ===== 4. EDICIONES ===== */
+.campus-edicions__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 44px;
+}
+
+.campus-edicio {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--gris-oscuro);
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    text-align: left;
+}
+
+.campus-edicio img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    transition: transform 0.6s ease, opacity 0.4s ease;
+}
+
+.campus-edicio:hover img {
+    transform: scale(1.06);
+    opacity: 0.42;
+}
+
+.campus-edicio > div {
+    position: relative;
+    padding: 28px;
+    background: linear-gradient(180deg, transparent, rgba(13,13,13,0.95) 50%);
+}
+
+.campus-edicio__estat {
+    margin-bottom: 16px;
+}
+
+.campus-edicio h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.campus-edicio__datas {
+    color: var(--gris-claro);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.campus-edicio__grup {
+    color: var(--dorado);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ===== 5. PRÓXIMO CAMPUS (edición protagonista amplia) ===== */
+.campus-proxim {
+    background:
+        linear-gradient(rgba(13,13,13,0.94), rgba(13,13,13,0.94)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(5).jpg") center / cover no-repeat;
+    border-top: 3px solid var(--dorado);
+    border-bottom: 3px solid var(--dorado);
+}
+
+.campus-proxim__etiqueta {
+    display: inline-block;
+    font-family: var(--fuente-titulos);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    border: 1px solid var(--dorado);
+    padding: 8px 18px;
+    margin-bottom: 22px;
+}
+
+.campus-proxim__edicio {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--rojo);
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.campus-proxim h2 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.05;
+    margin-bottom: 30px;
+}
+
+.campus-proxim__foto {
+    position: relative;
+    max-width: 960px;
+    margin: 40px auto 0;
+    height: clamp(280px, 42vw, 460px);
+    border: 1px solid var(--gris-oscuro);
+}
+
+.campus-proxim__foto img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.campus-proxim__foto .etiqueta {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+}
+
+.campus-proxim__desplegable {
+    max-width: 960px;
+    margin: 24px auto 0;
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    text-align: left;
+    transition: border-color 0.3s ease;
+}
+
+.campus-proxim__desplegable[open] { border-color: var(--dorado); }
+
+.campus-proxim__desplegable summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--fuente-titulos);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.campus-proxim__desplegable summary::-webkit-details-marker { display: none; }
+
+.campus-proxim__indicador {
+    color: var(--dorado);
+    font-size: 1.4rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.campus-proxim__desplegable[open] .campus-proxim__indicador { transform: rotate(45deg); }
+
+.campus-proxim__info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--gris-oscuro);
+}
+
+.campus-proxim__dada {
+    padding: 24px 22px;
+    border-right: 1px solid var(--gris-oscuro);
+}
+
+.campus-proxim__dada:last-child { border-right: none; }
+
+.campus-proxim__dada strong {
+    display: block;
+    font-family: var(--fuente-titulos);
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    color: var(--dorado);
+    margin-bottom: 10px;
+}
+
+.campus-proxim__dada span {
+    display: block;
+    color: var(--gris-claro);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.campus-proxim__accions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* ===== 6. QUÉ INCLUYE (índex editorial) ===== */
+.campus-serveis {
+    margin-top: 44px;
+    text-align: left;
+}
+
+.campus-serveis__fila {
+    display: grid;
+    grid-template-columns: 110px 1fr 1.4fr;
+    align-items: baseline;
+    gap: 24px;
+    padding: 24px 8px;
+    border-bottom: 1px solid var(--gris-oscuro);
+    transition: border-color 0.3s ease;
+}
+
+.campus-serveis__fila:first-child {
+    border-top: 1px solid var(--gris-oscuro);
+}
+
+.campus-serveis__fila:hover {
+    border-bottom-color: var(--dorado);
+}
+
+.campus-serveis__num {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--gris-oscuro);
+    transition: color 0.3s ease;
+}
+
+.campus-serveis__fila:hover .campus-serveis__num {
+    color: var(--rojo);
+}
+
+.campus-serveis__titol {
+    font-family: var(--fuente-titulos);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--blanco);
+}
+
+.campus-serveis__text {
+    color: var(--gris-claro);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* Fondo de foto para la sección (mismo tratamiento que el resto del campus) */
+.campus-serveis-seccio {
+    background:
+        linear-gradient(rgba(13,13,13,0.92), rgba(13,13,13,0.92)),
+        url("../Imatges/Campus d'estiu/Campus fotos (4).jpg") center / cover no-repeat;
+    border-top: 3px solid var(--dorado);
+    border-bottom: 3px solid var(--dorado);
+}
+
+.campus-serveis-seccio .campus-serveis__fila { border-bottom-color: rgba(255, 255, 255, 0.12); }
+
+.campus-serveis-seccio .campus-serveis__fila:first-child { border-top-color: rgba(255, 255, 255, 0.12); }
+
+.campus-serveis-seccio .campus-serveis__num { color: var(--gris-claro); }
+
+.campus-serveis-seccio .campus-serveis__fila:hover .campus-serveis__num { color: var(--dorado); }
+
+@media (max-width: 520px) {
+    .campus-serveis__fila {
+        grid-template-columns: 52px 1fr;
+        grid-template-areas:
+            "num titol"
+            "num text";
+        gap: 6px 16px;
+    }
+
+    .campus-serveis__num { grid-area: num; }
+    .campus-serveis__titol { grid-area: titol; }
+    .campus-serveis__text { grid-area: text; }
+}
+
+/* ===== 7. DOSSIER CTA ===== */
+.campus-dossier {
+    background:
+        linear-gradient(rgba(13,13,13,0.9), rgba(13,13,13,0.9)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(8).jpg") center / cover no-repeat;
+    border-top: 3px solid var(--dorado);
+    border-bottom: 3px solid var(--dorado);
+}
+
+.campus-dossier .btn,
+.campus-inscripcio .btn {
+    margin-top: 32px;
+}
+
+/* ===== 8. INSCRIPCIÓN CTA ===== */
+.campus-inscripcio {
+    background:
+        radial-gradient(circle at 80% 15%, rgba(200,16,46,0.18), transparent 45%),
+        radial-gradient(circle at 15% 85%, rgba(201,162,39,0.12), transparent 45%),
+        var(--negro);
+}
+
+/* ===== 9. EXPERIENCIAS ANTERIORES (cifras + testimonios) ===== */
+.campus-experiencies__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 44px;
+}
+
+.campus-experiencia {
+    border: 1px solid var(--gris-oscuro);
+    padding: 40px 28px;
+    text-align: center;
+    background: var(--negro-suave);
+}
+
+.campus-experiencia__cifra {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    font-weight: 800;
+    color: var(--blanco);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.campus-experiencia__cifra em {
+    font-style: normal;
+    color: var(--dorado);
+}
+
+.campus-experiencia__cifra span { color: var(--rojo); }
+
+.campus-experiencia p:last-child {
+    color: var(--gris-claro);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.campus-testimonis {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campus-testimoni {
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    padding: 30px 32px;
+    text-align: left;
+    position: relative;
+}
+
+.campus-testimoni::before {
+    content: "“";
+    position: absolute;
+    top: 6px;
+    left: 20px;
+    font-family: var(--fuente-titulos);
+    font-size: 3.4rem;
+    color: var(--dorado);
+    line-height: 1;
+    opacity: 0.6;
+}
+
+.campus-testimoni p {
+    color: var(--gris-claro);
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.campus-testimoni footer {
+    margin-top: 16px;
+    color: var(--blanco);
+    font-family: var(--fuente-titulos);
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .campus-edicions__grid { grid-template-columns: 1fr; }
+    .campus-experiencies__grid { grid-template-columns: 1fr; }
+    .campus-testimonis { grid-template-columns: 1fr; }
+    .capsalera-pagina { min-height: 48vh; }
+    .capsalera-pagina__contenido { padding: 130px 0 50px; }
+    .campus-proxim__info { grid-template-columns: 1fr 1fr; }
+    .campus-proxim__dada { border-bottom: 1px solid var(--gris-oscuro); }
+    .campus-proxim__dada:nth-child(even) { border-right: none; }
+    .campus-proxim__dada:nth-last-child(-n+2) { border-bottom: none; }
+}
+
+@media (max-width: 520px) {
+    .campus-treball__pista { height: 340px; }
+    .campus-proxim__info { grid-template-columns: 1fr; }
+    .campus-proxim__dada { padding: 20px 22px; border-right: none; border-bottom: 1px solid var(--gris-oscuro); }
+    .campus-proxim__dada:last-child { border-bottom: none; }
+}
+
+@media (max-width: 400px) {
+    .campus-treball__pista { height: 320px; }
+}

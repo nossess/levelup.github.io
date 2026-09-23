@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECCIONS | Level Up Football Experience</title>
+    <meta name="description" content="Seleccions Level Up: equips per competir en experiències seleccionades durant la temporada.">
+
+    <!-- Marca que hay JavaScript para activar las animaciones de scroll -->
+    <script>document.documentElement.className = "js";</script>
+    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/png">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/seleccions.css">
+</head>
+<body>
+
+    <a class="saltar-contenido" href="#contingut">Anar al contingut</a>
+
+    <!-- ===== Cabecera común (igual en todas las páginas) ===== -->
+    <header class="cabecera">
+        <div class="cabecera__contenido container">
+
+            <!-- ===== Zona izquierda: logo (un único enlace) ===== -->
+            <a href="index.html" class="logo" aria-label="Level Up - pàgina d'inici">
+                <img src="../Imatges/Logo_LevelUp.ico" alt="" class="logo__img">
+                <span class="logo__texto">Level<span class="logo__acento">Up</span></span>
+            </a>
+
+            <!-- ===== Zona central: navegació principal =====
+                 Per afegir o treure pàgines, només cal afegir o treure un <li>. -->
+            <nav class="menu" id="menu-principal" aria-label="Menú principal">
+                <ul class="menu__lista">
+                    <li><a class="menu__enlace" href="index.html">Inici</a></li>
+                    <li><a class="menu__enlace" href="levelup.html">Level Up</a></li>
+                    <li><a class="menu__enlace" href="tecnificacio.html">Tecnificació</a></li>
+                    <li><a class="menu__enlace" href="campus.html">Campus</a></li>
+                    <li><a class="menu__enlace" href="tornejos.html">Tornejos</a></li>
+                    <li><a class="menu__enlace menu__enlace--activo" href="seleccions.html" aria-current="page">Seleccions</a></li>
+                </ul>
+            </nav>
+
+            <!-- ===== Zona dreta: idioma + CTA + hamburguesa ===== -->
+            <div class="cabecera__acciones">
+
+                <!-- Selector d'idioma. De moment només és un botó.
+                     El comportament s'afegirà més endavant. -->
+                <div class="cabecera__idioma">
+                    <button type="button" class="cabecera__idioma-boton"
+                            aria-label="Canvia l'idioma" aria-haspopup="true" aria-expanded="false">
+                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Catala">
+                    </button>
+
+                    <ul class="menu__lista cabecera__idioma-lista">
+                        <li><a class="menu__enlace menu__enlace--activo" href="seleccions.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
+                        <li><a class="menu__enlace" href="../es/seleccions.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace" href="../en/seleccions.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
+                    </ul>
+                </div>
+
+                <button class="hamburguesa" type="button" aria-label="Obrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main id="contingut">
+
+        <!-- ==================== A. HERO SELECCIONS ==================== -->
+        <section class="seleccions-hero">
+            <div class="container seleccions-hero__grid">
+
+<div class="seleccions-hero__contenido">
+                    <span class="kicker">Seleccions Level Up</span>
+                    <h1>Equips que <span>competeixen</span> al màxim</h1>
+                    <div class="seleccions-hero__accions">
+                        <a class="btn btn--dorado" href="#experiencies">Veure experiències</a>
+                        <a class="btn btn--borde" href="#formulari">Vull informació</a>
+                    </div>
+                </div>
+
+                <aside class="seleccions-marcador" aria-label="Concepte clau">
+                    <p class="seleccions-marcador__label">Concepte</p>
+                    <p class="seleccions-marcador__titol">Més que un equip</p>
+                    <p class="seleccions-marcador__text">Formem equips Level Up amb jugadors i jugadores de diferents clubs per competir en experiències seleccionades. No és un equip qualsevol: és una selecció formada amb criteri, amb perfils complementaris, actituds compatibles i un objectiu comú, dissenyada per créixer, conviure i donar el millor de cadascú.</p>
+                </aside>
+
+            </div>
+        </section>
+
+<!-- ==================== B. QUÈ BUSQUEM ==================== -->
+        <section class="seccion seccion--fons-banda" data-reveal>
+            <!-- Foto integrada com a fons de la secció (recortada, sense estirar) -->
+            <div class="seleccions-fons seleccions-fons--clar" aria-hidden="true">
+                <img src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(8).jpg" alt="">
+            </div>
+
+            <div class="container seleccions-overlay">
+                <div class="seleccions-manifest">
+                    <span class="kicker">Què busquem</span>
+                    <p class="seleccions-manifest__frase">Competir, aprendre, conviure <span>i créixer.</span></p>
+                    <p class="seleccions-manifest__text">La competició com a eina formativa. No només busquem guanyar: busquem que cada jugador i jugadora surti millor del que ha entrat. La convivència, el respecte i l'esforç són els pilars de cada Selecció Level Up.</p>
+
+                    <div class="seleccions-rasgos">
+                        <p class="seleccions-rasgo">Competir</p>
+                        <p class="seleccions-rasgo">Aprendre</p>
+                        <p class="seleccions-rasgo">Conviure</p>
+                        <p class="seleccions-rasgo">Créixer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- ==================== C. COM CONFECCIONEM ==================== -->
+        <section class="seccion" data-reveal="left">
+            <div class="container centrado">
+                <span class="kicker">Com treballem</span>
+                <h2 class="titulo-seccion">Com confeccionem els equips</h2>
+                <p class="intro-seccion">Cada Selecció és un projecte pensat. Seleccionem, equilibrem i adaptem cada convocatòria a l'experiència que volem viure.</p>
+
+                <div class="seleccions-grid">
+
+                    <article class="seleccions-grid__item">
+                        <span class="seleccions-grid__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                        </span>
+                        <h3>Selecció</h3>
+                        <p>Convocatòries obertes i tancades segons l'experiència. No tothom entra: i això és el que li dóna valor.</p>
+                    </article>
+
+                    <article class="seleccions-grid__item">
+                        <span class="seleccions-grid__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </span>
+                        <h3>Equilibri</h3>
+                        <p>Busquem perfils complementaris: jugadors que sumin tècnica, mentalitat i actitud dins del grup.</p>
+                    </article>
+
+                    <article class="seleccions-grid__item">
+                        <span class="seleccions-grid__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                        </span>
+                        <h3>Adaptació</h3>
+                        <p>Cada experiència té les seves característiques. Adaptem la convocatòria al torneig, al nivell i als objectius.</p>
+                    </article>
+
+                    <article class="seleccions-grid__item">
+                        <span class="seleccions-grid__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </span>
+                        <h3>Criteri</h3>
+                        <p>Hi ha criteris, però no els publiquem. Cada jugador/a sap que ha estat escollit/a per alguna raó concreta.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== D. PREPARACIÓ ==================== -->
+<section class="seccion seccion--fondo-suave" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Preparació</span>
+                <h2 class="titulo-seccion">Abans de sortir al camp</h2>
+                <p class="intro-seccion">Cada Selecció es prepara amb antelació. No improvisem: planifiquem, treballem i ens assegurem que el grup arriba preparat.</p>
+
+                <div class="seleccions-grid">
+
+                    <article class="seleccions-grid__item">
+                        <span class="seleccions-grid__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <h3>Entrenaments previs</h3>
+                        <p>Sessions de preparació per conèixer el grup, treballar conceptes i crear química abans de l'experiència.</p>
+                    </article>
+
+                    <article class="seleccions-grid__item">
+                        <span class="seleccions-grid__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </span>
+                        <h3>Planificació</h3>
+                        <p>Anàlisi del rival, estratègia de partit i rols definits. Cada jugador sap què se n'espera.</p>
+                    </article>
+
+                    <article class="seleccions-grid__item">
+                        <span class="seleccions-grid__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                        </span>
+                        <h3>Metodologia</h3>
+                        <p>Una mateixa filosofia de joc connectada amb la resta de l'àrea Level Up. Coherència i identitat.</p>
+                    </article>
+
+                    <article class="seleccions-grid__item">
+                        <span class="seleccions-grid__icona" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </span>
+                        <h3>Seguiment</h3>
+                        <p>Avaluació abans, durant i després. Cada experiència és una oportunitat per millorar.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+<!-- ==================== E. IDEA DE JOC ==================== -->
+<section class="seccion seleccions-identitat-seccio" data-reveal="right">
+            <div class="container centrado">
+
+                <span class="kicker">Idea de joc</span>
+                <h2 class="titulo-seccion">Com volem jugar</h2>
+
+                <p class="seleccions-identitat__frase">Protagonista, associativa, valenta.</p>
+                <p class="seleccions-identitat__text">El nostre futbol té personalitat. Volem pilota, volem associació, volem transicions ràpides i decisions valentes. Cada jugador ha de sentir-se protagonista del joc, però mai per sobre del grup.</p>
+
+                <div class="seleccions-identitat__valors">
+                    <div class="seleccions-valor">
+                        <span class="seleccions-valor__num">01</span>
+                        <p class="seleccions-valor__titol">Protagonisme</p>
+                        <p>Cada jugador té un rol i l'assumeix amb responsabilitat.</p>
+                    </div>
+                    <div class="seleccions-valor">
+                        <span class="seleccions-valor__num">02</span>
+                        <p class="seleccions-valor__titol">Associació</p>
+                        <p>El joc col·lectiu per sobre de l'individual. Sumar per guanyar.</p>
+                    </div>
+                    <div class="seleccions-valor">
+                        <span class="seleccions-valor__num">03</span>
+                        <p class="seleccions-valor__titol">Valentia</p>
+                        <p>Atrevir-se, provar, arriscar. Sense por a equivocar-se.</p>
+                    </div>
+                    <div class="seleccions-valor">
+                        <span class="seleccions-valor__num">04</span>
+                        <p class="seleccions-valor__titol">Intensitat</p>
+                        <p>Mental i física. Cada minut al 100%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== F. EXPERIÈNCIES 26-27 ==================== -->
+        <section class="seccion seccion--fons-banda" id="experiencies" data-reveal>
+
+            <!-- Fons de la secció: una foto que omple tot el fons,
+                 recortada (sense estirar-se) i enfosquida. -->
+            <div class="seleccions-fons" aria-hidden="true">
+                <img src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(10).jpg" alt="">
+            </div>
+
+            <div class="container seleccions-frame">
+                <span class="kicker">Experiències 26-27</span>
+                <h2 class="titulo-seccion">Properes cites</h2>
+                <p class="intro-seccion">Cada temporada dissenyem noves experiències. Algunes són fixes, d'altres sorgeixen per oportunitats que no es poden desaprofitar.</p>
+
+                <div class="seleccions-experiencies">
+
+                    <!-- TARGETA 1 · 1900 CUP -->
+                    <article class="seleccions-exp">
+                        <div class="seleccions-exp__cap">
+                            <span class="etiqueta etiqueta--inscripcions">Inscripcions obertes</span>
+                            <p class="seleccions-exp__data">Març 2027</p>
+                        </div>
+                        <h3 class="seleccions-exp__nom">1900 CUP</h3>
+                        <p class="seleccions-exp__desc">Torneig de referència amb equips de tot el territori. Competició d'alt nivell, convivència i una experiència que els jugadors recorden tota la vida.</p>
+                        <ul class="seleccions-exp__detalls">
+                            <li><span>Ubicació</span><span>Per confirmar</span></li>
+                            <li><span>Categories</span><span>Sub12 · Sub14 · Sub16</span></li>
+                            <li><span>Estada</span><span>Allotjament inclòs</span></li>
+                        </ul>
+                        <a class="btn btn--dorado" href="#formulari">Vull anar-hi</a>
+                    </article>
+
+                    <!-- TARGETA 2 · Experiència internacional -->
+                    <article class="seleccions-exp">
+                        <div class="seleccions-exp__cap">
+                            <span class="etiqueta etiqueta--proximament">Pròximament</span>
+                            <p class="seleccions-exp__data">Juny 2027</p>
+                        </div>
+                        <h3 class="seleccions-exp__nom">Experiència internacional</h3>
+                        <p class="seleccions-exp__desc">Viatge seleccionat per competir fora de Catalunya. Concentració, partits contra equips de diferent nivell i creixement personal.</p>
+                        <ul class="seleccions-exp__detalls">
+                            <li><span>Ubicació</span><span>Per confirmar</span></li>
+                            <li><span>Categories</span><span>Sub14 · Sub16</span></li>
+                            <li><span>Estada</span><span>Experiència completa</span></li>
+                        </ul>
+                        <a class="btn btn--borde" href="#formulari">Vull informació</a>
+                    </article>
+
+                    <!-- TARGETA 3 · Torneig d'hivern -->
+                    <article class="seleccions-exp">
+                        <div class="seleccions-exp__cap">
+                            <span class="etiqueta etiqueta--proximament">Pròximament</span>
+                            <p class="seleccions-exp__data">Desembre 2026</p>
+                        </div>
+                        <h3 class="seleccions-exp__nom">Torneig d'hivern</h3>
+                        <p class="seleccions-exp__desc">Format exprés de cap de setmana. Competició intensa, partits ràpids i una posada a punt abans de la segona meitat de temporada.</p>
+                        <ul class="seleccions-exp__detalls">
+                            <li><span>Ubicació</span><span>Barcelona</span></li>
+                            <li><span>Categories</span><span>Sub10 · Sub12</span></li>
+                            <li><span>Estada</span><span>Sense allotjament</span></li>
+                        </ul>
+                        <a class="btn btn--borde" href="#formulari">Vull informació</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== G. CTA + FORMULARI ==================== -->
+        <section class="seccion seccion--fondo-suave" id="formulari" data-reveal>
+            <div class="container seleccions-form-wrap">
+
+                <div class="seleccions-form-text">
+                    <span class="kicker">Participa</span>
+                    <h2 class="titulo-seccion">Vols formar part d'una Selecció?</h2>
+                    <p class="intro-seccion">Omple el formulari i t'enviarem tota la informació de les experiències que t'interessin. Sense compromís.</p>
+                    <p class="seleccions-form-text__nota">Ens posem en contacte amb tu per resoldre dubtes i concretar detalls.</p>
+                </div>
+
+                <div class="seleccions-form seleccions-form--cta">
+                    <!-- EDITABLE: substituir '#' pel link del formulari de Google Forms -->
+                    <a class="btn btn--dorado" href="#" target="_blank" rel="noopener">Apuntar-me a una Selecció</a>
+                    <p class="seleccions-form-text__nota">T'enviarem tota la informació de les experiències que t'interessin. Sense compromís.</p>
+                </div>
+
+            </div>
+        </section>
+
+<!-- ==================== H. EXPERIÈNCIES VISCUDES ==================== -->
+        <section class="seccion" data-reveal="right">
+            <div class="container centrado">
+                <span class="kicker">Experiències viscudes</span>
+                <h2 class="titulo-seccion">El que diuen de nosaltres</h2>
+                <p class="intro-seccion">La prova més gran és la dels que ja hi han estat. Veus, imatges i paraules de famílies i jugadors.</p>
+
+                <div class="seleccions-testimonis">
+
+                    <article class="seleccions-testimoni">
+                        <p class="seleccions-testimoni__text">"El meu fill va tornar d'una altra manera. Més madur, més confiat i amb ganes de tornar-hi. Una experiència que canvia."</p>
+                        <p class="seleccions-testimoni__autor">— Pare d'un jugador Sub14</p>
+                    </article>
+
+                    <article class="seleccions-testimoni">
+                        <p class="seleccions-testimoni__text">"La convivència amb jugadors d'altres clubs et fa créixer com a persona. Vaig aprendre més en un cap de setmana que en un trimestre."</p>
+                        <p class="seleccions-testimoni__autor">— Jugadora Sub16</p>
+                    </article>
+
+                    <article class="seleccions-testimoni">
+                        <p class="seleccions-testimoni__text">"L'organització és impecable. Tens la sensació que tot està previst i que l'únic que has de fer és jugar i gaudir."</p>
+                        <p class="seleccions-testimoni__autor">— Entrenador</p>
+                    </article>
+
+                </div>
+
+                <div class="seleccions-xifres">
+                    <div class="seleccions-xifres__dada">
+                        <p class="seleccions-xifres__num">+200</p>
+                        <p class="seleccions-xifres__label">Jugadors han passat per les Seleccions</p>
+                    </div>
+                    <div class="seleccions-xifres__dada">
+                        <p class="seleccions-xifres__num">+30</p>
+                        <p class="seleccions-xifres__label">Clubs representats</p>
+                    </div>
+                    <div class="seleccions-xifres__dada">
+                        <p class="seleccions-xifres__num">95%</p>
+                        <p class="seleccions-xifres__label">Tornarien a participar</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Peu de pàgina comú (igual en totes les pàgines) ===== -->
+    <footer class="pie">
+        <div class="container pie__grid">
+
+            <div>
+                <p class="pie__logo">LEVEL<span>UP</span></p>
+                <p class="pie__frase">Formació, competició i experiències reals que et fan créixer.</p>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Contacte</p>
+                <ul class="pie__lista">
+                    <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
+                    <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Segueix-nos</p>
+                <ul class="pie__lista">
+                    <li><a href="https://www.instagram.com/levelupfootballexperience" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@levelupfootballexperience" target="_blank" rel="noopener">TikTok</a></li>
+                    <li><a href="#">Linktree</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Legal</p>
+                <ul class="pie__lista">
+                    <li><a href="#">Avís legal</a></li>
+                    <li><a href="#">Política de privacitat</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <p class="pie__copy">© <span id="any">2026</span> Level Up Football Experience · Tots els drets reservats</p>
+    </footer>
+
+    <!-- JavaScript común -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

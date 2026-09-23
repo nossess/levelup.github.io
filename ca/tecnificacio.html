@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECNIFICACIÓ | Level Up Football Experience</title>
+    <meta name="description" content="Perfecciona't: tecnificació Level Up. Treball complementari al club, personalitzat, en grups reduïts i amb metodologia pròpia.">
+
+    <!-- Marca que hay JavaScript para activar las animaciones de scroll -->
+    <script>document.documentElement.className = "js";</script>
+    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/png">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/tecnificacio.css">
+</head>
+<body>
+
+    <a class="saltar-contenido" href="#contingut">Anar al contingut</a>
+
+    <!-- ===== Cabecera común (igual en todas las páginas) ===== -->
+    <header class="cabecera">
+        <div class="cabecera__contenido container">
+
+            <!-- ===== Zona izquierda: logo (un único enlace) ===== -->
+            <a href="index.html" class="logo" aria-label="Level Up - pàgina d'inici">
+                <img src="../Imatges/Logo_LevelUp.ico" alt="" class="logo__img">
+                <span class="logo__texto">Level<span class="logo__acento">Up</span></span>
+            </a>
+
+            <!-- ===== Zona central: navegació principal =====
+                 Per afegir o treure pàgines, només cal afegir o treure un <li>. -->
+            <nav class="menu" id="menu-principal" aria-label="Menú principal">
+                <ul class="menu__lista">
+                    <li><a class="menu__enlace" href="index.html">Inici</a></li>
+                    <li><a class="menu__enlace" href="levelup.html">Level Up</a></li>
+                    <li><a class="menu__enlace menu__enlace--activo" href="tecnificacio.html" aria-current="page">Tecnificació</a></li>
+                    <li><a class="menu__enlace" href="campus.html">Campus</a></li>
+                    <li><a class="menu__enlace" href="tornejos.html">Tornejos</a></li>
+                    <li><a class="menu__enlace" href="seleccions.html">Seleccions</a></li>
+                </ul>
+            </nav>
+
+            <!-- ===== Zona dreta: idioma + hamburguesa ===== -->
+            <div class="cabecera__acciones">
+
+                <!-- Selector d'idioma. De moment només és un botó.
+                     El comportament s'afegirà més endavant. -->
+                <div class="cabecera__idioma">
+                    <button type="button" class="cabecera__idioma-boton"
+                            aria-label="Canvia l'idioma" aria-haspopup="true" aria-expanded="false">
+                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Catala">
+                    </button>
+
+                    <ul class="menu__lista cabecera__idioma-lista">
+                        <li><a class="menu__enlace menu__enlace--activo" href="tecnificacio.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
+                        <li><a class="menu__enlace" href="../es/tecnificacio.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace" href="../en/tecnificacio.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
+                    </ul>
+                </div>
+
+                <button class="hamburguesa" type="button" aria-label="Obrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main id="contingut">
+
+        <!-- ==================== 1. CABECERA ==================== -->
+        <section class="capsalera-pagina">
+            <div class="container capsalera-pagina__contenido">
+                <p class="kicker">Tecnificació · Temporada 26-27</p>
+                <h1>Perfecciona't</h1>
+                <p>Entrenament complementari al teu club, personalitzat i en grups reduïts. Millora tècnica, tàctica i física amb una metodologia pròpia.</p>
+                <a class="btn btn--dorado" href="#modalitats">Veure modalitats</a>
+                <a class="btn btn--rojo" href="#inscripcio">Inscriu-t'hi</a>
+            </div>
+        </section>
+
+        <!-- ==================== 2. QUÉ ES / IDEAL CLAU ==================== -->
+        <section class="seccion tec-quees" data-reveal="left">
+            <div class="tec-quees__bg">
+                <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(11).jpg" alt="Entrenament de tecnificació Level Up en un camp de futbol">
+            </div>
+            <div class="container">
+                <div class="tec-quees__grid">
+                    <div class="tec-quees__texto">
+                        <span class="kicker">Tecnificació Perfecciona't</span>
+                        <h2 class="titulo-seccion">Què és la Tecnificació Perfecciona't?</h2>
+                        <p><strong>Un programa en què trobaràs tot el que necessites per créixer.</strong></p>
+                        <p>Perfecciona't és un programa de tecnificació complementari al club, dirigit a jugadors i jugadores que volen assolir els seus objectius personals. Funciona d'octubre a juny amb entrenaments individuals, duo o grupals totalment personalitzats, a més de programes de millora física i cognitiva, recuperació i acompanyament 360º.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- ==================== 3. CÓMO TRABAJAMOS ==================== -->
+        <section class="seccion seccion--fondo-suave" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">La nostra TEC</span>
+                <h2 class="titulo-seccion">Què trobaràs a la nostra TEC?</h2>
+                <p class="intro-seccion">Si el que vols és ser millor futbolista, aquí t'ajudarem a aconseguir-ho.</p>
+                <div class="tec-treball__grid">
+                    <div class="tec-treball" role="button" tabindex="0" aria-label="Personalitzat: Independentment del programa, tindràs una planificació i un seguiment personalitzats.">
+                        <div class="tec-treball__intern">
+                            <div class="tec-treball__cara tec-treball__cara--davant">
+                                <p class="tec-treball__numero">01</p>
+                                <img class="tec-treball__foto" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(1).jpg" alt="Entrenament individual de tecnificació">
+                                <div class="tec-treball__cos">
+                                    <h3>Personalitzat</h3>
+                                    <p>Qualsevol dels programes, adaptat a les teves necessitats.</p>
+                                </div>
+                            </div>
+                            <div class="tec-treball__cara tec-treball__cara--darrera">
+                                <p class="tec-treball__mes">Independentment del programa, tindràs una planificació i un seguiment personalitzats. No hi ha dos jugadors/es iguals, ni amb les mateixes necessitats, i per tant, tampoc dues planificacions iguals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tec-treball" role="button" tabindex="0" aria-label="Complementari: El nostre treball és un complement, no un substitutiu.">
+                        <div class="tec-treball__intern">
+                            <div class="tec-treball__cara tec-treball__cara--davant">
+                                <p class="tec-treball__numero">02</p>
+                                <img class="tec-treball__foto" src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(10).jpg" alt="Entrenament grupal de tecnificació">
+                                <div class="tec-treball__cos">
+                                    <h3>Complementari</h3>
+                                    <p>Tenim en compte el que fas al teu club, i et complementem.</p>
+                                </div>
+                            </div>
+                            <div class="tec-treball__cara tec-treball__cara--darrera">
+                                <p class="tec-treball__mes">El nostre treball no és un substitutiu, sinó un complement. Estem aquí per ajudar-te en tot el que necessitis, proporcionar-te recursos, i que puguis elevar el teu nivell amb el teu equip.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tec-treball" role="button" tabindex="0" aria-label="Seguiment: Et seguim a través de feedback constant.">
+                        <div class="tec-treball__intern">
+                            <div class="tec-treball__cara tec-treball__cara--davant">
+                                <p class="tec-treball__numero">03</p>
+                                <img class="tec-treball__foto" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(5).jpg" alt="Seguiment del rendiment del jugador">
+                                <div class="tec-treball__cos">
+                                    <h3>Seguiment</h3>
+                                    <p>Ens importa tot el que fas amb el teu club.</p>
+                                </div>
+                            </div>
+                            <div class="tec-treball__cara tec-treball__cara--darrera">
+                                <p class="tec-treball__mes">Per a desenvolupar el millor programa per a tu, necessitem conèixer-te i això passa per saber el què fas amb el teu club en el teu dia a dia. Et seguim a través de feedback constant, i et venim a veure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tec-treball" role="button" tabindex="0" aria-label="Feedback: Sabràs en tot moment com evoluciones.">
+                        <div class="tec-treball__intern">
+                            <div class="tec-treball__cara tec-treball__cara--davant">
+                                <p class="tec-treball__numero">04</p>
+                                <img class="tec-treball__foto" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(8).jpg" alt="Feedback individual en una sessió">
+                                <div class="tec-treball__cos">
+                                    <h3>Feedback</h3>
+                                    <p>Sabràs en tot moment què necessites i com evoluciones.</p>
+                                </div>
+                            </div>
+                            <div class="tec-treball__cara tec-treball__cara--darrera">
+                                <p class="tec-treball__mes">De forma constant, rebràs feedback de les sessions d'entrenament, perquè puguis saber com estàs evolucionant i en què necessites enfocar-te més, així com reunions i informes trimestrals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. METODOLOGÍA TEC ==================== -->
+        <section class="seccion tec-metodologia" data-reveal="right">
+            <div class="container centrado">
+                <span class="kicker">Metodologia TEC</span>
+                <h2 class="titulo-seccion">Mètode, transferència i decisió</h2>
+                <details class="tec-metodologia__detall">
+                    <summary class="tec-metodologia__obertura">Veure metodologia completa</summary>
+                    <div class="tec-metodologia__grid">
+                        <div class="tec-metodologia__bloc">
+                            <h3>Què treballem</h3>
+                            <ul>
+                                <li><strong>Tècnica pura:</strong> control, conducció, passada, xut i bretxa amb repeticions de qualitat.</li>
+                                <li><strong>Presa de decisions:</strong> situacions reals de joc on cal triar ràpid i bé.</li>
+                                <li><strong>Lectura de joc:</strong> espais, temps i companys. Entendre el futbol més enllà de la pilota.</li>
+                                <li><strong>Condició física aplicada:</strong> força, velocitat i agilitat sempre amb pilota.</li>
+                            </ul>
+                        </div>
+                        <div class="tec-metodologia__bloc">
+                            <h3>Com es transfereix</h3>
+                            <ul>
+                                <li>Sessions <strong>en context de partit</strong>, no exercicis desconnectats del joc real.</li>
+                                <li>Jocs reduïts i <strong>situacions sobrecàrregues</strong> que milloren la presa de decisions.</li>
+                                <li>Feina per <strong>punts forts i febles</strong>, no un guió tancat per a tothom.</li>
+                                <li>Tot el que es treballa <strong>ho pots fer servir diumenge</strong> amb el teu equip.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- ==================== 5. MODALIDADES VIGENTES ==================== -->
+        <section class="seccion" id="modalitats" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Modalitats 26-27</span>
+                <h2 class="titulo-seccion">Tria com vols perfeccionar-te</h2>
+                <p class="intro-seccion">Diferents formats per adaptar-se a cada jugador, família i objectiu. Totes amb la mateixa metodologia TEC.</p>
+                <div class="tec-modalitats__grid">
+                    <div class="tec-modalitat">
+                        <h3>Grupal</h3>
+                        <p>Grups petits amb fonaments tècnics i tàctics per categories. El punt de partida de la majoria de jugadors.</p>
+                    </div>
+                    <div class="tec-modalitat">
+                        <h3>Individual</h3>
+                        <p>Treball 1:1 amb pla personalitzat. Per corregir hàbits o preparar un període concret.</p>
+                    </div>
+                    <div class="tec-modalitat">
+                        <h3>Duo</h3>
+                        <p>Dos jugadors amb el mateix nivell o posició. Competeixen i s'ajuden per progressar més ràpid.</p>
+                    </div>
+                    <div class="tec-modalitat">
+                        <h3>Posicional</h3>
+                        <p>Especialització per posició: porter, defensa, migcampista o davanter. Rols i exigències del teu lloc.</p>
+                    </div>
+                    <div class="tec-modalitat">
+                        <h3>Condicional</h3>
+                        <p>Preparació física integrada amb pilota. Per prevenir lesions i rendir els 90 minuts.</p>
+                    </div>
+                    <div class="tec-modalitat">
+                        <h3>Vídeo i anàlisi</h3>
+                        <p>Eines d'anàlisi per veure el propi rendiment i entendre què cal millorar a partir d'imatges reals.</p>
+                    </div>
+                    <div class="tec-modalitat">
+                        <h3>Fisioteràpia</h3>
+                        <p>Acompanyament de la recuperació i prevenció de lesions amb professionals de la salut.</p>
+                    </div>
+                    <div class="tec-modalitat">
+                        <h3>360</h3>
+                        <p>Detecció, pla específic i seguiment global del jugador a tots els nivells. El nostre programa complet.</p>
+                    </div>
+                </div>
+                <!-- EDITABLE: confirmar quines modalitats queden realment actives i esborrar les que no ho estiguin. -->
+            </div>
+        </section>
+
+        <!-- ==================== 6. SEGUIMIENTO ==================== -->
+        <section class="seccion tec-seguiment__seccion" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Seguiment</span>
+                <h2 class="titulo-seccion">Com funciona una temporada</h2>
+                <div class="tec-seguiment__grid">
+                    <div class="tec-seguiment">
+                        <p class="tec-seguiment__icono">1</p>
+                        <div>
+                            <h3>Durada i periodicitat</h3>
+                            <p>Sessions de 60 a 90 minuts, una o dues per setmana segons format. Tota la temporada — vegeu sedes i calendari més avall.</p>
+                        </div>
+                    </div>
+                    <div class="tec-seguiment">
+                        <p class="tec-seguiment__icono">2</p>
+                        <div>
+                            <h3>Grups estables</h3>
+                            <p>Els grups es mantenen durant el trimestre per garantir bona dinàmica, confiança i progressió real.</p>
+                        </div>
+                    </div>
+                    <div class="tec-seguiment">
+                        <p class="tec-seguiment__icono">3</p>
+                        <div>
+                            <h3>Informes i cicles</h3>
+                            <p>Al final de cada cicle es genera un informe de progrés amb dades objectives i propostes per al següent.</p>
+                        </div>
+                    </div>
+                    <div class="tec-seguiment">
+                        <p class="tec-seguiment__icono">4</p>
+                        <div>
+                            <h3>Famílies informades</h3>
+                            <p>Les famílies reben síntesis del progrés del seu fill o filla quan els informes ho recomanen. Comunicació clara i sense sorpreses.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tec-calen-nota">
+                    <p><strong>Calendari general:</strong> la temporada transcorre de <strong>setembre a juny</strong>, amb una dinàmica de trimestres per facilitar l'adaptació. El detall de dates per sessió es lliura a l'inici de cada trimestre.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 7. SEDES Y CALENDARIO ==================== -->
+        <section class="seccion" id="seus" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Sedes</span>
+                <h2 class="titulo-seccion">On i quan entrenem</h2>
+                <p class="intro-seccion">Dues seus actives aquesta temporada. Cada seu té el seu horari: tria la més propera a casa teva.</p>
+                <div class="tec-seus__grid">
+                    <div class="tec-seu">
+                        <div class="tec-seu__img">
+                            <img src="../Imatges/Camp%20La%20Torreta.jpg" alt="Camp la Torreta" loading="lazy">
+                        </div>
+                        <h3>C.F. La Torreta</h3>
+                        <ul>
+                            <li><span>Municipi</span> <span>La Roca del Vallès</span></li>
+                            <li><span>Direcció</span> <span>Carrer Granada, s/n, 08430 La Torreta</span></li>
+                        </ul>
+                        <a class="tec-seu__mapa" href="https://www.google.com/maps/search/C.F.+La+Torreta,+Carrer+Granada,+s/n,+08430+La+Torreta,+Barcelona" target="_blank" rel="noopener">Veure al mapa</a>
+                    </div>
+                    <div class="tec-seu">
+                        <div class="tec-seu__img">
+                            <img src="../Imatges/camp%20ametlla%20.jpg" alt="Camp de l'Ametlla" loading="lazy">
+                        </div>
+                        <h3>Camp de futbol de l'Ametlla "Josep Costa Vila"</h3>
+                        <ul>
+                            <li><span>Municipi</span> <span>L'Ametlla del Vallès</span></li>
+                            <li><span>Direcció</span> <span>Passatge Montaner, 6, 08480 L'Ametlla del Vallès</span></li>
+                        </ul>
+                        <a class="tec-seu__mapa" href="https://www.google.com/maps/search/Passatge+Montaner+6,+08480+L'Ametlla+del+Vallès,+Barcelona" target="_blank" rel="noopener">Veure al mapa</a>
+                    </div>
+                </div>
+                <div class="tec-calen-nota">
+                    <p><strong>Calendari:</strong> activitats de <strong>setembre a juny</strong>. El calendari complet per sessió no es publica per mantenir flexibilitat; cada família rep les seves dates a l'inici de trimestre.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 8+10. CTAS (dossier + inscripció) ==================== -->
+        <div class="tec-ctas">
+            <section class="seccion tec-dossier" data-reveal>
+                <div class="container centrado">
+                    <span class="kicker">Tot el detall</span>
+                    <h2 class="titulo-seccion">Baixa el dossier complet</h2>
+                    <p>Tots els continguts, metodologia, modalitats i condicions en un sol document. Sense registrar-te: només un clic.</p>
+                    <a class="btn btn--dorado" href="../pdf/dossier-tecnificacio-26-27.pdf" target="_blank" rel="noopener">Veure dossier TEC 26-27</a>
+                    <!-- EDITABLE: substituir pel PDF real del dossier quan estigui disponible. -->
+                </div>
+            </section>
+
+            <section class="seccion tec-inscripcio" id="inscripcio" data-reveal>
+                <div class="container centrado">
+                    <span class="kicker">Últim pas</span>
+                    <h2 class="titulo-seccion">Comença a perfeccionar-te</h2>
+                    <p>Omple el formulari i et contactarem per assignar grup, seu i horari. Sense compromís i sense espera.</p>
+                    <a class="btn btn--rojo" href="#" target="_blank" rel="noopener">Inscriu-te a Perfecciona't</a>
+                    <!-- EDITABLE: substituir "#" pel link del formulari de Google Forms. -->
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== 11. FAQ ==================== -->
+        <section class="seccion seccion--fondo-suave" id="faq" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Preguntes freqüents</span>
+                <h2 class="titulo-seccion">Resol els teus dubtes</h2>
+                <div class="tec-faq__llista">
+                    <details class="tec-faq__item">
+                        <summary class="tec-faq__pregunta">Es compatible amb el meu club?</summary>
+                        <div class="tec-faq__resposta">
+                            <p>Sí, i és exactament la idea: el nostre treball és complementari. Administrem les sessions perquè no s'enxafi amb el calendari del club, i la nostra feina millora també el teu rendiment a l'equip.</p>
+                        </div>
+                    </details>
+                    <details class="tec-faq__item">
+                        <summary class="tec-faq__pregunta">Necessito un nivell concret per entrar?</summary>
+                        <div class="tec-faq__resposta">
+                            <p>No. El programa s'adapta al nivell de cada jugador. El primer mes fem una detecció per situar-te al grup adequat i marcar-te objectius realistes.</p>
+                        </div>
+                    </details>
+                    <details class="tec-faq__item">
+                        <summary class="tec-faq__pregunta">Hi ha una prova prèvia?</summary>
+                        <div class="tec-faq__resposta">
+                            <p>Pots venir a una sessió d'assistència per conèixer-nos i que coneguem el jugador. És la millor manera de decidir, sense compromís.</p>
+                        </div>
+                    </details>
+                    <details class="tec-faq__item">
+                        <summary class="tec-faq__pregunta">Com funcionen els packs?</summary>
+                        <div class="tec-faq__resposta">
+                            <p>Esculls sessions per setmana i horari. Pots començar en qualsevol moment i canviar de format durant la temporada segons l'evolució.</p>
+                        </div>
+                    </details>
+                    <details class="tec-faq__item">
+                        <summary class="tec-faq__pregunta">I si em perdo una sessió?</summary>
+                        <div class="tec-faq__resposta">
+                            <p>Per assumptes justificats, gestionem recuperacions dins del mateix cicle quan és possible. Les regles exactes són al dossier.</p>
+                        </div>
+                    </details>
+                    <details class="tec-faq__item">
+                        <summary class="tec-faq__pregunta">Qui imparteix les sessions?</summary>
+                        <div class="tec-faq__resposta">
+                            <p>El cos tècnic de Level Up, format per entrenadors i professionals en actiu amb experiència formativa. Tots segueixen la mateixa metodologia TEC.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="tec-faq__contacte">
+                    <p>Si teniu qualsevol altra pregunta, no dubteu a posar-vos en contacte amb nosaltres:</p>
+                    <p><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a> · <a class="telefon-link" href="#" target="_blank" rel="noopener"><span class="telefon-numero"></span></a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Peu de pàgina comú (igual en totes les pàgines) ===== -->
+    <footer class="pie">
+        <div class="container pie__grid">
+
+            <div>
+                <p class="pie__logo">LEVEL<span>UP</span></p>
+                <p class="pie__frase">Formació, competició i experiències reals que et fan créixer.</p>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Contacte</p>
+                <ul class="pie__lista">
+                    <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
+                    <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Segueix-nos</p>
+                <ul class="pie__lista">
+                    <li><a href="https://www.instagram.com/levelupfootballexperience" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@levelupfootballexperience" target="_blank" rel="noopener">TikTok</a></li>
+                    <li><a href="#">Linktree</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Legal</p>
+                <ul class="pie__lista">
+                    <li><a href="#">Avís legal</a></li>
+                    <li><a href="#">Política de privacitat</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <p class="pie__copy">© <span id="any">2026</span> Level Up Football Experience · Tots els drets reservats</p>
+    </footer>
+
+    <!-- JavaScript común -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

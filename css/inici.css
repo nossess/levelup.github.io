@@ -1,0 +1,598 @@
+/* ============================================================
+   LEVEL UP - CSS DE LA PÁGINA INICI (portada)
+   Aquí SOLO van los estilos exclusivos de index.html.
+   Lo común (menú, footer, botones, colores) está en global.css.
+   Orden de secciones igual que en el HTML:
+   1 Hero  2 Què és  3 Àrees  4 Diferencial
+   5 Experiències  6 Xifres  7 Testimonis  8 CTA final
+   ============================================================ */
+
+/* ===== 1. HERO (presentación principal) ===== */
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background:
+        linear-gradient(105deg, rgba(13, 13, 13, 0.92) 25%, rgba(13, 13, 13, 0.55) 60%, rgba(13, 13, 13, 0.35)),
+        url("../Imatges/La%20suprema/Imatges%20la%20suprema%20(3).jpg") center / cover no-repeat;
+}
+
+.hero__contenido {
+    max-width: 640px;
+    padding: 140px 0 90px;
+    /* Enloco el .container y dejo un margen pequeño a la izquierda */
+    margin-left: min(12vw, 180px);
+    margin-right: auto;
+}
+
+.hero__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.4rem, 7vw, 4.6rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.05;
+    letter-spacing: 2px;
+}
+
+.hero__titulo span { color: var(--dorado); }
+
+.hero__frase {
+    color: var(--gris-claro);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin: 22px 0 46px;
+    border-left: 3px solid var(--dorado);
+    padding-left: 16px;
+}
+
+.hero__botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Indicador para bajar */
+.hero__flecha {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--dorado);
+    font-size: 1.6rem;
+    animation: rebote 1.8s infinite ease-in-out;
+}
+
+@keyframes rebote {
+    0%, 100% { transform: translate(-50%, 0); }
+    50%      { transform: translate(-50%, 10px); }
+}
+
+/* ===== 2. QUÈ ÉS LEVEL UP ===== */
+.quienes-somos__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+/* La secció fa de marc per a la foto i ocupa tota l'alçada de la finestra */
+.seccion--qui-som {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* La foto ocupa TOTA l'alçada de la secció (tocar
+   les vores superior i inferior) i arriba a la vora dreta. */
+.quienes-somos__foto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 62%;
+}
+
+/* El text queda a l'esquerra, més estret per no passar per sota de la foto */
+.quienes-somos__texto {
+    max-width: 480px;
+}
+
+.quienes-somos__texto p {
+    color: var(--gris-claro);
+    margin-top: 18px;
+}
+
+.quienes-somos__texto p strong {
+    color: var(--blanco); 
+    }
+
+/* Título un poco más grande que el estándar */
+.quienes-somos__titulo {
+    font-size: clamp(2rem, 4.6vw, 3.1rem);
+}
+
+.quienes-somos__foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Degradat de la imatge: invisible a l'esquerra (toca el text),
+       opacitat 100% a la dreta. Així la foto apareix de forma suau
+       i es fon amb la pàgina enlloc de ser una caixa tancada. */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 35%, #000 65%);
+            mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 35%, #000 65%);
+}
+
+/* ===== 3. TRES GRANS ÀREAS ===== */
+.seccion--areas {
+    position: relative;
+    padding: 110px 0;
+    background-color: var(--negro);
+}
+
+/* Foto de fondo como imagen real (se mueve con la sección, nunca sobresale) */
+.seccion--areas__fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Rectángulo oscuro: solo cubre la propia sección, sin sobresalir */
+.seccion--areas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 13, 13, 0.9);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.seccion--areas > .container {
+    position: relative;
+    z-index: 2;
+}
+
+.areas__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-top: 50px;
+}
+
+.area {
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--negro-suave);
+    border: 1px solid transparent;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.area:hover {
+    transform: translateY(-6px);
+    border-color: var(--dorado);
+}
+
+/* Foto de la tarjeta: franja superior bien encuadrada (sin recortes ni capas) */
+.area__foto {
+    height: 170px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.area__cuerpo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px 30px 30px;
+}
+
+.area__nombre {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.area__descripcion {
+    color: var(--gris-claro);
+    font-size: 0.92rem;
+    margin: 14px 0 20px;
+}
+
+.area__enlace {
+    font-family: var(--fuente-titulos);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    transition: color 0.2s ease;
+}
+
+.area__enlace::after { content: " →"; }
+
+.area__enlace:hover { color: var(--blanco); }
+
+/* Varios accesos juntos en una misma tarjeta (ej: Formació) */
+.area__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 26px;
+}
+
+/* Fotos de cada tarjeta (cámbialas aquí) */
+.area--formacio .area__foto {
+    background-image: url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(2).jpg");
+}
+
+.area--tornejos .area__foto {
+    background-image: url("../Imatges/La%20suprema/trofeo%20la%20suprema.jpg");
+}
+
+.area--seleccions .area__foto {
+    background-image: url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(9).jpg");
+}
+
+/* ===== 4. BANDA "QUÈ ENS DIFERENCIA" (con foto de fondo) ===== */
+.diferencial {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 0 60px;
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.72), rgba(13, 13, 13, 0.72)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(6).jpg") center / cover no-repeat;
+}
+
+/* El contenidor de la banda s'estira per poder centrar el contingut */
+.diferencial .container {
+    width: 100%;
+}
+
+/* Tot el contingut de la banda, centrat horitzontalment */
+.diferencial .container {
+    text-align: center;
+}
+
+.diferencial__lista {
+    position: relative;
+    height: 280px;
+    max-width: 1120px;
+    margin: 80px auto 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* El camí: una línia corba de guions - - - - dibuixada amb un SVG incrustat
+   com a fons, perquè es vegi idèntica en tots els navegadors */
+.diferencial__lista::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1120 280' preserveAspectRatio='none'%3E%3Cpath d='M70 115 L77 113 L90 111 L101 109 L112 106 L123 105 L134 103 L146 101 L157 99 L168 98 L179 96 L190 95 L202 94 L213 93 L224 92 L235 91 L246 91 L258 90 L269 90 L280 90 L291 90 L302 90 L314 91 L325 91 L336 92 L347 93 L358 94 L370 95 L381 96 L392 98 L403 99 L414 101 L426 103 L437 105 L448 106 L459 109 L470 111 L482 113 L493 115 L504 118 L515 120 L526 123 L538 125 L549 127 L560 130 L571 133 L582 135 L594 137 L605 140 L616 142 L627 145 L638 147 L650 149 L661 151 L672 154 L683 155 L694 157 L706 159 L717 161 L728 162 L739 164 L750 165 L762 166 L773 167 L784 168 L795 169 L806 169 L818 170 L829 170 L840 170 L851 170 L862 170 L874 169 L885 169 L896 168 L907 167 L918 166 L930 165 L941 164 L952 162 L963 161 L974 159 L986 157 L997 155 L1008 154 L1019 151 L1030 149 L1042 147 L1050 146' fill='none' stroke='%23c9a227' stroke-width='4' stroke-dasharray='14 13' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.9;
+}
+
+/* Cada punt del camí: posicionat sobre la corba */
+.diferencial__item {
+    position: absolute;
+    top: calc(var(--y) - 7px);
+    left: var(--x);
+    transform: translateX(-50%);
+    width: 11%;
+    text-align: center;
+    z-index: 1;
+}
+
+.diferencial__item:nth-child(1) { --x: 6.25%;  --y: 115px; }
+.diferencial__item:nth-child(2) { --x: 18.75%; --y: 94px; }
+.diferencial__item:nth-child(3) { --x: 31.25%; --y: 94px; }
+.diferencial__item:nth-child(4) { --x: 43.75%; --y: 115px; }
+.diferencial__item:nth-child(5) { --x: 56.25%; --y: 146px; }
+.diferencial__item:nth-child(6) { --x: 68.75%; --y: 167px; }
+.diferencial__item:nth-child(7) { --x: 81.25%; --y: 167px; }
+.diferencial__item:nth-child(8) { --x: 93.75%; --y: 146px; }
+
+/* El punt: cercle daurat sobre la corba */
+.diferencial__punt {
+    display: block;
+    width: 14px;
+    height: 14px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: var(--dorado);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.55);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* El text, separat del punt */
+.diferencial__text {
+    display: block;
+    margin-top: 26px;
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    transition: color 0.25s ease;
+}
+
+/* Interactivitat: en passar el ratolí, el punt brilla i el text es torna daurat */
+.diferencial__item:hover .diferencial__punt,
+.diferencial__item:focus-visible .diferencial__punt {
+    transform: scale(1.6);
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.95);
+}
+
+.diferencial__item:hover .diferencial__text,
+.diferencial__item:focus-visible .diferencial__text {
+    color: var(--dorado);
+}
+
+.diferencial__item:focus-visible {
+    outline: none;
+}
+
+/* ===== 5. PRÒXIMES EXPERIÈNCIES (tarjetas) ===== */
+.experiencias__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.experiencia {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.experiencia:hover {
+    transform: translateY(-4px);
+    border-color: var(--dorado);
+}
+
+.experiencia__foto img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
+}
+
+.experiencia__cuerpo {
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.experiencia__datos {
+    color: var(--gris-claro);
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: var(--fuente-titulos);
+}
+
+.experiencia__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.45rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.experiencia__texto {
+    color: var(--gris-claro);
+    font-size: 0.95rem;
+}
+
+.experiencia__botones {
+    margin-top: auto;
+    padding-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+/* ===== 6. XIFRES (trayectoria) ===== */
+.xifres {
+    border-top: 3px solid var(--rojo);
+    border-bottom: 3px solid var(--rojo);
+    background: #000000;
+    padding: 70px 0;
+}
+
+.xifres__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 30px;
+    text-align: center;
+}
+
+.xifres__numero {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: var(--dorado);
+}
+
+.xifres__etiqueta {
+    color: var(--gris-claro);
+    font-family: var(--fuente-titulos);
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+/* ===== 7. TESTIMONIS ===== */
+.testimonis__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-top: 50px;
+}
+
+.testimoni {
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    padding: 34px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.testimoni:hover {
+    border-color: var(--dorado);
+    transform: translateY(-4px);
+}
+
+.testimoni__comillas {
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--rojo);
+}
+
+.testimoni__texto {
+    color: var(--gris-claro);
+    font-style: italic;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.testimoni__autor {
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dorado);
+}
+
+/* ===== 8. CTA FINAL ===== */
+.cta-final {
+    padding: 130px 0;
+    text-align: center;
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.82), rgba(13, 13, 13, 0.82)),
+        url("../Imatges/La%20suprema/Imatges%20la%20suprema%20(1).jpg") center / cover no-repeat;
+}
+
+.cta-final .titulo-seccion::after { margin-inline: auto; }
+
+.cta-final__texto {
+    color: var(--gris-claro);
+    max-width: 560px;
+    margin: 20px auto 36px;
+}
+
+.cta-final__botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* ===== RESPONSIVE DE LA PORTADA ===== */
+@media (max-width: 900px) {
+
+    /* Pantallas estrechas: más aire entre subtítulo y botones */
+    .hero__frase { margin-bottom: 60px; }
+
+    .quienes-somos__grid {
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+
+    .quienes-somos__foto {
+        position: static;
+        width: 100%;
+        margin-top: 34px;
+    }
+    .quienes-somos__foto img { height: 340px; }
+
+    /* En pantalla estreta la imatge va sola: sense degradat, es veu completa */
+    .quienes-somos__foto img {
+        -webkit-mask-image: none;
+                mask-image: none;
+    }
+
+    .areas__grid { grid-template-columns: 1fr; }
+    .area { min-height: 320px; }
+
+    .experiencia { grid-template-columns: 1fr; }
+    .experiencia__foto img { min-height: 220px; max-height: 260px; }
+
+    .xifres__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px 20px;
+    }
+    .xifres__grid > :last-child { grid-column: 1 / -1; }
+
+    .testimonis__grid { grid-template-columns: 1fr; }
+
+    /* En pantalla estreta: la corba desapareix i cada punt va en una fila,
+   amb el camí de guions a l'esquerra */
+    .diferencial__lista {
+        height: auto;
+        margin-top: 44px;
+    }
+
+    .diferencial__lista::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        left: 14px;
+        right: auto;
+        width: 0;
+        background: none;
+        border-left: 2px dashed rgba(212, 175, 55, 0.7);
+    }
+
+    .diferencial__item {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: auto;
+        text-align: left;
+        padding-left: 40px;
+        margin-bottom: 30px;
+    }
+
+    .diferencial__punt {
+        position: absolute;
+        left: 8px;
+        top: 6px;
+        margin: 0;
+    }
+
+    .diferencial__text { margin-top: 0; }
+}
+
+/* Pantallas muy pequeñas: botones apilados, con el mismo ancho */
+@media (max-width: 560px) {
+    .hero__botones { flex-direction: column; align-items: stretch; gap: 18px; max-width: 260px; }
+    .hero__botones .btn { width: 100%; text-align: center; }
+}

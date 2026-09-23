@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL UP | Level Up Football Experience</title>
+    <meta name="description" content="Qui som, filosofia, metodologia, pilars, seus i equip de Level Up Football Experience.">
+
+    <!-- Marca que hay JavaScript para activar las animaciones de scroll -->
+    <script>document.documentElement.className = "js";</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Estilos: global (común) + levelup (esta página) -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/levelup.css">
+</head>
+<body>
+
+    <a class="saltar-contenido" href="#contingut">Anar al contingut</a>
+
+    <header class="cabecera">
+        <div class="cabecera__contenido container">
+
+            <a href="index.html" class="logo" aria-label="Level Up - pàgina d'inici">
+                <img src="../Imatges/Logo_LevelUp.ico" alt="" class="logo__img">
+                <span class="logo__texto">Level<span class="logo__acento">Up</span></span>
+            </a>
+
+            <!-- ===== Zona central: navegació principal =====
+                 Per afegir o treure pàgines, només cal afegir o treure un <li>. -->
+            <nav class="menu" id="menu-principal" aria-label="Menú principal">
+                <ul class="menu__lista">
+                    <li><a class="menu__enlace" href="index.html">Inici</a></li>
+                    <li><a class="menu__enlace menu__enlace--activo" href="levelup.html" aria-current="page">Level Up</a></li>
+                    <li><a class="menu__enlace" href="tecnificacio.html">Tecnificació</a></li>
+                    <li><a class="menu__enlace" href="campus.html">Campus</a></li>
+                    <li><a class="menu__enlace" href="tornejos.html">Tornejos</a></li>
+                    <li><a class="menu__enlace" href="seleccions.html">Seleccions</a></li>
+                </ul>
+            </nav>
+            <div class="cabecera__acciones">
+
+                <button type="button" class="cabecera__idioma"
+                        aria-label="Canvia l'idioma" aria-haspopup="true" aria-expanded="false">
+
+                    <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Catala">
+
+
+                    <ul class="menu__lista cabecera__idioma-lista">
+                        <li><a class="menu__enlace menu__enlace--activo" href="levelup.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
+                        <li><a class="menu__enlace" href="../es/levelup.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace" href="../en/levelup.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
+                    </ul>
+                </button>
+
+                <button class="hamburguesa" type="button" aria-label="Obrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main id="contingut">
+
+        <!--  1. CABECERA DE PÁGINA  -->
+        <section class="capsalera-pagina">
+            <div class="container capsalera-pagina__contenido">
+                <p class="kicker">Qui som</p>
+                <h1>Level Up Football Experience</h1>
+            </div>
+        </section>
+
+        <!--  2. HISTORIA / QUÉ ES LEVEL UP  -->
+        <section class="seccion seccion-historia" data-reveal>
+            <div class="container historia__grid">
+
+                <div class="historia__foto">
+                    <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(1).jpg"
+                         alt="Jugadors de Level Up durant un entrenament">
+                </div>
+
+                <div class="historia__texto">
+                    <span class="kicker">La història</span>
+                    <h2 class="titulo-seccion">Què és Level&nbsp;Up?</h2>
+                    <p>Level Up Football Experience neix amb una idea clara:
+                       crear <strong>experiències formatives i competitives de qualitat</strong>
+                       per a jugadors i jugadores que volen donar un pas endavant.</p>
+                    <p>Avui combinem tres línies de treball: <strong>formació contínua</strong>
+                       (tecnificació i campus), <strong>tornejos propis</strong> i
+                       <strong>seleccions</strong> que competeixen en esdeveniments seleccionats.</p>
+                    <p>La finalitat és acompanyar el creixement esportiu i personal de cada
+                       jugador, treballant amb rigor, sentit crític i molta passió pel futbol.</p>
+                </div>
+
+            </div>
+        </section>
+
+<!--  3. FILOSOFÍA (banda con cita)  -->
+        <section class="filosofia" data-reveal>
+            <div class="container">
+                <span class="kicker">Filosofia</span>
+                <blockquote>
+                    <p>Creiem en el creixement a través d'experiències reals:
+                       entrenar bé, competir de debò i aprendre de cada situació.</p>
+                    <cite>Filosofia Level Up</cite>
+                </blockquote>
+            </div>
+        </section>
+
+<!--  4. PILARES  -->
+        <section class="seccion seccion--fondo-suave" data-reveal>
+            <div class="container">
+                <span class="kicker">Què ens diferencia?</span>
+                <h2 class="titulo-seccion">Els nostres pilars</h2>
+                <p class="intro-seccion">Els fonaments que donen forma a cada experiència.</p>
+
+                <div class="pilars__slider" data-slider>
+
+                    <ul class="pilars__pista" data-slider-pista>
+
+                        <li class="pilar" data-slide>
+                            <img class="pilar__foto" src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(5).jpg" alt="">
+                            <div class="pilar__cos">
+                                <p class="pilar__numero">01</p>
+                                <h3>Individualització</h3>
+                                <p>Cada jugador/a és únic. Dissenyem programes i experiències
+                                   adaptades a les seves necessitats i al seu moment de creixement.</p>
+                            </div>
+                        </li>
+
+                        <li class="pilar" data-slide>
+                            <img class="pilar__foto" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(9).jpg" alt="">
+                            <div class="pilar__cos">
+                                <p class="pilar__numero">02</p>
+                                <h3>Mètode</h3>
+                                <p>Treball estructurat i planificat al més mínim detall.
+                                   Tot té un perquè. Aquí res queda a l'atzar.</p>
+                            </div>
+                        </li>
+
+                        <li class="pilar" data-slide>
+                            <img class="pilar__foto" src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(10).jpg" alt="">
+                            <div class="pilar__cos">
+                                <p class="pilar__numero">03</p>
+                                <h3>Experiències reals</h3>
+                                <p>Formació i competició connectades en entorns reals, amb uns serveis
+                                   i organització que marquen la diferència.</p>
+                            </div>
+                        </li>
+
+                        <li class="pilar" data-slide>
+                            <img class="pilar__foto" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(11).jpg" alt="">
+                            <div class="pilar__cos">
+                                <p class="pilar__numero">04</p>
+                                <h3>Professionalitat</h3>
+                                <p>Treball real i exigent, aplicat amb professionalitat en cada detall:
+                                   de la planificació a l'execució, tot es cuida.</p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <button type="button" class="pilars__fletxa pilars__fletxa--esquerra"
+                            data-slider-moviment="anterior" aria-label="Pilar anterior">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button type="button" class="pilars__fletxa pilars__fletxa--dreta"
+                            data-slider-moviment="seguent" aria-label="Pilar següent">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+
+                    <div class="pilars__punts" data-slider-punts></div>
+
+                </div>
+            </div>
+        </section>
+
+<!--  5. METODOLOGÍA  -->
+        <section class="seccion metodologia-fons" data-reveal>
+            <div class="container metodologia__grid">
+
+                <div class="metodologia__texto">
+                    <span class="kicker">Com formem</span>
+                    <h2 class="titulo-seccion">Metodologia</h2>
+                    <p><strong>El jugador és el protagonista.</strong> Entrenem perquè cada
+                       jugador percebi, decideixi i resolgui situacions reals de joc.</p>
+                    <p>Prioritzem la <strong>presa de decisions</strong>, les situacions
+                       contextuals i la transferència del que s'entrena al partit.
+                       Cap exercici sense un perquè.</p>
+                    <p>Treballem de manera global en cinc aspectes:</p>
+                </div>
+
+<div class="metodologia__slider" data-metodologia-slider>
+
+                    <ul class="metodologia__aspectes" data-metodologia-pista>
+                        <li data-metodologia-slide>
+                            <strong>Tècnic</strong>
+                            <span>Execució i domini del gest sota pressió.</span>
+                        </li>
+                        <li data-metodologia-slide>
+                            <strong>Tàctic</strong>
+                            <span>Comprensió del joc i comportaments per posició.</span>
+                        </li>
+                        <li data-metodologia-slide>
+                            <strong>Cognitiu</strong>
+                            <span>Percepció, atenció i presa de decisions.</span>
+                        </li>
+                        <li data-metodologia-slide>
+                            <strong>Condicional</strong>
+                            <span>Força, resistència i velocitat aplicades al futbol.</span>
+                        </li>
+                        <li data-metodologia-slide>
+                            <strong>Emocional</strong>
+                            <span>Gestió de la pressió, la confiança i l'autonomia.</span>
+                        </li>
+                    </ul>
+
+                    <!-- Barra de navegación (solo visible en móvil) -->
+                    <div class="metodologia__navegacio">
+                        <button type="button" class="metodologia__fletxa metodologia__fletxa--anterior"
+                                data-metodologia-moviment="anterior" aria-label="Aspecte anterior">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="metodologia__punts" data-metodologia-punts></div>
+                        <button type="button" class="metodologia__fletxa metodologia__fletxa--seguent"
+                                data-metodologia-moviment="seguent" aria-label="Aspecte següent">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== 6. VALORES ==================== -->
+        <section class="valors valors-fons seccion" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">La nostra identitat</span>
+                <h2 class="titulo-seccion">Valors que ens defineixen</h2>
+
+                <div class="valors__grid">
+
+                    <div class="valor" data-reveal="escala" role="button" tabindex="0" aria-label="Professionalitat: Rigor en cada detall.">
+                        <div class="valor__intern">
+                            <div class="valor__cara valor__cara--davant">
+                                <p class="valor__numero">01</p>
+                                <h3>Professionalitat</h3>
+                            </div>
+                            <div class="valor__cara valor__cara--darrera">
+                                <p class="valor__text">Rigor i serietat en cada detall: de la
+                                   planificació a l'execució, tot el que fem es fa bé i a temps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="valor" data-reveal="escala" role="button" tabindex="0" aria-label="Esforç: Sense dreceres.">
+                        <div class="valor__intern">
+                            <div class="valor__cara valor__cara--davant">
+                                <p class="valor__numero">02</p>
+                                <h3>Esforç</h3>
+                            </div>
+                            <div class="valor__cara valor__cara--darrera">
+                                <p class="valor__text">El talent ens porta lluny, però només
+                                   l'esforç diari ens fa arribar. Aquí no hi ha atalls.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="valor" data-reveal="escala" role="button" tabindex="0" aria-label="Constància: El progrés es construeix dia rere dia.">
+                        <div class="valor__intern">
+                            <div class="valor__cara valor__cara--davant">
+                                <p class="valor__numero">03</p>
+                                <h3>Constància</h3>
+                            </div>
+                            <div class="valor__cara valor__cara--darrera">
+                                <p class="valor__text">El progrés no es regala: es construeix dia rere dia,
+                                   repetint, corregint i millorant sense parar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="valor" data-reveal="escala" role="button" tabindex="0" aria-label="Humilitat: Aprenem de tothom.">
+                        <div class="valor__intern">
+                            <div class="valor__cara valor__cara--davant">
+                                <p class="valor__numero">04</p>
+                                <h3>Humilitat</h3>
+                            </div>
+                            <div class="valor__cara valor__cara--darrera">
+                                <p class="valor__text">Ningú no ho sap tot. Aprenem de cada persona,
+                                   de cada partit i de cada error, sempre amb els peus a terra.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="valor" data-reveal="escala" role="button" tabindex="0" aria-label="Resiliència: Ens aixequem i ho tornem a intentar.">
+                        <div class="valor__intern">
+                            <div class="valor__cara valor__cara--davant">
+                                <p class="valor__numero">05</p>
+                                <h3>Resiliència</h3>
+                            </div>
+                            <div class="valor__cara valor__cara--darrera">
+                                <p class="valor__text">Cauc i torna-te'n a aixecar. Aquí convertim
+                                   les ensopegades en aprenentatge i tornem a intentar-ho.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="valor" data-reveal="escala" role="button" tabindex="0" aria-label="Respecte: Companys, rivals i àrbitres.">
+                        <div class="valor__intern">
+                            <div class="valor__cara valor__cara--davant">
+                                <p class="valor__numero">06</p>
+                                <h3>Respecte</h3>
+                            </div>
+                            <div class="valor__cara valor__cara--darrera">
+                                <p class="valor__text">Guanyem i perdem amb els mateixos valors:
+                                   companys, rivals, àrbitres i famílies sempre mereixedors de respecte.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 7. SEDES ====================
+             EDITABLE: nombre, dirección y enlace de Maps de cada sede.
+             Los enlaces usan la búsqueda oficial de Google Maps. -->
+<section class="seccion seccion--fondo-suave" data-reveal>
+            <div class="container">
+                <span class="kicker">On treballem</span>
+                <h2 class="titulo-seccion">Les nostres seus</h2>
+
+                <div class="seus__grid">
+
+                    <article class="seu">
+                        <div class="seu__foto">
+                            <img src="../Imatges/Camp%20La%20Torreta.jpg" alt="Camp la Torreta" loading="lazy">
+                        </div>
+                        <h3>C.F. La Torreta</h3>
+                        <ul class="seu__dades">
+                            <li><span>Municipi</span> <span>La Roca del Vallès</span></li>
+                            <li><span>Direcció</span> <span>Carrer Granada, s/n, 08430 La Torreta</span></li>
+                        </ul>
+                        <a class="seu__maps" href="https://www.google.com/maps/search/C.F.+La+Torreta,+Carrer+Granada,+s/n,+08430+La+Torreta,+Barcelona" target="_blank" rel="noopener">Veure al mapa</a>
+                    </article>
+
+                    <article class="seu">
+                        <div class="seu__foto">
+                            <img src="../Imatges/camp%20ametlla%20.jpg" alt="Camp de l'Ametlla" loading="lazy">
+                        </div>
+                        <h3>Camp de futbol de l'Ametlla "Josep Costa Vila"</h3>
+                        <ul class="seu__dades">
+                            <li><span>Municipi</span> <span>L'Ametlla del Vallès</span></li>
+                            <li><span>Direcció</span> <span>Passatge Montaner, 6, 08480 L'Ametlla del Vallès</span></li>
+                        </ul>
+                        <a class="seu__maps" href="https://www.google.com/maps/search/Passatge+Montaner+6,+08480+L'Ametlla+del+Vallès,+Barcelona" target="_blank" rel="noopener">Veure al mapa</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 8. EQUIPO ====================
+             EDITABLE: nombres de ejemplo (excepto Edu, dirección).
+             Los avatares usan iniciales; se pueden cambiar por fotos. -->
+<section class="seccion" data-reveal>
+            <div class="container centrado">
+                <span class="kicker">Les persones</span>
+                <h2 class="titulo-seccion">L'equip</h2>
+
+                <div class="equip__grid">
+
+                    <article class="membre">
+                        <img class="membre__avatar" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(2).jpg" alt="">
+                        <h3>Edu</h3>
+                        <p>Direcció del projecte</p>
+                    </article>
+
+                    <article class="membre">
+                        <img class="membre__avatar" src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(3).jpg" alt="">
+                        <h3>Marta</h3>
+                        <p>Coordinació de formació</p>
+                    </article>
+
+                    <article class="membre">
+                        <img class="membre__avatar" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(3).jpg" alt="">
+                        <h3>Roger</h3>
+                        <p>Responsable de tornejos</p>
+                    </article>
+
+                    <article class="membre">
+                        <p class="membre__avatar" aria-hidden="true">+10</p>
+                        <h3>Cos tècnic</h3>
+                        <p>Formadors i formadores especialitzats</p>
+                    </article>
+
+                </div>
+
+                <p class="equip__nota">
+                   No publiquem l'organigrama intern complet.
+                   Els perfils públics s'actualitzen cada temporada.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==================== 9. CONFIANZA (cifras estáticas) ====================
+             EDITABLE: mismos datos que la portada, sin animación. -->
+        <section class="confianca seccion" data-reveal>
+            <div class="container">
+                <span class="kicker">Confiança</span>
+                <h2 class="titulo-seccion">Experiència que avala</h2>
+
+                <div class="confianca__grid">
+                    <div>
+                        <p class="confianca__dada"><span>+</span>1200</p>
+                        <p class="confianca__etiqueta">Participants formats</p>
+                    </div>
+                    <div>
+                        <p class="confianca__dada"><span>+</span>25</p>
+                        <p class="confianca__etiqueta">Clubs col·laboradors</p>
+                    </div>
+                    <div>
+                        <p class="confianca__dada">5</p>
+                        <p class="confianca__etiqueta">Anys creixent junts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 10. CTA FINAL: ACCESOS A LAS 4 LÍNEAS ==================== -->
+        <section class="seccion seccion--fondo-suave centrado" data-reveal>
+            <div class="container">
+                <span class="kicker">Continua descobrint</span>
+                <h2 class="titulo-seccion">On vols anar ara?</h2>
+
+                <div class="destins__grid">
+
+                    <a class="desti desti--tecnificacio" href="tecnificacio.html">
+                        <h3>Tecnificació</h3>
+                        <p>Perfecciona't durant tota la temporada.</p>
+                        <span>Entrar</span>
+                    </a>
+
+                    <a class="desti desti--campus" href="campus.html">
+                        <h3>Campus</h3>
+                        <p>Nadal, Setmana Santa i Estiu.</p>
+                        <span>Entrar</span>
+                    </a>
+
+                    <a class="desti desti--tornejos" href="tornejos.html">
+                        <h3>Tornejos</h3>
+                        <p>Competicions pròpies Level Up.</p>
+                        <span>Entrar</span>
+                    </a>
+
+                    <a class="desti desti--seleccions" href="seleccions.html">
+                        <h3>Seleccions</h3>
+                        <p>Equips Level Up en experiències seleccionades.</p>
+                        <span>Entrar</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (igual en todas las páginas) -->
+    <footer class="pie">
+        <div class="container pie__grid">
+
+            <div>
+                <p class="pie__logo">LEVEL<span>UP</span></p>
+                <p class="pie__frase">Formació, competició i experiències reals que et fan créixer.</p>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Contacte</p>
+                <ul class="pie__lista">
+                    <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
+                    <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Segueix-nos</p>
+                <ul class="pie__lista">
+                    <li><a href="https://www.instagram.com/levelupfootballexperience" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@levelupfootballexperience" target="_blank" rel="noopener">TikTok</a></li>
+                    <li><a href="#">Linktree</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Legal</p>
+                <ul class="pie__lista">
+                    <li><a href="#">Avís legal</a></li>
+                    <li><a href="#">Política de privacitat</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <p class="pie__copy">© <span id="any">2026</span> Level Up Football Experience · Tots els drets reservats</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

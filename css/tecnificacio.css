@@ -1,0 +1,695 @@
+/* ============================================================
+   LEVEL UP - CSS DE LA PÁGINA TECNIFICACIÓ (PERFECCIONA'T)
+   Estilos exclusivos de tecnificacio.html.
+   Lo común (menú, footer, botones, colores) está en global.css.
+   Orden igual que en el HTML:
+   1 Cabecera  2 Qué es  3 Cómo trabajamos  4 Metodología TEC
+   5 Modalidades  6 Seguimiento  7 Sedes y calendario
+   8 Tarifas  9 Dossier CTA  10 Inscripción CTA  11 FAQ
+   ============================================================ */
+
+/* ===== 1. CABECERA DE PÁGINA (hero corto) ===== */
+.capsalera-pagina {
+    min-height: 62vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.78), rgba(13, 13, 13, 0.78)),
+        url("../Imatges/La%20suprema/Imatges%20la%20suprema%20(4).jpg") center / cover no-repeat;
+}
+
+.capsalera-pagina__contenido { padding: 150px 0 70px; }
+
+.capsalera-pagina h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+.capsalera-pagina p {
+    color: var(--gris-claro);
+    max-width: 640px;
+    margin: 16px auto 34px;
+    font-size: 1.05rem;
+}
+
+/* ===== 2. QUÉ ES PERFECCIONA'T ===== */
+.tec-quees {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.tec-quees__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.tec-quees__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tec-quees__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(13, 13, 13, 0.92) 0%, rgba(13, 13, 13, 0.7) 50%, rgba(13, 13, 13, 0.3) 100%);
+}
+
+.tec-quees .container {
+    position: relative;
+    z-index: 1;
+}
+
+.tec-quees__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 700px;
+}
+
+.tec-quees__texto p {
+    color: var(--gris-claro);
+    margin-top: 16px;
+}
+
+
+/* ===== 3. CÓMO TRABAJAMOS ===== */
+.tec-treball__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+    max-width: 1120px;
+    margin-inline: auto;
+}
+
+.tec-treball {
+    background: transparent;
+    border: 1px solid var(--gris-oscuro);
+    padding: 0;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.tec-treball:hover {
+    border-color: var(--dorado);
+}
+
+.tec-treball__intern {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.tec-treball:hover .tec-treball__intern,
+.tec-treball.tec-treball--voltat .tec-treball__intern {
+    transform: rotateY(180deg);
+}
+
+.tec-treball__cara {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background: var(--negro-suave);
+}
+
+.tec-treball__cara--darrera {
+    transform: rotateY(180deg);
+    justify-content: center;
+    padding: 28px;
+}
+
+.tec-treball .tec-treball__numero {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 100%;
+    height: 320px;
+    padding: 20px 0 10px 12px;
+    font-family: "Arial Black", "Impact", sans-serif;
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 0.9;
+    color: transparent;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.3) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.tec-treball .tec-treball__numero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(to top, rgba(13, 13, 13, 0.7), rgba(13, 13, 13, 0.15) 65%, transparent);
+}
+
+.tec-treball__foto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    z-index: 0;
+}
+
+.tec-treball__cos {
+    padding: 22px;
+}
+
+.tec-treball h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.tec-treball p {
+    color: var(--gris-claro);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.tec-treball__mes {
+    color: var(--blanco) !important;
+}
+
+/* ===== 4. METODOLOGÍA TEC ===== */
+.tec-metodologia {
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.9), rgba(13, 13, 13, 0.9)),
+        url("../Imatges/La%20suprema/Imatges%20la%20suprema%20(8).jpg") center / cover no-repeat;
+    border-top: 3px solid var(--dorado);
+    border-bottom: 3px solid var(--dorado);
+}
+
+.tec-metodologia__detall {
+    max-width: 860px;
+    margin-inline: auto;
+    margin-top: 46px;
+}
+
+.tec-metodologia__obertura {
+    list-style: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: 1px solid var(--dorado);
+    color: var(--dorado);
+    font-family: var(--fuente-titulos);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
+    user-select: none;
+}
+
+.tec-metodologia__obertura::-webkit-details-marker { display: none; }
+
+.tec-metodologia__obertura::after {
+    content: "+";
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.tec-metodologia__detall[open] .tec-metodologia__obertura {
+    background: var(--dorado);
+    color: var(--negro-suave);
+}
+
+.tec-metodologia__detall[open] .tec-metodologia__obertura::after { transform: rotate(45deg); }
+
+.tec-metodologia__obertura:hover {
+    background: var(--dorado);
+    color: var(--negro-suave);
+}
+
+.tec-metodologia__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+    margin-top: 46px;
+}
+
+.tec-metodologia__bloc h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.15rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 20px;
+}
+
+.tec-metodologia__bloc ul {
+    list-style: none;
+}
+
+.tec-metodologia__bloc li {
+    padding: 14px 0 14px 26px;
+    border-bottom: 1px solid var(--gris-oscuro);
+    color: var(--gris-claro);
+    position: relative;
+    line-height: 1.6;
+}
+
+.tec-metodologia__bloc li:last-child { border-bottom: none; }
+
+.tec-metodologia__bloc li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 21px;
+    width: 10px;
+    height: 2px;
+    background: var(--rojo);
+}
+
+.tec-metodologia__bloc li strong { color: var(--blanco); }
+
+/* ===== 5. MODALIDADES VIGENTES ===== */
+.tec-modalitats__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.tec-modalitat {
+    padding: 28px 22px;
+    border: 1px solid var(--gris-oscuro);
+    background: var(--negro-suave);
+    transition: border-color 0.3s ease;
+}
+
+.tec-modalitat:hover { border-color: var(--rojo); }
+
+.tec-modalitat h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 10px;
+}
+
+.tec-modalitat p {
+    color: var(--gris-claro);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* ===== 6. CÓMO ES EL SEGUIMIENTO ===== */
+.tec-seguiment__seccion {
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.88), rgba(13, 13, 13, 0.88)),
+        url("../Imatges/Campus%20d'estiu/Campus%20fotos%20(7).jpg") center / cover no-repeat;
+}
+
+.tec-seguiment__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 46px;
+}
+
+.tec-seguiment {
+    display: flex;
+    gap: 24px;
+    padding: 28px 26px;
+    border-left: 3px solid var(--dorado);
+    background: var(--negro-suave);
+}
+
+.tec-seguiment__icono {
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--rojo);
+    flex: 0 0 auto;
+}
+
+.tec-seguiment h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.tec-seguiment p {
+    color: var(--gris-claro);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* ===== 7. SEDES Y CALENDARIO GENERAL ===== */
+.tec-seus__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+    max-width: 860px;
+    margin-inline: auto;
+}
+
+.tec-seu {
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    padding: 30px 28px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease;
+}
+
+.tec-seu:hover { border-color: var(--dorado); }
+
+.tec-seu h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.15rem;
+    line-height: 1.35;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    min-height: 3.1em;
+    margin-bottom: 14px;
+}
+
+.tec-seu ul {
+    list-style: none;
+    margin-bottom: 18px;
+}
+
+.tec-seu li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gris-oscuro);
+    color: var(--gris-claro);
+    font-size: 0.92rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.tec-seu li:last-child { border-bottom: none; }
+
+.tec-seu li span { color: var(--blanco); font-weight: 600; text-align: right; }
+
+.tec-seu__img {
+    margin: -30px -28px 20px;
+    overflow: hidden;
+}
+
+.tec-seu__img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tec-seu:hover .tec-seu__img img { transform: scale(1.05); }
+
+.tec-seu__mapa {
+    display: inline-block;
+    margin-top: auto;
+    align-self: center;
+    padding: 10px 20px;
+    background: var(--dorado);
+    color: var(--negro-suave);
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.tec-seu__mapa:hover {
+    background: var(--blanco);
+    transform: translateY(-2px);
+}
+
+/* Franja horaria / periodo de temporada */
+.tec-calen-nota {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--gris-claro);
+    border: 1px dashed var(--gris-oscuro);
+    padding: 26px 24px;
+    max-width: 620px;
+    margin-inline: auto;
+}
+
+.tec-calen-nota strong { color: var(--dorado); }
+
+/* ===== 8. TARIFAS Y PACKS ===== */
+.tec-tarifes__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+    max-width: 960px;
+    margin-inline: auto;
+}
+
+.tec-tarifa {
+    padding: 34px 28px;
+    border: 2px solid var(--gris-oscuro);
+    background: var(--negro-suave);
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.tec-tarifa--destacada {
+    border-color: var(--dorado);
+    background: linear-gradient(rgba(201, 162, 39, 0.06), rgba(201, 162, 39, 0.06)), var(--negro-suave);
+}
+
+.tec-tarifa:hover { transform: translateY(-6px); }
+.tec-tarifa--destacada { border-color: var(--dorado); }
+
+.tec-tarifa h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.tec-tarifa__precio {
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--dorado);
+    margin: 14px 0 4px;
+}
+
+.tec-tarifa__precio span {
+    font-size: 0.95rem;
+    color: var(--gris-claro);
+    font-weight: 400;
+}
+
+.tec-tarifa ul {
+    list-style: none;
+    margin-top: 22px;
+}
+
+.tec-tarifa li {
+    padding: 8px 0;
+    color: var(--gris-claro);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--gris-oscuro);
+}
+
+.tec-tarifa li:last-child { border-bottom: none; }
+
+.tec-tarifa .btn { margin-top: 26px; }
+
+.tec-tarifes__nota {
+    text-align: center;
+    color: var(--gris-claro);
+    font-size: 0.9rem;
+    margin-top: 34px;
+}
+
+/* ===== 9. DOSSIER COMPLETO (CTA) ===== */
+.tec-ctas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.85)),
+        url("../Imatges/La%20suprema/trofeo%20la%20suprema.jpg") center / cover no-repeat;
+}
+
+.tec-ctas .seccion {
+    display: flex;
+    align-items: center;
+    padding: 90px 32px;
+}
+
+.tec-ctas .container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.tec-ctas h2 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.tec-ctas p {
+    max-width: 380px;
+}
+
+.tec-ctas .btn { font-size: 0.82rem; }
+
+.tec-dossier {
+    text-align: center;
+    height: 100%;
+}
+
+.tec-dossier p {
+    color: var(--gris-claro);
+    margin: 18px auto 34px;
+}
+
+/* ===== 10. INSCRIPCIÓN (CTA) ===== */
+.tec-inscripcio {
+    text-align: center;
+    height: 100%;
+}
+
+.tec-inscripcio p {
+    color: var(--gris-claro);
+    margin: 16px auto 34px;
+}
+
+/* ===== 11. FAQ BREVE ===== */
+.tec-faq__llista {
+    max-width: 760px;
+    margin: 46px auto 0;
+}
+
+.tec-faq__item {
+    margin-bottom: 14px;
+    border: 1px solid var(--gris-oscuro);
+    background: var(--negro-suave);
+    transition: border-color 0.3s ease;
+}
+
+.tec-faq__item:hover {
+    border-color: var(--dorado);
+}
+
+.tec-faq__pregunta {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    font-family: var(--fuente-titulos);
+    font-size: 0.92rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--blanco);
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.tec-faq__pregunta::after {
+    content: "+";
+    font-size: 1.4rem;
+    color: var(--dorado);
+    transition: transform 0.3s ease;
+}
+
+.tec-faq__item[open] .tec-faq__pregunta::after { transform: rotate(45deg); }
+
+.tec-faq__resposta {
+    padding: 0 24px 22px;
+    color: var(--gris-claro);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.tec-faq__resposta p { margin-bottom: 10px; }
+.tec-faq__resposta p:last-child { margin-bottom: 0; }
+
+.tec-faq__contacte {
+    margin-top: 36px;
+    padding: 24px;
+    border: 1px dashed var(--gris-oscuro);
+    text-align: center;
+    color: var(--gris-claro);
+    font-size: 0.95rem;
+}
+
+.tec-faq__contacte p { margin-bottom: 8px; }
+.tec-faq__contacte p:last-child { margin-bottom: 0; }
+
+.tec-faq__contacte a {
+    color: var(--dorado);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tec-faq__contacte a:hover { color: var(--blanco); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+    .capsalera-pagina { min-height: 48vh; }
+    .capsalera-pagina__contenido { padding: 130px 0 50px; }
+
+    .tec-treball__grid { grid-template-columns: repeat(2, 1fr); max-width: 640px; }
+    .tec-quees__grid { grid-template-columns: 1fr; gap: 40px; }
+    .tec-metodologia__grid { grid-template-columns: 1fr; gap: 40px; }
+    .tec-seguiment__grid { grid-template-columns: 1fr; }
+    .tec-modalitats__grid { grid-template-columns: repeat(2, 1fr); }
+    .tec-tarifes__grid { grid-template-columns: 1fr; max-width: 480px; }
+    .tec-seus__grid { grid-template-columns: 1fr; max-width: 480px; }
+    .tec-ctas { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+    .tec-treball__grid { grid-template-columns: 1fr; max-width: 420px; }
+    .tec-modalitats__grid { grid-template-columns: 1fr; }
+}

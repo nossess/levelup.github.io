@@ -1,0 +1,689 @@
+/* ============================================================
+   LEVEL UP - CSS PÁGINA TORNEJOS (ca/es/en)
+   Comparte variables y botones con global.css.
+   ============================================================ */
+
+/* ===== A. HERO TORNEJOS (split: texto izquierda + marcador derecha) ===== */
+.tornejos-hero {
+    position: relative;
+    min-height: 62vh;
+    display: flex;
+    align-items: center;
+    padding: 150px 0 80px;
+    background:
+        linear-gradient(90deg, rgba(13, 13, 13, 0.92) 0%, rgba(13, 13, 13, 0.55) 55%, rgba(13, 13, 13, 0.3) 100%),
+        url("../Imatges/La%20suprema/trofeo%20la%20suprema.jpg") center / cover no-repeat,
+        var(--negro);
+    border-bottom: 1px solid var(--gris-oscuro);
+    overflow: hidden;
+}
+
+.tornejos-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.tornejos-hero__contenido {
+    text-align: left;
+    max-width: 760px;
+}
+
+.tornejos-hero h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.tornejos-hero h1 span { color: var(--dorado); }
+
+.tornejos-hero .intro-seccion { margin-inline: 0; }
+
+.tornejos-hero__accions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+/* --- Marcador de la edición protagonista --- */
+.tornejos-marcador {
+    position: relative;
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    border-top: 4px solid var(--dorado);
+    padding: 34px 30px;
+    box-shadow: var(--sombra);
+    text-align: left;
+}
+
+.tornejos-marcador::before {
+    content: "ESTADIS // 90'";
+    position: absolute;
+    top: -13px;
+    left: 24px;
+    background: var(--rojo);
+    color: var(--blanco);
+    font-family: var(--fuente-titulos);
+    font-size: 0.63rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 4px 12px;
+}
+
+.tornejos-marcador__toroig {
+    font-family: var(--fuente-titulos);
+    font-size: 0.63rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 6px;
+}
+
+.tornejos-marcador__nom {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--blanco);
+    margin-bottom: 14px;
+}
+
+.tornejos-marcador__fitxa {
+    list-style: none;
+    margin-bottom: 22px;
+}
+
+.tornejos-marcador__fitxa li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 9px 0;
+    border-bottom: 1px dashed var(--gris-oscuro);
+    font-size: 0.85rem;
+}
+
+.tornejos-marcador__fitxa li span:first-child {
+    color: var(--gris-claro);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.tornejos-marcador__fitxa li span:last-child {
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+.tornejos-marcador__concepte {
+    color: var(--gris-claro);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    border-top: 1px solid var(--gris-oscuro);
+    padding-top: 18px;
+}
+
+/* ===== B. QUÉ SON (manifiesto + marcador de la propera edició) ===== */
+/* La secció ocupa l'alçada de la finestra, amb un màxim perquè no
+   es faci interminable en pantalles molt altes. */
+.tornejos-queson {
+    display: flex;
+    align-items: center;
+    min-height: min(100vh, 900px);
+}
+
+.tornejos-manifest {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.tornejos-manifest__frase {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.5rem, 3.2vw, 2.3rem);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.5px;
+    margin-bottom: 26px;
+}
+
+.tornejos-manifest__frase span { color: var(--dorado); }
+
+.tornejos-manifest__text {
+    color: var(--gris-claro);
+    max-width: 640px;
+    line-height: 1.8;
+}
+
+/* ===== C. QUÉ CUIDAMOS (checklist con iconos SVG + fotos) ===== */
+.tornejos-cuidem__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 44px;
+    text-align: left;
+}
+
+.tornejos-cuidem__item {
+    position: relative;
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    padding: 26px 22px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tornejos-cuidem__item:hover {
+    transform: translateY(-4px);
+    border-color: var(--dorado);
+}
+
+.tornejos-cuidem__foto {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.tornejos-cuidem__item:hover .tornejos-cuidem__foto {
+    opacity: 0.25;
+}
+
+.tornejos-cuidem__icona {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid var(--dorado);
+    margin-bottom: 18px;
+    transition: background 0.3s ease;
+}
+
+.tornejos-cuidem__item:hover .tornejos-cuidem__icona {
+    background: rgba(201, 162, 39, 0.12);
+}
+
+.tornejos-cuidem__icona svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--dorado);
+}
+
+.tornejos-cuidem__item h3 {
+    position: relative;
+    font-family: var(--fuente-titulos);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--blanco);
+    margin-bottom: 8px;
+}
+
+.tornejos-cuidem__item p {
+    position: relative;
+    color: var(--gris-claro);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* ===== D. NUESTROS TORNEOS (tarjetas apiladas con acento) ===== */
+/* Tarjeta d'aspecte més estret, centrada dins de la secció */
+.tornejos-llista {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin: 44px auto 0;
+    max-width: 940px;
+    text-align: left;
+}
+
+.torneig {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.35fr 1fr;
+    gap: 0;
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* En passar per sobre: bordes daurats */
+.torneig:hover {
+    border-color: var(--dorado);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
+}
+
+/* Franja lateral de color por torneo */
+.torneig__identitat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 34px 26px;
+    background: #1b1b1b;
+    border-right: 1px solid var(--gris-oscuro);
+    min-height: 300px;
+}
+
+.torneig__nom {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    color: var(--blanco);
+}
+
+.torneig__concepte {
+    color: var(--gris-claro);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    max-width: 26ch;
+    margin-top: 10px;
+}
+
+.torneig__cos {
+    padding: 34px 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.torneig__dades {
+    list-style: none;
+    margin-bottom: 26px;
+}
+
+.torneig__dades li {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gris-oscuro);
+}
+
+.torneig__dades li:first-child { border-top: 1px solid var(--gris-oscuro); }
+
+.torneig__dades span {
+    font-size: 0.88rem;
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+.torneig__dades span:first-child {
+    color: var(--gris-claro);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.torneig__accions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Etiqueta nueva: PLAZAS LIMITADAS */
+.etiqueta--limitades {
+    color: var(--negro);
+    background-color: var(--dorado);
+    border-color: var(--dorado);
+    font-weight: 800;
+}
+
+/* ===== E. FORMULARIO "REBRE DOSSIER" (estilo ticket) ===== */
+.tornejos-form {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    padding: 46px 40px;
+    text-align: left;
+    box-shadow: var(--sombra);
+}
+
+.tornejos-form__cap {
+    text-align: center;
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed var(--gris-oscuro);
+}
+
+.tornejos-form__camps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.tornejos-form__campo--ple {
+    grid-column: 1 / -1;
+}
+
+.tornejos-form label {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 8px;
+}
+
+.tornejos-form input[type="text"],
+.tornejos-form input[type="tel"],
+.tornejos-form input[type="email"],
+.tornejos-form select {
+    width: 100%;
+    background: var(--negro);
+    border: 1px solid var(--gris-oscuro);
+    color: var(--blanco);
+    font-family: var(--fuente-texto);
+    font-size: 0.9rem;
+    padding: 13px 14px;
+    transition: border-color 0.3s ease;
+}
+
+.tornejos-form input:focus,
+.tornejos-form select:focus {
+    outline: none;
+    border-color: var(--dorado);
+}
+
+.tornejos-form__categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.tornejos-form__categoria {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--gris-oscuro);
+    padding: 9px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gris-claro);
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+    user-select: none;
+}
+
+.tornejos-form__categoria:hover {
+    border-color: var(--dorado);
+    color: var(--blanco);
+}
+
+.tornejos-form__categoria input {
+    accent-color: var(--dorado);
+}
+
+.tornejos-form__categoria input:checked + span {
+    color: var(--dorado);
+}
+
+.tornejos-form__enviar {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.tornejos-form__nota {
+    margin-top: 18px;
+    text-align: center;
+    color: var(--gris-claro);
+    font-size: 0.78rem;
+}
+
+/* ===== FOTO DE FONS per seccions ===== */
+.seccion--foto-bg {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.seccion--foto-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 13, 13, 0.72);
+    z-index: 0;
+}
+
+.seccion--foto-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== FOTOS als tornejos (identitat) ===== */
+.torneig__identitat {
+    background-size: cover;
+    background-position: center;
+}
+
+.torneig__identitat::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 13, 13, 0.7);
+    z-index: 0;
+}
+
+.torneig__identitat > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== F. CIFRAS (marcador electrónico) ===== */
+.tornejos-xifres {
+    border-top: 1px solid var(--gris-oscuro);
+    border-bottom: 1px solid var(--gris-oscuro);
+}
+
+.tornejos-xifres__marcador {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 40px;
+    border: 1px solid var(--gris-oscuro);
+    background: #111111;
+}
+
+.tornejos-xifres__dada {
+    position: relative;
+    padding: 34px 20px;
+    text-align: center;
+}
+
+.tornejos-xifres__dada + .tornejos-xifres__dada::before {
+    content: "|";
+    position: absolute;
+    left: -1px;
+    top: 20%;
+    bottom: 20%;
+    width: 1px;
+    background: var(--gris-oscuro);
+    font-size: 0;
+}
+
+.tornejos-xifres__num {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    font-weight: 800;
+    color: var(--dorado);
+    line-height: 1;
+}
+
+.tornejos-xifres__label {
+    margin-top: 10px;
+    color: var(--gris-claro);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* ===== G. EXPERIENCIAS ANTERIORES (timeline) ===== */
+.tornejos-timeline {
+    position: relative;
+    max-width: 980px;
+    margin: 50px auto 0;
+    text-align: left;
+}
+
+.tornejos-timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(var(--dorado), var(--rojo));
+    transform: translateX(-50%);
+}
+
+.tornejos-fita {
+    position: relative;
+    width: 50%;
+    padding: 0 40px 46px;
+}
+
+.tornejos-fita--esquerra { left: 0; text-align: right; }
+.tornejos-fita--dreta { left: 50%; text-align: left; }
+
+/* Punto sobre la línea central */
+.tornejos-fita::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--dorado);
+    border: 3px solid var(--negro);
+    box-shadow: 0 0 0 2px var(--dorado);
+}
+
+.tornejos-fita--esquerra::before { right: -7px; }
+.tornejos-fita--dreta::before { left: -7px; }
+
+.tornejos-fita__any {
+    font-family: var(--fuente-titulos);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--rojo);
+    margin-bottom: 6px;
+}
+
+.tornejos-fita__num {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--dorado);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.tornejos-fita__nom {
+    font-family: var(--fuente-titulos);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--blanco);
+    margin-bottom: 8px;
+}
+
+.tornejos-fita p {
+    color: var(--gris-claro);
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+/* Transició de color per a un canvi suau */
+.tornejos-fita__nom,
+.tornejos-fita p {
+    transition: color 0.3s ease;
+}
+
+/* Interactivitat: en passar per sobre, el text es torna daurat */
+.tornejos-fita:hover .tornejos-fita__nom,
+.tornejos-fita:hover p {
+    color: var(--dorado);
+}
+
+/* ===== H. CTA FINAL (foto trofeo de fondo) ===== */
+.tornejos-cta {
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.9), rgba(13, 13, 13, 0.9)),
+        url("../Imatges/La%20suprema/trofeo%20la%20suprema.jpg") center / cover no-repeat;
+    border-top: 3px solid var(--dorado);
+    border-bottom: 3px solid var(--dorado);
+}
+
+.tornejos-cta .tornejos-hero__accions {
+    justify-content: center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 950px) {
+    .tornejos-hero__grid { grid-template-columns: 1fr; gap: 44px; }
+    .tornejos-hero { padding-top: 130px; }
+
+    .tornejos-manifest { grid-template-columns: 1fr; gap: 40px; }
+    .tornejos-cuidem__grid { grid-template-columns: repeat(2, 1fr); }
+
+    .torneig { grid-template-columns: 1fr; }
+    .torneig__identitat {
+        border-right: none;
+        border-bottom: 1px solid var(--gris-oscuro);
+        min-height: 0;
+        gap: 14px;
+    }
+
+    .tornejos-xifres__marcador { grid-template-columns: repeat(2, 1fr); }
+    .tornejos-xifres__dada:nth-child(3)::before { display: none; }
+    .tornejos-xifres__dada { border-bottom: 1px solid var(--gris-oscuro); }
+    .tornejos-xifres__dada:nth-last-child(-n+2) { border-bottom: none; }
+
+    /* Timeline a una columna */
+    .tornejos-timeline::before { left: 8px; transform: none; }
+    .tornejos-fita,
+    .tornejos-fita--esquerra,
+    .tornejos-fita--dreta { width: 100%; left: 0; text-align: left; padding: 0 0 40px 36px; }
+    .tornejos-fita--esquerra::before,
+    .tornejos-fita--dreta::before { left: 2px; }
+}
+
+@media (max-width: 560px) {
+    .tornejos-cuidem__grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .tornejos-cuidem__item { padding: 18px 14px; }
+    .tornejos-cuidem__icona { width: 40px; height: 40px; margin-bottom: 12px; }
+    .tornejos-cuidem__icona svg { width: 18px; height: 18px; }
+    .tornejos-cuidem__item h3 { font-size: 0.78rem; margin-bottom: 4px; }
+    .tornejos-cuidem__item p { font-size: 0.75rem; line-height: 1.4; }
+    .tornejos-form__camps { grid-template-columns: 1fr; }
+    .tornejos-form { padding: 34px 22px; }
+}

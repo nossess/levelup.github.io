@@ -1,0 +1,740 @@
+:root {
+    --negro:        #0d0d0d;   /* fondo principal */
+    --negro-suave:  #161616;   /* fondos de tarjetas / secciones alternas */
+    --gris-oscuro:  #222222;   /* líneas y bordes */
+    --blanco:       #ffffff;   /* texto principal */
+    --gris-claro:   #bdbdbd;   /* texto secundario */
+    --rojo:         #c8102e;   /* acento principal */
+    --rojo-oscuro:  #8f0b20;   /* hover del rojo */
+    --dorado:       #c9a227;   /* acento dorado (no amarillo) */
+    --dorado-claro: #e0bc4c;   /* hover del dorado */
+
+    --fuente-titulos: "Poppins", "Segoe UI", Arial, sans-serif;
+    --fuente-texto:   "Open Sans", "Segoe UI", Arial, sans-serif;
+
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+    /* ===== Cabecera ===== */
+    --altura-cabecera:  76px;
+    --cabecera-fondo:   rgba(13, 13, 13, 0.92);
+    --logo-alto:        40px;
+    --logo-gap:         14px;
+    --logo-fuente:      1.3rem;
+    --ancho-menu-movil: min(320px, 80%);
+    --z-cabecera:       100;
+    --z-hamburguesa:    110;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Evita que el scroll-reveal (translateX de los [data-reveal])
+       amplíe el ancho del viewport inicial y recorte el menú en móvil */
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    background-color: var(--negro);
+    color: var(--blanco);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    /* Evita scroll horizontal por el menú móvil que queda fuera de pantalla */
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.container {
+    width: min(1150px, 92%);
+    margin-inline: auto;
+}
+
+.texto-dorado { color: var(--dorado); }
+.texto-rojo   { color: var(--rojo); }
+
+/* Saltar al contenido (accesibilidad, invisible hasta usar Tab) */
+.saltar-contenido {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--dorado);
+    color: var(--negro);
+    padding: 10px 18px;
+    z-index: 200;
+}
+.saltar-contenido:focus { left: 10px; }
+
+/* ===== 4. TÍTULOS DE SECCIÓN ===== */
+.seccion {
+    padding: 90px 0;
+}
+
+.seccion--fondo-suave {
+    background-color: var(--negro-suave);
+}
+
+.kicker {
+    display: inline-block;
+    font-family: var(--fuente-titulos);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--rojo);
+    margin-bottom: 12px;
+}
+
+.titulo-seccion {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.titulo-seccion::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--dorado), var(--rojo));
+    margin-top: 14px;
+}
+
+.intro-seccion {
+    color: var(--gris-claro);
+    max-width: 640px;
+    margin-top: 18px;
+}
+
+.centrado { text-align: center; }
+.centrado .titulo-seccion::after { margin-inline: auto; }
+.centrado .intro-seccion { margin-inline: auto; }
+
+/* ===== 5. BOTONES =====
+   Cada botón tiene UN significado en toda la web:
+   dorado = acción principal | rojo = inscripción |
+   borde  = acción secundaria */
+.btn {
+    display: inline-block;
+    font-family: var(--fuente-titulos);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.btn--dorado {                       /* acción principal */
+    background-color: var(--dorado);
+    color: var(--negro);
+}
+.btn--dorado:hover { background-color: var(--dorado-claro); }
+
+.btn--rojo {                         /* inscripciones */
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+.btn--rojo:hover { background-color: var(--rojo-oscuro); }
+
+.btn--borde {                        /* secundario */
+    background-color: transparent;
+    border-color: var(--blanco);
+    color: var(--blanco);
+}
+.btn--borde:hover { border-color: var(--dorado); color: var(--dorado); }
+
+.btn--pequeño { padding: 10px 22px; font-size: 0.75rem; }
+
+/* ===== 6. CABECERA =====
+   La cabecera se divide en 3 zonas:
+   izquierda (logo) · central (navegación) · derecha (acciones).
+   Medidas, colores y espacios salen de variables definidas en :root. */
+
+/* --- Contenedor principal --- */
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: var(--z-cabecera);
+    background: rgba(13, 13, 13, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cabecera más sólida al hacer scroll (clase puesta por js/main.js) */
+.cabecera--solidaria {
+    background: var(--cabecera-fondo);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cabecera__contenido {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: var(--altura-cabecera);
+}
+
+/* --- Zona izquierda: logo --- */
+.logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--logo-gap);
+}
+
+.logo__img {
+    width: var(--logo-alto);
+    height: var(--logo-alto);
+    object-fit: contain;
+}
+
+.logo__texto {
+    font-family: var(--fuente-titulos);
+    font-size: var(--logo-fuente);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    color: var(--blanco);
+    white-space: nowrap;
+}
+
+
+.logo__acento { color: var(--dorado); }
+
+/* --- Zona central: navegación --- */
+.menu {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+}
+
+.menu__lista {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2vw, 28px);
+}
+
+.menu__enlace {
+    position: relative;
+    font-family: var(--fuente-titulos);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--blanco);
+    padding: 8px 2px;
+    transition: color 0.25s ease;
+}
+
+.menu__enlace:hover { color: var(--dorado); }
+
+.menu__enlace--activo { color: var(--dorado); }
+
+/* Subrayado animado (la animación se declara abajo) */
+.menu__enlace::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--dorado);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.menu__enlace:hover::after,
+.menu__enlace--activo::after { transform: scaleX(1); }
+
+/* --- Desplegable (solo para levelup.html; migración pendiente) --- */
+.menu__desplegable { position: relative; }
+
+.menu__desplegable__boton {
+    background: none;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.menu__desplegable__boton::after { content: " ▾"; color: var(--dorado); }
+
+.menu__desplegable__lista {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 190px;
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    box-shadow: var(--sombra);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, top 0.25s ease;
+}
+
+/* Se abre con ratón en escritorio... */
+@media (hover: hover) {
+    .menu__desplegable:hover .menu__desplegable__lista,
+    .menu__desplegable:focus-within .menu__desplegable__lista {
+        opacity: 1;
+        visibility: visible;
+        top: calc(100% + 8px);
+    }
+}
+
+/* ...y con clic en móvil (clase puesta por js/main.js) */
+.menu__desplegable.abierto .menu__desplegable__lista {
+    opacity: 1;
+    visibility: visible;
+    top: calc(100% + 8px);
+}
+
+.menu__desplegable__lista a {
+    display: block;
+    padding: 13px 20px;
+    font-family: var(--fuente-titulos);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gris-claro);
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.menu__desplegable__lista a:hover {
+    color: var(--dorado);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* --- Selector de idiomas con enlaces (solo para levelup.html;
+       la portada ya usa el botón .cabecera__idioma) --- */
+.idiomas {
+    display: flex;
+    gap: 10px;
+    font-family: var(--fuente-titulos);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.idiomas a {
+    color: var(--gris-claro);
+    padding: 4px 2px;
+    transition: color 0.2s ease;
+}
+
+.idiomas a:hover { color: var(--blanco); }
+
+.idiomas a.idioma-activo {
+    color: var(--dorado);
+    border-bottom: 2px solid var(--dorado);
+}
+
+/* --- Zona derecha: acciones --- */
+.cabecera__acciones {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+/* --- Desplegable de idiomas --- */
+.cabecera__idioma {
+    position: relative;
+}
+
+.cabecera__idioma-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--fuente-titulos);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gris-claro);
+    background: transparent;
+    border: 1px solid var(--gris-oscuro);
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.cabecera__idioma-boton:hover,
+.cabecera__idioma:focus-within .cabecera__idioma-boton {
+    color: var(--blanco);
+    border-color: var(--dorado);
+}
+.cabecera__idioma-boton:focus-visible {
+    outline: 2px solid var(--dorado);
+    outline-offset: 2px;
+}
+
+/* Flecha que indica que es un desplegable */
+.cabecera__idioma-boton::after {
+    content: " ▾";
+    color: var(--dorado);
+    font-size: 0.7rem;
+}
+
+/* Panel de idiomas. Se abre con hover/focus en escritorio
+   y con clic (clase .abierto puesta por js/main.js) en móvil.
+   Nunca puede ocupar más de lo que se ve en pantalla. */
+.cabecera__idioma .cabecera__idioma-lista {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    min-width: 150px;
+    max-width: calc(100vw - 24px);
+    max-height: min(70vh, 320px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 8px;
+    background: var(--negro-suave);
+    border: 1px solid var(--gris-oscuro);
+    box-shadow: var(--sombra);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Bandera de l'idioma actiu al botó */
+.cabecera__idioma-bandeira {
+    width: 24px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+    flex: 0 0 auto;
+}
+
+/* Bandera de cada idioma dins del menú desplegable */
+.cabecera__idioma .cabecera__idioma-lista .menu__enlace {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    font-size: 0.72rem;
+}
+
+.cabecera__idioma-lista .bandeira {
+    width: 22px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    flex: 0 0 auto;
+}
+
+.cabecera__idioma .cabecera__idioma-lista .menu__enlace::after { display: none; }
+
+.cabecera__idioma .cabecera__idioma-lista .menu__enlace:hover {
+    color: var(--dorado);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.cabecera__idioma-abierto .cabecera__idioma-lista,
+.cabecera__idioma:hover .cabecera__idioma-lista,
+.cabecera__idioma:focus-within .cabecera__idioma-lista {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* --- Botón hamburguesa (solo visible en móvil) --- */
+.hamburguesa {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    z-index: var(--z-hamburguesa);
+}
+
+.hamburguesa span {
+    width: 26px;
+    height: 3px;
+    background: var(--blanco);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* --- Animaciones de la cabecera ---
+   El subrayado animado del menú se anima con la propiedad
+   "transform" del pseudo-elemento (ver .menu__enlace::after).
+   La hamburguesa se convierte en una "X" al abrir el menú. */
+.hamburguesa.abierta span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburguesa.abierta span:nth-child(2) { opacity: 0; }
+.hamburguesa.abierta span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ===== 7. ETIQUETAS DE ESTADO (tarjetas de experiencias) =====
+   Estados posibles según el brief:
+   ACTIU · INSCRIPCIONS OBERTES · PRÒXIMAMENT · FINALITZAT */
+.etiqueta {
+    display: inline-block;
+    font-family: var(--fuente-titulos);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border: 1px solid;
+}
+
+.etiqueta--actiu {
+    color: var(--dorado);
+    border-color: var(--dorado);
+}
+
+.etiqueta--inscripcions {
+    color: var(--blanco);
+    background-color: var(--rojo);
+    border-color: var(--rojo);
+}
+
+.etiqueta--proximament {
+    color: var(--gris-claro);
+    border-color: var(--gris-claro);
+}
+
+.etiqueta--finalitzat {
+    color: var(--gris-claro);
+    border-color: var(--gris-oscuro);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== 8. PIE DE PÁGINA ===== */
+.pie {
+    background: #000000;
+    border-top: 3px solid var(--dorado);
+    padding: 70px 0 0;
+}
+
+.pie__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.pie__logo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.pie__logo span { color: var(--dorado); }
+
+.pie__frase {
+    color: var(--gris-claro);
+    font-size: 0.9rem;
+    max-width: 260px;
+}
+
+.pie__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rojo);
+    margin-bottom: 18px;
+}
+
+.pie__lista li { margin-bottom: 10px; }
+
+.pie__lista a,
+.pie__lista span {
+    color: var(--gris-claro);
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.pie__lista a:hover { color: var(--dorado); }
+
+.pie__copy {
+    border-top: 1px solid var(--gris-oscuro);
+    padding: 22px 0;
+    text-align: center;
+    color: var(--gris-claro);
+    font-size: 0.8rem;
+}
+
+/* ===== 9. PÁGINAS EN CONSTRUCCIÓN ===== */
+.pagina-vacia {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 140px 20px 60px;
+    background:
+        radial-gradient(circle at 80% 15%, rgba(200, 16, 46, 0.18), transparent 45%),
+        radial-gradient(circle at 15% 85%, rgba(201, 162, 39, 0.12), transparent 45%),
+        var(--negro);
+}
+
+.pagina-vacia h1 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 0 18px;
+}
+
+.pagina-vacia p {
+    color: var(--gris-claro);
+    max-width: 480px;
+    margin-bottom: 34px;
+}
+
+/* ===== 10. ANIMACIÓN AL HACER SCROLL (reveal) =====
+   Cualquier elemento con data-reveal se muestra deslizándose
+   suavemente cuando entra en pantalla (js/main.js añade .revelat).
+   El estado oculto solo se aplica si hay JavaScript (html.js),
+   para no esconder contenido si el script no puede cargar. */
+html.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+}
+
+html.js [data-reveal].revelat {
+    opacity: 1;
+    transform: none;
+}
+
+/* Variantes de dirección y efecto */
+html.js [data-reveal="left"]   { transform: translateX(-44px); }
+html.js [data-reveal="right"]  { transform: translateX(44px); }
+html.js [data-reveal="escala"] { transform: scale(0.94); }
+
+/* Efecto cascada en las tarjetas de valores */
+html.js .valor[data-reveal]:nth-child(2) { transition-delay: 0.08s; }
+html.js .valor[data-reveal]:nth-child(3) { transition-delay: 0.16s; }
+html.js .valor[data-reveal]:nth-child(4) { transition-delay: 0.24s; }
+html.js .valor[data-reveal]:nth-child(5) { transition-delay: 0.32s; }
+html.js .valor[data-reveal]:nth-child(6) { transition-delay: 0.4s; }
+
+/* Navegadores / usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    html.js [data-reveal],
+    html.js [data-reveal].revelat {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ===== 11. RESPONSIVE (tablet y móvil) ===== */
+@media (max-width: 900px) {
+
+    .cabecera__contenido { height: 64px; }
+
+    /* La navegación pasa a ser un panel deslizante desde la derecha */
+    .menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: var(--ancho-menu-movil);
+        height: 100vh;
+        background: var(--negro-suave);
+        border-left: 1px solid var(--gris-oscuro);
+        padding: 110px 34px 40px;
+        overflow-y: auto;
+        transition: right 0.35s ease;
+        z-index: var(--z-cabecera);
+    }
+
+    .menu.abierto { right: 0; }
+
+    .menu__lista {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .menu__enlace { font-size: 0.95rem; }
+
+    .menu__desplegable__lista {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 16px;
+        display: none;
+    }
+
+    .menu__desplegable.abierto .menu__desplegable__lista { display: block; }
+
+    .idiomas { margin-top: 8px; }
+
+    .hamburguesa { display: flex; }
+
+    .seccion { padding: 64px 0; }
+}
+
+/* Pantallas muy pequeñas: la prioridad es que el logo
+   (icono + texto "LevelUp") nunca desaparezca. */
+@media (max-width: 520px) {
+
+    .cabecera__contenido {
+        height: 58px;
+        gap: 12px;
+    }
+
+    .logo { gap: 10px; }
+    .logo__img { width: 30px; height: 30px; }
+    .logo__texto { font-size: 1.05rem; }
+
+    .cabecera__acciones { gap: 10px; }
+
+    .cabecera__idioma { padding: 7px 10px; }
+}

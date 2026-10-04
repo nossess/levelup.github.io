@@ -301,10 +301,16 @@
 
 /* ===== 5. MODALIDADES VIGENTES ===== */
 .tec-modalitats__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     margin-top: 50px;
+}
+
+.tec-modalitats__grid > .tec-modalitat {
+    flex: 0 1 calc(25% - 15px);
+    text-align: left;
 }
 
 .tec-modalitat {
@@ -683,7 +689,7 @@
     .tec-quees__grid { grid-template-columns: 1fr; gap: 40px; }
     .tec-metodologia__grid { grid-template-columns: 1fr; gap: 40px; }
     .tec-seguiment__grid { grid-template-columns: 1fr; }
-    .tec-modalitats__grid { grid-template-columns: repeat(2, 1fr); }
+    .tec-modalitats__grid > .tec-modalitat { flex-basis: calc(50% - 10px); }
     .tec-tarifes__grid { grid-template-columns: 1fr; max-width: 480px; }
     .tec-seus__grid { grid-template-columns: 1fr; max-width: 480px; }
     .tec-ctas { grid-template-columns: 1fr; }
@@ -691,5 +697,5 @@
 
 @media (max-width: 520px) {
     .tec-treball__grid { grid-template-columns: 1fr; max-width: 420px; }
-    .tec-modalitats__grid { grid-template-columns: 1fr; }
+    .tec-modalitats__grid > .tec-modalitat { flex-basis: 100%; }
 }

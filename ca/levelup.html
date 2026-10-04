@@ -7,7 +7,7 @@
     <meta name="description" content="Qui som, filosofia, metodologia, pilars, seus i equip de Level Up Football Experience.">
 
     <!-- Marca que hay JavaScript para activar las animaciones de scroll -->
-    <script>document.documentElement.className = "js";</script>
+    <script>document.documentElement.className = "js"; setTimeout(function () { if (!window.luReady) { document.documentElement.className = ""; } }, 3000);</script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,12 +46,12 @@
                 <div class="cabecera__idioma">
                     <button type="button" class="cabecera__idioma-boton"
                             aria-label="Canvia l'idioma" aria-haspopup="true" aria-expanded="false">
-                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Catala">
+                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Català">
                     </button>
 
                     <ul class="menu__lista cabecera__idioma-lista">
-                        <li><a class="menu__enlace menu__enlace--activo" href="levelup.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
-                        <li><a class="menu__enlace" href="../es/levelup.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace menu__enlace--activo" href="levelup.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Català</a></li>
+                        <li><a class="menu__enlace" href="../es/levelup.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Castellà</a></li>
                         <li><a class="menu__enlace" href="../en/levelup.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
                     </ul>
                 </div>
@@ -81,20 +81,19 @@
 
                 <div class="historia__foto">
                     <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(1).jpg"
-                         alt="Jugadors de Level Up durant un entrenament">
+                         alt="Jugadors de Level Up durant un entrenament" loading="lazy">
                 </div>
 
                 <div class="historia__texto">
                     <span class="kicker">La història</span>
                     <h2 class="titulo-seccion">Què és Level&nbsp;Up?</h2>
-                    <p>Level Up Football Experience neix amb una idea clara:
-                       crear <strong>experiències formatives i competitives de qualitat</strong>
-                       per a jugadors i jugadores que volen donar un pas endavant.</p>
-                    <p>Avui combinem tres línies de treball: <strong>formació contínua</strong>
-                       (tecnificació i campus), <strong>tornejos propis</strong> i
-                       <strong>seleccions</strong> que competeixen en esdeveniments seleccionats.</p>
-                    <p>La finalitat és acompanyar el creixement esportiu i personal de cada
-                       jugador, treballant amb rigor, sentit crític i molta passió pel futbol.</p>
+                    <p>Level Up Football Experience neix per crear <strong>experiències formatives i competitives de qualitat</strong>
+                       per a jugadors i jugadores que volen fer un pas endavant en el seu desenvolupament esportiu i personal.</p>
+                    <p>El projecte combina tres línies de treball: <strong>tecnificació i campus</strong>,
+                       <strong>tornejos propis</strong> per a clubs i equips, i <strong>seleccions Level Up</strong>
+                       que participen en experiències competitives.</p>
+                    <p>La nostra finalitat és acompanyar el creixement de cada jugador i jugadora amb planificació,
+                       criteri formatiu i passió pel futbol.</p>
                 </div>
 
             </div>
@@ -124,27 +123,26 @@
                     <ul class="pilars__pista" data-slider-pista>
 
                         <li class="pilar" data-slide>
-                            <img class="pilar__foto" src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(5).jpg" alt="">
+                            <img class="pilar__foto" src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(5).jpg" alt="" loading="lazy">
                             <div class="pilar__cos">
                                 <p class="pilar__numero">01</p>
                                 <h3>Individualització</h3>
-                                <p>Cada jugador/a és únic. Dissenyem programes i experiències
+                                <p>Cada jugador i jugadora és únic. Dissenyem programes i experiències
                                    adaptades a les seves necessitats i al seu moment de creixement.</p>
                             </div>
                         </li>
 
                         <li class="pilar" data-slide>
-                            <img class="pilar__foto" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(9).jpg" alt="">
+                            <img class="pilar__foto" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(9).jpg" alt="" loading="lazy">
                             <div class="pilar__cos">
                                 <p class="pilar__numero">02</p>
                                 <h3>Mètode</h3>
-                                <p>Treball estructurat i planificat al més mínim detall.
-                                   Tot té un perquè. Aquí res queda a l'atzar.</p>
+                                <p>Planifiquem el treball amb objectius clars i adaptem les sessions a les necessitats dels jugadors i jugadores. Cada proposta té una finalitat formativa.</p>
                             </div>
                         </li>
 
                         <li class="pilar" data-slide>
-                            <img class="pilar__foto" src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(10).jpg" alt="">
+                            <img class="pilar__foto" src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(10).jpg" alt="" loading="lazy">
                             <div class="pilar__cos">
                                 <p class="pilar__numero">03</p>
                                 <h3>Experiències reals</h3>
@@ -154,7 +152,7 @@
                         </li>
 
                         <li class="pilar" data-slide>
-                            <img class="pilar__foto" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(11).jpg" alt="">
+                            <img class="pilar__foto" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(11).jpg" alt="" loading="lazy">
                             <div class="pilar__cos">
                                 <p class="pilar__numero">04</p>
                                 <h3>Professionalitat</h3>
@@ -187,11 +185,8 @@
                 <div class="metodologia__texto">
                     <span class="kicker">Com formem</span>
                     <h2 class="titulo-seccion">Metodologia</h2>
-                    <p><strong>El jugador és el protagonista.</strong> Entrenem perquè cada
-                       jugador percebi, decideixi i resolgui situacions reals de joc.</p>
-                    <p>Prioritzem la <strong>presa de decisions</strong>, les situacions
-                       contextuals i la transferència del que s'entrena al partit.
-                       Cap exercici sense un perquè.</p>
+                    <p><strong>El jugador o jugadora és protagonista del procés.</strong> Treballem la percepció, la presa de decisions
+                       i la resolució de situacions reals de joc, perquè el que s'aprèn a l'entrenament es pugui aplicar al partit.</p>
                     <p>Treballem de manera global en cinc aspectes:</p>
                 </div>
 
@@ -246,27 +241,25 @@
 
                 <div class="valors__grid">
 
-                    <div class="valor" data-reveal="escala" role="button" tabindex="0" aria-label="Professionalitat: Rigor en cada detall.">
+                    <div class="valor" data-reveal="escala" role="button" tabindex="0" aria-label="Professionalitat: rigor i responsabilitat.">
                         <div class="valor__intern">
                             <div class="valor__cara valor__cara--davant">
                                 <p class="valor__numero">01</p>
                                 <h3>Professionalitat</h3>
                             </div>
                             <div class="valor__cara valor__cara--darrera">
-                                <p class="valor__text">Rigor i serietat en cada detall: de la
-                                   planificació a l'execució, tot el que fem es fa bé i a temps.</p>
+                                <p class="valor__text">Rigor i responsabilitat en la planificació, l'organització i el seguiment de cada experiència.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="valor" data-reveal="escala" role="button" tabindex="0" aria-label="Esforç: Sense dreceres.">
+                    <div class="valor" data-reveal="escala" role="button" tabindex="0" aria-label="Esforç: dedicació i compromís.">
                         <div class="valor__intern">
                             <div class="valor__cara valor__cara--davant">
                                 <p class="valor__numero">02</p>
                                 <h3>Esforç</h3>
                             </div>
                             <div class="valor__cara valor__cara--darrera">
-                                <p class="valor__text">El talent ens porta lluny, però només
-                                   l'esforç diari ens fa arribar. Aquí no hi ha atalls.</p>
+                                <p class="valor__text">El talent creix amb dedicació, pràctica i compromís. Valorem el treball diari i les ganes d'aprendre.</p>
                             </div>
                         </div>
                     </div>
@@ -301,8 +294,7 @@
                                 <h3>Resiliència</h3>
                             </div>
                             <div class="valor__cara valor__cara--darrera">
-                                <p class="valor__text">Cauc i torna-te'n a aixecar. Aquí convertim
-                                   les ensopegades en aprenentatge i tornem a intentar-ho.</p>
+                                <p class="valor__text">Aprenem de les dificultats, ens adaptem i tornem a intentar-ho. Cada error és una oportunitat per continuar millorant.</p>
                             </div>
                         </div>
                     </div>
@@ -313,8 +305,7 @@
                                 <h3>Respecte</h3>
                             </div>
                             <div class="valor__cara valor__cara--darrera">
-                                <p class="valor__text">Guanyem i perdem amb els mateixos valors:
-                                   companys, rivals, àrbitres i famílies sempre mereixedors de respecte.</p>
+                                <p class="valor__text">Respectem companys i companyes, rivals, àrbitres i famílies, tant quan guanyem com quan perdem.</p>
                             </div>
                         </div>
                     </div>
@@ -329,7 +320,8 @@
 <section class="seccion seccion--fondo-suave" data-reveal>
             <div class="container">
                 <span class="kicker">On treballem</span>
-                <h2 class="titulo-seccion">Les nostres seus</h2>
+                <h2 class="titulo-seccion">Les seus de la Tecnificació Perfecciona't</h2>
+                <p class="intro-seccion">Entrenem a La Torreta i a Santa Agnès de Malanyanes, al municipi de la Roca del Vallès. La seu de cada campus o torneig s'indica a la informació de l'edició corresponent.</p>
 
                 <div class="seus__grid">
 
@@ -337,24 +329,24 @@
                         <div class="seu__foto">
                             <img src="../Imatges/Camp%20La%20Torreta.jpg" alt="Camp la Torreta" loading="lazy">
                         </div>
-                        <h3>C.F. La Torreta</h3>
+                        <h3>Camp de Futbol Municipal de La Torreta</h3>
                         <ul class="seu__dades">
                             <li><span>Municipi</span> <span>La Roca del Vallès</span></li>
-                            <li><span>Direcció</span> <span>Carrer Granada, s/n, 08430 La Torreta</span></li>
+                            <li><span>Adreça</span> <span>Carrer Granada, s/n, 08430 La Torreta</span></li>
                         </ul>
                         <a class="seu__maps" href="https://www.google.com/maps/search/C.F.+La+Torreta,+Carrer+Granada,+s/n,+08430+La+Torreta,+Barcelona" target="_blank" rel="noopener">Veure al mapa</a>
                     </article>
 
                     <article class="seu">
                         <div class="seu__foto">
-                            <img src="../Imatges/camp%20ametlla%20.jpg" alt="Camp de l'Ametlla" loading="lazy">
+                            <img src="../Imatges/camp-seu-provisional.jpg" alt="Camp de futbol" loading="lazy">
                         </div>
-                        <h3>Camp de futbol de l'Ametlla "Josep Costa Vila"</h3>
+                        <h3>Camp de Futbol Municipal de Santa Agnès</h3>
                         <ul class="seu__dades">
-                            <li><span>Municipi</span> <span>L'Ametlla del Vallès</span></li>
-                            <li><span>Direcció</span> <span>Passatge Montaner, 6, 08480 L'Ametlla del Vallès</span></li>
+                            <li><span>Municipi</span> <span>La Roca del Vallès</span></li>
+                            <li><span>Adreça</span> <span>Avinguda del Solell, s/n, 08430 Santa Agnès de Malanyanes</span></li>
                         </ul>
-                        <a class="seu__maps" href="https://www.google.com/maps/search/Passatge+Montaner+6,+08480+L'Ametlla+del+Vallès,+Barcelona" target="_blank" rel="noopener">Veure al mapa</a>
+                        <a class="seu__maps" href="https://www.google.com/maps/search/Camp+de+Futbol+Municipal+de+Santa+Agnès,+Avinguda+del+Solell,+08430+Santa+Agnès+de+Malanyanes" target="_blank" rel="noopener">Veure al mapa</a>
                     </article>
 
                 </div>
@@ -372,34 +364,38 @@
                 <div class="equip__grid">
 
                     <article class="membre">
-                        <img class="membre__avatar" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(2).jpg" alt="">
-                        <h3>Edu</h3>
-                        <p>Direcció del projecte</p>
+                        <p class="membre__avatar" aria-hidden="true">EC</p>
+                        <h3>Edu Cosme</h3>
+                        <p>Direcció del projecte i àrea esportiva</p>
                     </article>
 
                     <article class="membre">
-                        <img class="membre__avatar" src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(3).jpg" alt="">
-                        <h3>Marta</h3>
-                        <p>Coordinació de formació</p>
+                        <p class="membre__avatar" aria-hidden="true">JS</p>
+                        <h3>Joan Sierra</h3>
+                        <p>Administració i atenció a les famílies</p>
                     </article>
 
                     <article class="membre">
-                        <img class="membre__avatar" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(3).jpg" alt="">
-                        <h3>Roger</h3>
-                        <p>Responsable de tornejos</p>
+                        <p class="membre__avatar" aria-hidden="true">EM</p>
+                        <h3>Erik Moreno</h3>
+                        <p>Responsable de seleccions</p>
                     </article>
 
                     <article class="membre">
-                        <p class="membre__avatar" aria-hidden="true">+10</p>
-                        <h3>Cos tècnic</h3>
+                        <p class="membre__avatar" aria-hidden="true">MG</p>
+                        <h3>Mer Garcia</h3>
+                        <p>Comunicació i xarxes socials</p>
+                    </article>
+
+                    <article class="membre">
+                        <h3>Equip tècnic</h3>
                         <p>Formadors i formadores especialitzats</p>
                     </article>
 
                 </div>
 
                 <p class="equip__nota">
-                   No publiquem l'organigrama intern complet.
-                   Els perfils públics s'actualitzen cada temporada.
+                   Un equip que connecta la direcció esportiva, la formació, l'organització i l'atenció a les famílies per cuidar cada experiència Level Up.
                 </p>
             </div>
         </section>
@@ -444,7 +440,7 @@
 
                     <a class="desti desti--campus" href="campus.html">
                         <h3>Campus</h3>
-                        <p>Nadal, Setmana Santa i Estiu.</p>
+                        <p>Nadal, Setmana Santa i estiu.</p>
                         <span>Entrar</span>
                     </a>
 
@@ -477,6 +473,7 @@
 
             <div>
                 <p class="pie__titulo">Contacte</p>
+                <p class="pie__frase">Contacta amb Level Up. El nostre equip t'orientarà i derivarà la consulta a la persona responsable.</p>
                 <ul class="pie__lista">
                     <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
                     <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>

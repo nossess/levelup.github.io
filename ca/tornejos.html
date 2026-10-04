@@ -7,8 +7,8 @@
     <meta name="description" content="Tornejos Level Up: competicions pròpies amb organització professional, ritme alt, igualtat real i experiència completa. El Desmarc, Futbol Vertical i La Suprema.">
 
     <!-- Marca que hay JavaScript para activar las animaciones de scroll -->
-    <script>document.documentElement.className = "js";</script>
-    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/png">
+    <script>document.documentElement.className = "js"; setTimeout(function () { if (!window.luReady) { document.documentElement.className = ""; } }, 3000);</script>
+    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/tornejos.css">
 </head>
@@ -45,12 +45,12 @@
                 <div class="cabecera__idioma">
                     <button type="button" class="cabecera__idioma-boton"
                             aria-label="Canvia l'idioma" aria-haspopup="true" aria-expanded="false">
-                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Catala">
+                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Català">
                     </button>
 
                     <ul class="menu__lista cabecera__idioma-lista">
-                        <li><a class="menu__enlace menu__enlace--activo" href="tornejos.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
-                        <li><a class="menu__enlace" href="../es/tornejos.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace menu__enlace--activo" href="tornejos.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Català</a></li>
+                        <li><a class="menu__enlace" href="../es/tornejos.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Castellà</a></li>
                         <li><a class="menu__enlace" href="../en/tornejos.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
                     </ul>
                 </div>
@@ -87,8 +87,8 @@
             <div class="container tornejos-manifest">
                 <div class="tornejos-manifest__texto">
                     <span class="kicker">Què són</span>
-                    <p class="tornejos-manifest__frase">Competeix com de debò. <span>Organitzat com s'ha de fer.</span></p>
-                    <p class="tornejos-manifest__text">Des de Level Up organitzem tornejos que combinen intensitat, professionalitat i valors, dissenyats per jugar-se a un nivell alt des del primer minut: partits de qualitat, arbitratge i una organització que cuida el mínim detall. Volem que clubs i jugadors/es creixin en igualtat de condicions, amb una experiència que no s'acaba al xiulet final.</p>
+                    <p class="tornejos-manifest__frase">Competeix i viu el futbol <span>amb Level Up.</span></p>
+                    <p class="tornejos-manifest__text">Organitzem tornejos propis per a clubs i equips, amb formats adaptats a les categories i una organització cuidada. Treballem perquè jugadors, jugadores, formadors i famílies visquin una experiència competitiva i formativa, basada en el respecte i el joc.</p>
                 </div>
 
                 <!-- Marcador de la edició protagonista -->
@@ -96,10 +96,10 @@
                     <p class="tornejos-marcador__toroig">Propera edició</p>
                     <p class="tornejos-marcador__nom">La Suprema</p>
                     <ul class="tornejos-marcador__fitxa">
-                        <li><span>Estat</span><span class="etiqueta etiqueta--inscripcions">Inscripcions obertes</span></li>
-                        <li><span>Període</span><span>Abril 2027</span></li>
-                        <li><span>Categories</span><span>Sub8 – Sub16</span></li>
-                        <li><span>Format</span><span>Fase de grups + eliminatòries</span></li>
+                        <li><span>Estat</span><span class="etiqueta etiqueta--proximament">Pròximament</span></li>
+                        <li><span>Període</span><span>Del 28 de juny al 23 de juliol de 2027</span></li>
+                        <li><span>Categories</span><span>De S8 a Amateur</span></li>
+                        <li><span>Format</span><span>Jornades de tarda entre setmana; sistema de competició segons categoria</span></li>
                     </ul>
                 </aside>
             </div>
@@ -109,8 +109,8 @@
         <section class="seccion seccion--fondo-suave" data-reveal>
             <div class="container centrado">
                 <span class="kicker">Què cuidem</span>
-                <h2 class="titulo-seccion">Els nostres tornejos,<br>els sentiràs de debò.</h2>
-                <p class="intro-seccion">A Level Up treballem perquè els clubs només s'hagin de preocupar de competir. Ens encarreguem de tot el que envolta el torneig, amb una organització professional i serveis pensats perquè jugadors/es, formadors/es i famílies visquin una experiència completa.</p>
+                <h2 class="titulo-seccion">Cuidem el torneig dins i fora del camp</h2>
+                <p class="intro-seccion">Planifiquem la competició i coordinem la informació, els espais i l'atenció als equips. Cada torneig concreta el format, els horaris i els serveis perquè clubs i famílies puguin preparar l'experiència.</p>
 
                 <div class="tornejos-cuidem__grid">
 
@@ -120,7 +120,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
                         </span>
                         <h3>Format competitiu</h3>
-                        <p>Fase de grups i eliminatòries amb temps de joc garantits per a tots els equips.</p>
+                        <p>Format i nombre de partits definits al reglament de cada edició.</p>
                     </article>
 
                     <article class="tornejos-cuidem__item">
@@ -129,7 +129,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="4"/><path d="M6 4h12l2 5-2 11H6L4 9z"/><path d="M9 13h6"/></svg>
                         </span>
                         <h3>Organització</h3>
-                        <p>Calendari clar, horaris rigorosos i circuits tancats on tot està previst.</p>
+                        <p>Calendari, horaris i coordinació de la jornada.</p>
                     </article>
 
                     <article class="tornejos-cuidem__item">
@@ -138,7 +138,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h20v12H2z"/><path d="M6 20h12M8 16v4M16 16v4"/></svg>
                         </span>
                         <h3>Instal·lacions</h3>
-                        <p>Espais de joc amb les garanties que un torneig d'aquest nivell necessita.</p>
+                        <p>Seus i espais de joc indicats a la informació del torneig.</p>
                     </article>
 
                     <article class="tornejos-cuidem__item">
@@ -147,7 +147,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a7 7 0 100-14 7 7 0 000 14z"/><path d="M9 8l2 2 4-4"/></svg>
                         </span>
                         <h3>Atenció</h3>
-                        <p>Líders de seu i canal de contacte obert durant tot l'esdeveniment.</p>
+                        <p>Persones de referència i canal de contacte per als equips.</p>
                     </article>
 
                     <article class="tornejos-cuidem__item">
@@ -156,7 +156,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-6-7 18-2-8z"/><path d="M12 15l6-6"/></svg>
                         </span>
                         <h3>Comunicació</h3>
-                        <p>Informació clara abans i durant el torneig: tot el que cal saber, quan cal saber-ho.</p>
+                        <p>Informació pràctica abans i durant la competició.</p>
                     </article>
 
                     <article class="tornejos-cuidem__item">
@@ -165,7 +165,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.5H21l-5.5 4 2 6.5-5.5-4-5.5 4 2-6.5L3 8.5h6.5z"/></svg>
                         </span>
                         <h3>Premis</h3>
-                        <p>Trofees, reconeixements i un protocol de victòria que val la pena viure.</p>
+                        <p>Trofeus i reconeixements segons les bases de cada torneig.</p>
                     </article>
 
                     <article class="tornejos-cuidem__item">
@@ -174,7 +174,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12a10 10 0 1020 0H2z"/><path d="M2 14v2h20v-2"/><path d="M12 4a2 2 0 100 4 2 2 0 000-4z"/></svg>
                         </span>
                         <h3>Serveis</h3>
-                        <p>Suport de club: gestions, coordinació i acompanyament durant tot el torneig.</p>
+                        <p>Coordinació i acompanyament dels clubs en l'organització de la participació.</p>
                     </article>
 
                     <article class="tornejos-cuidem__item">
@@ -183,7 +183,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9C1.5 9.8 2.3 7 4.5 6s4.4 1 6.2 3l1.3 1.6L13.3 9C15.1 7 17.8 5.8 19.5 6s3 2.3 2 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>
                         </span>
                         <h3>Experiència</h3>
-                        <p>Un torneig que es recorda: ambient, protocol i moments que duren tota la vida.</p>
+                        <p>Competició, convivència i moments compartits dins i fora del camp.</p>
                     </article>
 
                 </div>
@@ -192,6 +192,7 @@
 
         <!-- ==================== D. NUESTROS TORNEJOS ==================== -->
         <section class="seccion" id="torneigs" data-reveal>
+            <span id="inscripcio"></span>
             <div class="container centrado">
                 <span class="kicker">Els nostres tornejos</span>
                 <h2 class="titulo-seccion">Diferents tornejos, mateixa exigència</h2>
@@ -203,16 +204,16 @@
                     <article class="torneig torneig--desmarge">
                         <div class="torneig__identitat" style="background-image: url('../Imatges/La suprema/Imatges la suprema (9).jpg');">
                             <div>
-                                <h3 class="torneig__nom">El Desmarc</h3>
-                                <p class="torneig__concepte">La competició pensada per descobrir talent: observació amb ulls de club i molt de joc.</p>
+                                <h3 class="torneig__nom">El Desmarque</h3>
+                                <p class="torneig__concepte">Torneig propi Level Up per competir i compartir una experiència formativa amb el teu equip.</p>
                             </div>
                         </div>
                         <div class="torneig__cos">
                             <ul class="torneig__dades">
-                                <li><span>Estat</span><span class="etiqueta etiqueta--proximament">Properament</span></li>
-                                <li><span>Període</span><span>2027 · dates per confirmar</span></li>
-                                <li><span>Categories</span><span>Sub10 · Sub12 · Sub14</span></li>
-                                <li><span>Format</span><span>Competició de descobriment</span></li>
+                                <li><span>Estat</span><span class="etiqueta etiqueta--proximament">Pròximament</span></li>
+                                <li><span>Període</span><span>6 i 7 de febrer de 2027</span></li>
+                                <li><span>Categories</span><span>S7-S12</span></li>
+                                <li><span>Format</span><span>Format per categoria, per confirmar</span></li>
                             </ul>
                             <div class="torneig__accions">
                                 <a class="btn btn--borde" href="#contacte">Contacta'ns</a>
@@ -226,15 +227,15 @@
                         <div class="torneig__identitat" style="background-image: url('../Imatges/La suprema/Imatges la suprema (10).jpg');">
                             <div>
                                 <h3 class="torneig__nom">Futbol Vertical</h3>
-                                <p class="torneig__concepte">Ritme, transicions i marcadors vius: un torneig ràpid que no baixa intensitat.</p>
+                                <p class="torneig__concepte">Tres caps de setmana de competició. Cada categoria disposa de la seva jornada i del seu format de joc.</p>
                             </div>
                         </div>
                         <div class="torneig__cos">
                             <ul class="torneig__dades">
-                                <li><span>Estat</span><span class="etiqueta etiqueta--limitades">Places limitades</span></li>
-                                <li><span>Període</span><span>2027 · dates per confirmar</span></li>
-                                <li><span>Categories</span><span>Sub12 · Sub14 · Sub16</span></li>
-                                <li><span>Format</span><span>Torneig exprés d'alt ritme</span></li>
+                                <li><span>Estat</span><span class="etiqueta etiqueta--proximament">Pròximament</span></li>
+                                <li><span>Període</span><span>29-30 de maig, 5-6 de juny i 12-13 de juny de 2027</span></li>
+                                <li><span>Categories</span><span>S7-S12</span></li>
+                                <li><span>Format</span><span>Jornada i format segons categoria</span></li>
                             </ul>
                             <div class="torneig__accions">
                                 <a class="btn btn--dorado" href="#contacte">Contacta'ns</a>
@@ -248,15 +249,15 @@
                         <div class="torneig__identitat" style="background-image: url('../Imatges/La suprema/Imatges la suprema (11).jpg');">
                             <div>
                                 <h3 class="torneig__nom">La Suprema</h3>
-                                <p class="torneig__concepte">El nostre gran torneig: format definitiu, final en camp gran i protocol de campió.</p>
+                                <p class="torneig__concepte">Torneig d'estiu amb activitat de tarda entre setmana. Competició i convivència per a clubs, equips i famílies.</p>
                             </div>
                         </div>
                         <div class="torneig__cos">
                             <ul class="torneig__dades">
-                                <li><span>Estat</span><span class="etiqueta etiqueta--inscripcions">Inscripcions obertes</span></li>
-                                <li><span>Període</span><span>Abril 2027</span></li>
-                                <li><span>Categories</span><span>Sub8 – Sub16</span></li>
-                                <li><span>Format</span><span>Fase de grups + eliminatòries</span></li>
+                                <li><span>Estat</span><span class="etiqueta etiqueta--proximament">Pròximament</span></li>
+                                <li><span>Període</span><span>Del 28 de juny al 23 de juliol de 2027</span></li>
+                                <li><span>Categories</span><span>De S8 a Amateur</span></li>
+                                <li><span>Format</span><span>Jornades de tarda entre setmana; sistema de competició segons categoria</span></li>
                             </ul>
                             <div class="torneig__accions">
                                 <a class="btn btn--borde" href="../pdf/dossier-la-suprema.pdf" target="_blank" rel="noopener">Veure dossier</a>
@@ -319,6 +320,7 @@
 
             <div>
                 <p class="pie__titulo">Contacte</p>
+                <p class="pie__frase">Contacta amb Level Up. El nostre equip t'orientarà i derivarà la consulta a la persona responsable.</p>
                 <ul class="pie__lista">
                     <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
                     <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>

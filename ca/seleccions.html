@@ -7,8 +7,8 @@
     <meta name="description" content="Seleccions Level Up: equips per competir en experiències seleccionades durant la temporada.">
 
     <!-- Marca que hay JavaScript para activar las animaciones de scroll -->
-    <script>document.documentElement.className = "js";</script>
-    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/png">
+    <script>document.documentElement.className = "js"; setTimeout(function () { if (!window.luReady) { document.documentElement.className = ""; } }, 3000);</script>
+    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/seleccions.css">
 </head>
@@ -47,12 +47,12 @@
                 <div class="cabecera__idioma">
                     <button type="button" class="cabecera__idioma-boton"
                             aria-label="Canvia l'idioma" aria-haspopup="true" aria-expanded="false">
-                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Catala">
+                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Català">
                     </button>
 
                     <ul class="menu__lista cabecera__idioma-lista">
-                        <li><a class="menu__enlace menu__enlace--activo" href="seleccions.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
-                        <li><a class="menu__enlace" href="../es/seleccions.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace menu__enlace--activo" href="seleccions.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Català</a></li>
+                        <li><a class="menu__enlace" href="../es/seleccions.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Castellà</a></li>
                         <li><a class="menu__enlace" href="../en/seleccions.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
                     </ul>
                 </div>
@@ -74,7 +74,7 @@
 
 <div class="seleccions-hero__contenido">
                     <span class="kicker">Seleccions Level Up</span>
-                    <h1>Equips que <span>competeixen</span> al màxim</h1>
+                    <h1>Competir, aprendre i <span>conviure</span> amb Level Up</h1>
                     <div class="seleccions-hero__accions">
                         <a class="btn btn--dorado" href="#experiencies">Veure experiències</a>
                         <a class="btn btn--borde" href="#formulari">Vull informació</a>
@@ -84,7 +84,7 @@
                 <aside class="seleccions-marcador" aria-label="Concepte clau">
                     <p class="seleccions-marcador__label">Concepte</p>
                     <p class="seleccions-marcador__titol">Més que un equip</p>
-                    <p class="seleccions-marcador__text">Formem equips Level Up amb jugadors i jugadores de diferents clubs per competir en experiències seleccionades. No és un equip qualsevol: és una selecció formada amb criteri, amb perfils complementaris, actituds compatibles i un objectiu comú, dissenyada per créixer, conviure i donar el millor de cadascú.</p>
+                    <p class="seleccions-marcador__text">Formem equips Level Up amb jugadors i jugadores de diferents clubs per participar en experiències competitives. Cada convocatòria combina perfils complementaris i un objectiu comú: competir, aprendre i créixer com a grup.</p>
                 </aside>
 
             </div>
@@ -94,14 +94,14 @@
         <section class="seccion seccion--fons-banda" data-reveal>
             <!-- Foto integrada com a fons de la secció (recortada, sense estirar) -->
             <div class="seleccions-fons seleccions-fons--clar" aria-hidden="true">
-                <img src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(8).jpg" alt="">
+                <img src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(8).jpg" alt="" loading="lazy">
             </div>
 
             <div class="container seleccions-overlay">
                 <div class="seleccions-manifest">
                     <span class="kicker">Què busquem</span>
                     <p class="seleccions-manifest__frase">Competir, aprendre, conviure <span>i créixer.</span></p>
-                    <p class="seleccions-manifest__text">La competició com a eina formativa. No només busquem guanyar: busquem que cada jugador i jugadora surti millor del que ha entrat. La convivència, el respecte i l'esforç són els pilars de cada Selecció Level Up.</p>
+                    <p class="seleccions-manifest__text">La competició com a eina formativa. La convivència, el respecte i l'esforç són els pilars de cada selecció Level Up.</p>
 
                     <div class="seleccions-rasgos">
                         <p class="seleccions-rasgo">Competir</p>
@@ -118,7 +118,7 @@
             <div class="container centrado">
                 <span class="kicker">Com treballem</span>
                 <h2 class="titulo-seccion">Com confeccionem els equips</h2>
-                <p class="intro-seccion">Cada Selecció és un projecte pensat. Seleccionem, equilibrem i adaptem cada convocatòria a l'experiència que volem viure.</p>
+                <p class="intro-seccion">Cada selecció és un projecte pensat. Seleccionem, equilibrem i adaptem cada convocatòria a l'experiència que volem viure.</p>
 
                 <div class="seleccions-grid">
 
@@ -127,7 +127,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
                         </span>
                         <h3>Selecció</h3>
-                        <p>Convocatòries obertes i tancades segons l'experiència. No tothom entra: i això és el que li dóna valor.</p>
+                        <p>Les convocatòries depenen de l'experiència, les categories i les places disponibles. Valorem l'adequació de cada jugador o jugadora al grup i als objectius de la participació.</p>
                     </article>
 
                     <article class="seleccions-grid__item">
@@ -151,7 +151,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         </span>
                         <h3>Criteri</h3>
-                        <p>Hi ha criteris, però no els publiquem. Cada jugador/a sap que ha estat escollit/a per alguna raó concreta.</p>
+                        <p>Tenim en compte l'edat, les necessitats del grup, els perfils de joc, l'actitud i les característiques de l'experiència. La inscripció d'interès no garanteix una convocatòria.</p>
                     </article>
 
                 </div>
@@ -163,7 +163,7 @@
             <div class="container centrado">
                 <span class="kicker">Preparació</span>
                 <h2 class="titulo-seccion">Abans de sortir al camp</h2>
-                <p class="intro-seccion">Cada Selecció es prepara amb antelació. No improvisem: planifiquem, treballem i ens assegurem que el grup arriba preparat.</p>
+                <p class="intro-seccion">Preparem cada experiència segons les característiques del torneig i del grup convocat.</p>
 
                 <div class="seleccions-grid">
 
@@ -172,7 +172,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                         </span>
                         <h3>Entrenaments previs</h3>
-                        <p>Sessions de preparació per conèixer el grup, treballar conceptes i crear química abans de l'experiència.</p>
+                        <p>Sessions de preparació quan el programa de l'experiència les preveu, per conèixer el grup i treballar conceptes compartits.</p>
                     </article>
 
                     <article class="seleccions-grid__item">
@@ -180,7 +180,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                         </span>
                         <h3>Planificació</h3>
-                        <p>Anàlisi del rival, estratègia de partit i rols definits. Cada jugador sap què se n'espera.</p>
+                        <p>Objectius, rols i organització de la participació adaptats al torneig.</p>
                     </article>
 
                     <article class="seleccions-grid__item">
@@ -188,7 +188,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
                         </span>
                         <h3>Metodologia</h3>
-                        <p>Una mateixa filosofia de joc connectada amb la resta de l'àrea Level Up. Coherència i identitat.</p>
+                        <p>Un criteri formatiu compartit amb els programes Level Up.</p>
                     </article>
 
                     <article class="seleccions-grid__item">
@@ -196,7 +196,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                         </span>
                         <h3>Seguiment</h3>
-                        <p>Avaluació abans, durant i després. Cada experiència és una oportunitat per millorar.</p>
+                        <p>Feedback durant l'experiència per aprendre del joc i de la convivència.</p>
                     </article>
 
                 </div>
@@ -232,7 +232,7 @@
                     <div class="seleccions-valor">
                         <span class="seleccions-valor__num">04</span>
                         <p class="seleccions-valor__titol">Intensitat</p>
-                        <p>Mental i física. Cada minut al 100%.</p>
+                        <p>Concentració, compromís i una exigència adaptada al moment del joc i a les necessitats del grup.</p>
                     </div>
                 </div>
             </div>
@@ -244,62 +244,62 @@
             <!-- Fons de la secció: una foto que omple tot el fons,
                  recortada (sense estirar-se) i enfosquida. -->
             <div class="seleccions-fons" aria-hidden="true">
-                <img src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(10).jpg" alt="">
+                <img src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(10).jpg" alt="" loading="lazy">
             </div>
 
             <div class="container seleccions-frame">
                 <span class="kicker">Experiències 26-27</span>
                 <h2 class="titulo-seccion">Properes cites</h2>
-                <p class="intro-seccion">Cada temporada dissenyem noves experiències. Algunes són fixes, d'altres sorgeixen per oportunitats que no es poden desaprofitar.</p>
+                <p class="intro-seccion">Cada temporada preparem noves experiències per a les seleccions Level Up. La informació de cada convocatòria concreta el torneig, les categories, les dates i les condicions de participació.</p>
 
                 <div class="seleccions-experiencies">
 
                     <!-- TARGETA 1 · 1900 CUP -->
                     <article class="seleccions-exp">
                         <div class="seleccions-exp__cap">
-                            <span class="etiqueta etiqueta--inscripcions">Inscripcions obertes</span>
-                            <p class="seleccions-exp__data">Març 2027</p>
+                            <span class="etiqueta etiqueta--proximament">Pròximament</span>
+                            <p class="seleccions-exp__data">Del 25 al 28 de març de 2027</p>
                         </div>
-                        <h3 class="seleccions-exp__nom">1900 CUP</h3>
-                        <p class="seleccions-exp__desc">Torneig de referència amb equips de tot el territori. Competició d'alt nivell, convivència i una experiència que els jugadors recorden tota la vida.</p>
+                        <h3 class="seleccions-exp__nom">1900 CUP 2027</h3>
+                        <p class="seleccions-exp__desc">Seleccions Level Up de S8 a S15: futbol 7 de S8 a S12 i futbol 11 de S13 a S15. Competició i convivència amb jugadors i jugadores de diferents clubs.</p>
                         <ul class="seleccions-exp__detalls">
-                            <li><span>Ubicació</span><span>Per confirmar</span></li>
-                            <li><span>Categories</span><span>Sub12 · Sub14 · Sub16</span></li>
-                            <li><span>Estada</span><span>Allotjament inclòs</span></li>
+                            <li><span>Ubicació</span><span>Barcelona; camps assignats segons categoria</span></li>
+                            <li><span>Categories</span><span>S8-S15</span></li>
+                            <li><span>Estada</span><span>Condicions de participació segons convocatòria</span></li>
                         </ul>
-                        <a class="btn btn--dorado" href="#formulari">Vull anar-hi</a>
+                        <a class="btn btn--dorado" href="#formulari">Sol·licitar informació</a>
                     </article>
 
                     <!-- TARGETA 2 · Experiència internacional -->
                     <article class="seleccions-exp">
                         <div class="seleccions-exp__cap">
                             <span class="etiqueta etiqueta--proximament">Pròximament</span>
-                            <p class="seleccions-exp__data">Juny 2027</p>
+                            <p class="seleccions-exp__data">Del 5 a l'11 de juliol de 2027</p>
                         </div>
-                        <h3 class="seleccions-exp__nom">Experiència internacional</h3>
-                        <p class="seleccions-exp__desc">Viatge seleccionat per competir fora de Catalunya. Concentració, partits contra equips de diferent nivell i creixement personal.</p>
+                        <h3 class="seleccions-exp__nom">Donosti Cup 2027</h3>
+                        <p class="seleccions-exp__desc">Arribada el 5 de juliol; competició del 6 a l'11 de juliol. Seleccions Level Up de S10 a S15: futbol 8 de S10 a S12 i futbol 11 de S13 a S15. Una experiència de competició i convivència a Donostia / Sant Sebastià.</p>
                         <ul class="seleccions-exp__detalls">
-                            <li><span>Ubicació</span><span>Per confirmar</span></li>
-                            <li><span>Categories</span><span>Sub14 · Sub16</span></li>
-                            <li><span>Estada</span><span>Experiència completa</span></li>
+                            <li><span>Ubicació</span><span>Donostia / Sant Sebastià</span></li>
+                            <li><span>Categories</span><span>S10-S15</span></li>
+                            <li><span>Estada</span><span>Expedició amb allotjament; serveis i condicions segons convocatòria</span></li>
                         </ul>
-                        <a class="btn btn--borde" href="#formulari">Vull informació</a>
+                        <a class="btn btn--borde" href="#formulari">Sol·licitar informació</a>
                     </article>
 
                     <!-- TARGETA 3 · Torneig d'hivern -->
                     <article class="seleccions-exp">
                         <div class="seleccions-exp__cap">
                             <span class="etiqueta etiqueta--proximament">Pròximament</span>
-                            <p class="seleccions-exp__data">Desembre 2026</p>
+                            <p class="seleccions-exp__data">27, 28 i 29 de desembre de 2026</p>
                         </div>
-                        <h3 class="seleccions-exp__nom">Torneig d'hivern</h3>
-                        <p class="seleccions-exp__desc">Format exprés de cap de setmana. Competició intensa, partits ràpids i una posada a punt abans de la segona meitat de temporada.</p>
+                        <h3 class="seleccions-exp__nom">Champions Dream</h3>
+                        <p class="seleccions-exp__desc">Jugadors nascuts el 2018, 2017, 2016 i 2015: benjamins i alevins de Primera i Preferent. Una experiència de competició amb les Seleccions Level Up per continuar aprenent i creixent com a equip.</p>
                         <ul class="seleccions-exp__detalls">
-                            <li><span>Ubicació</span><span>Barcelona</span></li>
-                            <li><span>Categories</span><span>Sub10 · Sub12</span></li>
-                            <li><span>Estada</span><span>Sense allotjament</span></li>
+                            <li><span>Ubicació</span><span>Pendent de confirmació de l'edició</span></li>
+                            <li><span>Categories</span><span>Nascuts entre 2015 i 2018 · Primera i Preferent</span></li>
+                            <li><span>Estada</span><span>Serveis i condicions segons convocatòria</span></li>
                         </ul>
-                        <a class="btn btn--borde" href="#formulari">Vull informació</a>
+                        <a class="btn btn--borde" href="#formulari">Sol·licitar informació</a>
                     </article>
 
                 </div>
@@ -312,15 +312,14 @@
 
                 <div class="seleccions-form-text">
                     <span class="kicker">Participa</span>
-                    <h2 class="titulo-seccion">Vols formar part d'una Selecció?</h2>
-                    <p class="intro-seccion">Omple el formulari i t'enviarem tota la informació de les experiències que t'interessin. Sense compromís.</p>
-                    <p class="seleccions-form-text__nota">Ens posem en contacte amb tu per resoldre dubtes i concretar detalls.</p>
+                    <h2 class="titulo-seccion">Vols informació de les Seleccions Level Up?</h2>
+                    <p class="intro-seccion">Omple el formulari d'interès i t'informarem de les experiències i dels processos de convocatòria. Ens posarem en contacte amb tu per resoldre dubtes i concretar els detalls.</p>
                 </div>
 
                 <div class="seleccions-form seleccions-form--cta">
                     <!-- EDITABLE: substituir '#' pel link del formulari de Google Forms -->
-                    <a class="btn btn--dorado" href="#" target="_blank" rel="noopener">Apuntar-me a una Selecció</a>
-                    <p class="seleccions-form-text__nota">T'enviarem tota la informació de les experiències que t'interessin. Sense compromís.</p>
+                    <a class="btn btn--dorado" href="#" target="_blank" rel="noopener">Sol·licitar informació</a>
+                    <p class="seleccions-form-text__nota">La participació queda subjecta a la convocatòria i a les condicions de cada experiència.</p>
                 </div>
 
             </div>
@@ -337,12 +336,12 @@
 
                     <article class="seleccions-testimoni">
                         <p class="seleccions-testimoni__text">"El meu fill va tornar d'una altra manera. Més madur, més confiat i amb ganes de tornar-hi. Una experiència que canvia."</p>
-                        <p class="seleccions-testimoni__autor">— Pare d'un jugador Sub14</p>
+                        <p class="seleccions-testimoni__autor">— Pare d'un jugador S14</p>
                     </article>
 
                     <article class="seleccions-testimoni">
                         <p class="seleccions-testimoni__text">"La convivència amb jugadors d'altres clubs et fa créixer com a persona. Vaig aprendre més en un cap de setmana que en un trimestre."</p>
-                        <p class="seleccions-testimoni__autor">— Jugadora Sub16</p>
+                        <p class="seleccions-testimoni__autor">— Jugadora S16</p>
                     </article>
 
                     <article class="seleccions-testimoni">
@@ -383,6 +382,7 @@
 
             <div>
                 <p class="pie__titulo">Contacte</p>
+                <p class="pie__frase">Contacta amb Level Up. El nostre equip t'orientarà i derivarà la consulta a la persona responsable.</p>
                 <ul class="pie__lista">
                     <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
                     <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>

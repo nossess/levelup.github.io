@@ -507,8 +507,8 @@
 /* ===== 8. EQUIPO ===== */
 .equip__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
     margin-top: 50px;
 }
 
@@ -534,6 +534,19 @@
     border-radius: 50%;
     border: 2px solid var(--dorado);
     object-fit: cover;
+}
+
+.membre p.membre__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    background: var(--negro);
+    color: var(--dorado);
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .membre h3 {
@@ -859,6 +872,7 @@
     .seus__grid { grid-template-columns: 1fr; }
 
     .equip__grid { grid-template-columns: repeat(2, 1fr); }
+    .equip__grid .membre:last-child:nth-child(odd) { grid-column: 1 / -1; }
 
     .confianca__grid { grid-template-columns: 1fr; gap: 36px; }
 

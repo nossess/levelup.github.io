@@ -1,6 +1,10 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Avisa al <head> que el script ha cargado (evita que las secciones se queden ocultas si falla)
+    window.luReady = true;
+    var reduirMoviment = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     /* ===== 1. MENÚ HAMBURGUESA ===== */
     var botonHamburguesa = document.querySelector(".hamburguesa");
     var menuNavegacion = document.querySelector(".menu");
@@ -28,16 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-    /* ===== 2. DESPLEGABLE FORMACIÓ (con clic en móvil) ===== */
-    var botonDesplegable = document.querySelector(".menu__desplegable__boton");
-    var itemDesplegable = document.querySelector(".menu__desplegable");
-
-    if (botonDesplegable && itemDesplegable) {
-        botonDesplegable.addEventListener("click", function () {
-            itemDesplegable.classList.toggle("abierto");
-        });
-    }
-
     /* ===== 2.1 DESPLEGABLE DE IDIOMAS (clic; móvil y escritorio) ===== */
     var desplegableIdioma = document.querySelector(".cabecera__idioma");
     var botonIdioma = desplegableIdioma ? desplegableIdioma.querySelector(".cabecera__idioma-boton") : null;
@@ -46,6 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
         botonIdioma.addEventListener("click", function () {
             var abierto = desplegableIdioma.classList.toggle("cabecera__idioma-abierto");
             botonIdioma.setAttribute("aria-expanded", String(abierto));
+        });
+
+        function cerrarIdioma() {
+            desplegableIdioma.classList.remove("cabecera__idioma-abierto");
+            botonIdioma.setAttribute("aria-expanded", "false");
+        }
+
+        document.addEventListener("click", function (evento) {
+            if (!desplegableIdioma.contains(evento.target)) { cerrarIdioma(); }
+        });
+
+        document.addEventListener("keydown", function (evento) {
+            if (evento.key === "Escape") { cerrarIdioma(); botonIdioma.focus(); }
         });
     }
 
@@ -85,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, { threshold: 0.4 });
 
         contadores.forEach(function (contador) {
+            contador.textContent = (contador.dataset.prefixe || "") + "0";
             observador.observe(contador);
         });
     }
@@ -100,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var avance = Math.min((momento - inicio) / duracion, 1);
             // Frena suavemente al acercarse al número final
             var suave = 1 - Math.pow(1 - avance, 3);
-            elemento.textContent = prefijo + Math.round(objetivo * suave);
+            elemento.textContent = prefijo + String(Math.round(objetivo * suave)).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
             if (avance < 1) { requestAnimationFrame(paso); }
         }
 
@@ -112,13 +120,13 @@ document.addEventListener("DOMContentLoaded", function () {
         cadena sencera en aquest fitxer. Es munta per parts
         en l'execució i s'aplica als enllaços de WhatsApp. */
     var telefonPref = ["+3", "4 "];
-    var telefonCos = ["675", "25 "];
-    var telefonFi = ["20 ", "11"];
+    var telefonCos = ["672", " 85 "];
+    var telefonFi = ["62 ", "32"];
 
-    var numeroWhatsApp = "3" + "467" + "5252" + "011";       // 34675252011
+    var numeroWhatsApp = "3" + "467" + "2856" + "232";
     var textWhatsApp = telefonPref[0] + telefonPref[1] +
                        telefonCos[0] + telefonCos[1] +
-                       telefonFi[0] + telefonFi[1];          // +34 675 25 20 11
+                       telefonFi[0] + telefonFi[1];
 
     var enllacosCta = document.querySelectorAll(".telefon-cta");
     enllacosCta.forEach(function (enllac) {
@@ -213,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Reproducción automática con pausa al pasar el ratón
         function iniciarAutoplay() {
             pararAutoplay();
+            if (reduirMoviment) { return; }
             intervalo = setInterval(function () {
                 irA(indice + 1);
             }, 6000);
@@ -307,6 +316,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }, { passive: true });
 
             anarAspecte(0);
+
+            window.addEventListener("resize", function () {
+                if (esMobil()) {
+                    anarAspecte(indexAspecte);
+                } else {
+                    pistaAspectes.style.transform = "";
+                }
+            });
         }
     }
 

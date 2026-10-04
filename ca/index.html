@@ -7,8 +7,8 @@
     <meta name="description" content="Formació, competició i experiències reals que et fan créixer. Tecnificació, campus, tornejos i seleccions Level Up.">
 
     <!-- Marca que hay JavaScript para activar las animaciones de scroll -->
-    <script>document.documentElement.className = "js";</script>
-    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/png">
+    <script>document.documentElement.className = "js"; setTimeout(function () { if (!window.luReady) { document.documentElement.className = ""; } }, 3000);</script>
+    <link rel="icon" href="../Imatges/Logo_LevelUp.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/inici.css">
 </head>
@@ -46,12 +46,12 @@
                 <div class="cabecera__idioma">
                     <button type="button" class="cabecera__idioma-boton"
                             aria-label="Canvia l'idioma" aria-haspopup="true" aria-expanded="false">
-                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Catala">
+                        <img class="cabecera__idioma-bandeira" src="../Imatges/bandera-cat.svg" alt="Català">
                     </button>
 
                     <ul class="menu__lista cabecera__idioma-lista">
-                        <li><a class="menu__enlace menu__enlace--activo" href="index.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Catalan</a></li>
-                        <li><a class="menu__enlace" href="../es/index.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Spanish</a></li>
+                        <li><a class="menu__enlace menu__enlace--activo" href="index.html" aria-current="true"><img class="bandeira" src="../Imatges/bandera-cat.svg" alt="">Català</a></li>
+                        <li><a class="menu__enlace" href="../es/index.html"><img class="bandeira" src="../Imatges/bandera-es.svg" alt="">Castellà</a></li>
                         <li><a class="menu__enlace" href="../en/index.html"><img class="bandeira" src="../Imatges/bandera-en.svg" alt="">English</a></li>
                     </ul>
                 </div>
@@ -75,7 +75,7 @@
                 <p class="hero__frase">Formació, competició i experiències reals que et fan créixer.</p>
                 <div class="hero__botones">
                     <a class="btn btn--dorado" href="levelup.html">Descobreix Level Up</a>
-                    <a class="btn btn--borde" href="#experiencies">Veure experiències</a>
+                    <a class="btn btn--borde" href="#experiencies">Descobreix les experiències</a>
                 </div>
             </div>
             <span class="hero__flecha" aria-hidden="true">▾</span>
@@ -88,17 +88,16 @@
                 <div class="quienes-somos__texto">
                     <span class="kicker">Sobre nosaltres</span>
                     <h2 class="titulo-seccion quienes-somos__titulo">Què és Level&nbsp;Up?</h2>
-                    <p>Level Up Football Experience és un projecte que desenvolupa
-                       <strong>experiències formatives i competitives</strong> per a jugadors,
-                       famílies i clubs.</p>
-                    <p>Combinem <strong>formació, competició i organització d'esdeveniments</strong>
-                       per acompanyar cada jugador en el seu creixement esportiu i personal,
-                       sempre amb grups reduïts i seguiment individual.</p>
+                    <p>Level Up Football Experience desenvolupa <strong>experiències formatives i competitives</strong>
+                       per a jugadors i jugadores, famílies i clubs.</p>
+                    <p>Connectem <strong>formació, competició i organització d'esdeveniments</strong>
+                       per acompanyar el creixement esportiu i personal. En els programes formatius,
+                       treballem amb grups reduïts, atenció individual i seguiment adaptat a cada jugador o jugadora.</p>
                 </div>
 
                 <div class="quienes-somos__foto">
                     <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(4).jpg"
-                         alt="Entrenament de Level Up Football Experience">
+                         alt="Entrenament de Level Up Football Experience" loading="lazy">
                 </div>
 
             </div>
@@ -106,12 +105,12 @@
 
         <!--  3. TRES GRANS ÀREES  -->
         <section class="seccion seccion--areas centrado" data-reveal>
-            <img class="seccion--areas__fondo" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(5).jpg" alt="" aria-hidden="true">
+            <img class="seccion--areas__fondo" src="../Imatges/La%20suprema/Imatges%20la%20suprema%20(5).jpg" alt="" aria-hidden="true" loading="lazy">
             <div class="container">
                 <span class="kicker">Les nostres línies</span>
                 <h2 class="titulo-seccion">Tres grans àrees</h2>
                 <p class="intro-seccion">
-                   Tot el que fem es mou entre tres línies clares. Entra en cadascuna per saber-ne més.
+                   Tres línies de treball connectades: formació, seleccions i tornejos propis.
                 </p>
 
                 <div class="areas__grid">
@@ -121,8 +120,7 @@
                         <div class="area__cuerpo">
                             <h3 class="area__nombre">Formació</h3>
                             <p class="area__descripcion">
-                               Dos programes per seguir creixent durant tota la temporada,
-                               també en període vacacional.
+                               Tecnificació durant la temporada i campus en períodes vacacionals: dues maneres de continuar aprenent i millorant.
                             </p>
                             <div class="area__links">
                                 <a class="area__enlace" href="tecnificacio.html">Tecnificació</a>
@@ -136,7 +134,7 @@
                         <div class="area__cuerpo">
                             <h3 class="area__nombre">Seleccions</h3>
                             <p class="area__descripcion">
-                               Equips Level Up per competir en experiències seleccionades durant la temporada.
+                               Equips Level Up amb jugadors i jugadores de diferents clubs per competir, aprendre i conviure en experiències seleccionades.
                             </p>
                             <a class="area__enlace" href="seleccions.html">Descobrir seleccions</a>
                         </div>
@@ -147,7 +145,7 @@
                         <div class="area__cuerpo">
                             <h3 class="area__nombre">Tornejos</h3>
                             <p class="area__descripcion">
-                               Competicions pròpies amb organització professional i segell Level Up.
+                               Tornejos propis per a clubs i equips, amb una organització cuidada i identitat Level Up.
                             </p>
                             <a class="area__enlace" href="tornejos.html">Descobrir tornejos</a>
                         </div>
@@ -167,15 +165,15 @@
 
                     <li class="diferencial__item">
                         <span class="diferencial__punt"></span>
-                        <span class="diferencial__text">Grups reduïts</span>
+                        <span class="diferencial__text">Grups reduïts en la formació</span>
                     </li>
                     <li class="diferencial__item">
                         <span class="diferencial__punt"></span>
-                        <span class="diferencial__text">Correccions individuals</span>
+                        <span class="diferencial__text">Atenció individual</span>
                     </li>
                     <li class="diferencial__item">
                         <span class="diferencial__punt"></span>
-                        <span class="diferencial__text">Ritme alt d'entrenament</span>
+                        <span class="diferencial__text">Entrenaments exigents i adaptats</span>
                     </li>
                     <li class="diferencial__item">
                         <span class="diferencial__punt"></span>
@@ -183,7 +181,7 @@
                     </li>
                     <li class="diferencial__item">
                         <span class="diferencial__punt"></span>
-                        <span class="diferencial__text">Seguiment continu</span>
+                        <span class="diferencial__text">Seguiment formatiu</span>
                     </li>
                     <li class="diferencial__item">
                         <span class="diferencial__punt"></span>
@@ -215,15 +213,14 @@
                     <article class="experiencia">
                         <div class="experiencia__foto">
                             <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(7).jpg"
-                                 alt="Entrenament de tecnificació">
+                                 alt="Entrenament de tecnificació" loading="lazy">
                         </div>
                         <div class="experiencia__cuerpo">
-                            <span class="etiqueta etiqueta--actiu">Actiu</span>
-                            <h3 class="experiencia__titulo">Tecnificació Perfecciona't 26-27</h3>
-                            <p class="experiencia__datos">Setembre 2026 – Juny 2027 · Sub8 – Sub18</p>
+                            <span class="etiqueta etiqueta--proximament">Pròximament</span>
+                            <h3 class="experiencia__titulo">Tecnificació Perfecciona't 2026-2027</h3>
+                            <p class="experiencia__datos">Del 4 d'octubre de 2026 al 30 de maig de 2027 · S7-S18</p>
                             <p class="experiencia__texto">
-                               Treball complementari al club, personalitzat i en grups reduïts,
-                               amb correccions individuals i seguiment continu.
+                               Entrenament complementari al club, amb modalitats individuals i en grups reduïts. Planificació personalitzada, seguiment i confirmació setmanal de les sessions.
                             </p>
                             <div class="experiencia__botones">
                                 <a class="btn btn--borde" href="tecnificacio.html">Més informació</a>
@@ -235,15 +232,14 @@
                     <article class="experiencia">
                         <div class="experiencia__foto">
                             <img src="../Imatges/La%20suprema/trofeo%20la%20suprema.jpg"
-                                 alt="Trofeus de La Suprema">
+                                 alt="Trofeus de La Suprema" loading="lazy">
                         </div>
                         <div class="experiencia__cuerpo">
-                            <span class="etiqueta etiqueta--inscripcions">Inscripcions obertes</span>
+                            <span class="etiqueta etiqueta--proximament">Pròximament</span>
                             <h3 class="experiencia__titulo">La Suprema</h3>
-                            <p class="experiencia__datos">Abril 2027 · Sub14 / Sub16 · Clubs i equips</p>
+                            <p class="experiencia__datos">Del 28 de juny al 23 de juliol de 2027 · De S8 a Amateur</p>
                             <p class="experiencia__texto">
-                               El torneig de referència: competició exigent, serveis complets i
-                               una experiència pensada per als equips que venen a guanyar.
+                               Torneig d'estiu amb jornades de tarda entre setmana. Competició i convivència amb una organització cuidada, pensada per a clubs, equips i famílies.
                             </p>
                             <!-- El PDF debe estar en la carpeta /pdf con este nombre exacto -->
                             <div class="experiencia__botones">
@@ -258,15 +254,14 @@
                     <article class="experiencia">
                         <div class="experiencia__foto">
                             <img src="../Imatges/Campus%20d'estiu/Campus%20fotos%20(11).jpg"
-                                 alt="Campus d'estiu Level Up">
+                                 alt="Campus d'estiu Level Up" loading="lazy">
                         </div>
                         <div class="experiencia__cuerpo">
                             <span class="etiqueta etiqueta--proximament">Pròximament</span>
                             <h3 class="experiencia__titulo">Campus d'Estiu 2027</h3>
-                            <p class="experiencia__datos">Juliol 2027 · Sub8 – Sub16</p>
+                            <p class="experiencia__datos">Del 22 de juny al 23 de juliol de 2027 · S6-S16</p>
                             <p class="experiencia__texto">
-                               Programa intensiu de perfeccionament en període vacacional:
-                               entrenament de qualitat, bons grups i molta pilota.
+                               Formació en període vacacional amb entrenaments adaptats a l'edat i al nivell. Participació per períodes segons el programa. Setmana del 26 al 30 de juliol pendent de confirmació.
                             </p>
                             <div class="experiencia__botones">
                                 <a class="btn btn--borde" href="campus.html">Més informació</a>
@@ -285,27 +280,27 @@
         <section class="xifres" data-reveal>
             <div class="container xifres__grid">
                 <div>
-                    <p class="xifres__numero" data-objectiu="9000" data-prefixe="+">+0</p>
+                    <p class="xifres__numero" data-objectiu="9000" data-prefixe="+">+9.000</p>
                     <p class="xifres__etiqueta">Participants als nostres tornejos</p>
                 </div>
                 <div>
-                    <p class="xifres__numero" data-objectiu="2000" data-prefixe="+">+0</p>
+                    <p class="xifres__numero" data-objectiu="2000" data-prefixe="+">+2.000</p>
                     <p class="xifres__etiqueta">Jugadors en programes formatius</p>
                 </div>
                 <div>
-                    <p class="xifres__numero" data-objectiu="870" data-prefixe="+">+0</p>
+                    <p class="xifres__numero" data-objectiu="870" data-prefixe="+">+870</p>
                     <p class="xifres__etiqueta">Equips que han competit aquí</p>
                 </div>
                 <div>
-                    <p class="xifres__numero" data-objectiu="1300" data-prefixe="+">+0</p>
+                    <p class="xifres__numero" data-objectiu="1300" data-prefixe="+">+1.300</p>
                     <p class="xifres__etiqueta">Partits disputats en tornejos Level</p>
                 </div>
                 <div>
-                    <p class="xifres__numero" data-objectiu="60" data-prefixe="+">+0</p>
+                    <p class="xifres__numero" data-objectiu="60" data-prefixe="+">+60</p>
                     <p class="xifres__etiqueta">Clubs que ja han confiat en nosaltres</p>
                 </div>
                 <div>
-                    <p class="xifres__numero" data-objectiu="8" data-prefixe="+">+0</p>
+                    <p class="xifres__numero" data-objectiu="8" data-prefixe="+">+8</p>
                     <p class="xifres__etiqueta">Anys d'experiència organitzant tornejos</p>
                 </div>
             </div>
@@ -324,7 +319,7 @@
                         <p class="testimoni__texto">
                            Una experiència única pel nostre fill, ha crescut dins i fora del camp.
                         </p>
-                        <p class="testimoni__autor">Família · Sergi Vives, formador UE Sant Andreu</p>
+                        <p class="testimoni__autor">Família participant</p>
                     </article>
 
                     <article class="testimoni">
@@ -332,7 +327,7 @@
                         <p class="testimoni__texto">
                            Organització impecable, tot estava sota control. Repetirem segur.
                         </p>
-                        <p class="testimoni__autor">Club · Sergi Vives, formador UE Sant Andreu</p>
+                        <p class="testimoni__autor">Club participant</p>
                     </article>
 
                     <article class="testimoni">
@@ -340,7 +335,7 @@
                         <p class="testimoni__texto">
                            He après molt més que futbol: esforç, companyonia i confiança.
                         </p>
-                        <p class="testimoni__autor">Jugador · Sergi Vives, formador UE Sant Andreu</p>
+                        <p class="testimoni__autor">Jugador participant</p>
                     </article>
 
                 </div>
@@ -353,12 +348,11 @@
                 <span class="kicker">Informa't</span>
                 <h2 class="titulo-seccion">Vols formar part de Level&nbsp;Up?</h2>
                 <p class="cta-final__texto">
-                   Explica'ns què busques: formació, campus, tornejos o seleccions.
-                   T'acompanyem en cada pas.
+                   Explica'ns què busques: tecnificació, campus, tornejos o seleccions. T'ajudarem a trobar l'experiència que encaixi amb les teves necessitats.
                 </p>
                 <div class="cta-final__botones">
                     <a class="btn btn--dorado telefon-cta" href="#" target="_blank" rel="noopener">Contacta'ns</a>
-                    <a class="btn btn--borde" href="https://www.instagram.com/levelupfootballexperience" target="_blank" rel="noopener">Segueix-nos</a>
+                    <a class="btn btn--borde" href="https://www.instagram.com/levelupfootballexperience" target="_blank" rel="noopener" title="Entrenaments, competició i experiències al nostre Instagram: @levelupfootballexperience">Veure Level Up en acció</a>
                 </div>
             </div>
         </section>
@@ -378,6 +372,7 @@
 
             <div>
                 <p class="pie__titulo">Contacte</p>
+                <p class="pie__frase">Contacta amb Level Up. El nostre equip t'orientarà i derivarà la consulta a la persona responsable.</p>
                 <ul class="pie__lista">
                     <li><a href="mailto:info@levelupfootballexperience.org">info@levelupfootballexperience.org</a></li>
                     <li><a class="telefon-link" href="#" target="_blank" rel="noopener">WhatsApp · <span class="telefon-numero"></span></a></li>

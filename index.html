@@ -2,12 +2,18 @@
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Level Up Football Experience</title>
-    <!-- Esta página solo redirige al catalán (idioma principal) -->
-    <meta http-equiv="refresh" content="0; url=ca/index.html">
-    <link rel="canonical" href="ca/index.html">
+    <meta name="robots" content="noindex">
+    <!-- De moment només existeix la versió catalana. Quan es publiquin es/ i en/, afegeix l'idioma a la llista. -->
+    <script>
+        var idiomes = ["ca"]; // afegir "es", "en" quan estiguin disponibles
+        var lang = ((navigator.language || "ca") + "").slice(0, 2);
+        window.location.replace((idiomes.indexOf(lang) > -1 ? lang : "ca") + "/index.html");
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=ca/index.html"></noscript>
 </head>
 <body>
-    <p><a href="ca/index.html">Entrar / Entrar / Enter</a></p>
+    <p><a href="ca/index.html" hreflang="ca" lang="ca">Entrar</a></p>
 </body>
 </html>
